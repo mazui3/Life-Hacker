@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-lifehacker: #6001d2;
+}
+
+/* Bento custom styling */
+.bento-item {
+  background-color: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e1e4e8;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.bento-item:hover {
+  border-color: #6001d2;
+  box-shadow: 0 10px 25px -5px rgba(96, 1, 210, 0.08), 0 8px 10px -6px rgba(96, 1, 210, 0.08);
+  transform: translateY(-2px);
+}
+
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
