@@ -12,6 +12,8 @@ interface NewsFeedProps {
   weather: WeatherData;
   onWeatherCityChange: (data: WeatherData) => void;
   onHoroscopeClick: () => void;
+  onKeywordClick?: (term: string) => void;
+  searchStats?: Record<string, number>;
 }
 
 export default function NewsFeed({
@@ -21,9 +23,32 @@ export default function NewsFeed({
   weather,
   onWeatherCityChange,
   onHoroscopeClick,
+  onKeywordClick,
+  searchStats = {},
 }: NewsFeedProps) {
-  // Carousel states
-  const heroArticles = articles.filter((a) => a.isHero || a.trending).slice(0, 5);
+  // Helper to get category count from PlayFab stats
+  const getCategoryCount = (category: string) => {
+    return searchStats[category.toLowerCase().trim()] || 0;
+  };
+
+  // Helper to get keyword count from PlayFab stats
+  const getKeywordCount = (keyword: string) => {
+    return searchStats[keyword.toLowerCase().trim()] || 0;
+  };
+
+  // Carousel states - sorted by category search counts
+  const heroArticles = articles
+    .filter((a) => a.isHero || a.trending)
+    .sort((a, b) => {
+      const countA = getCategoryCount(a.category);
+      const countB = getCategoryCount(b.category);
+      if (countB !== countA) {
+        return countB - countA;
+      }
+      return 0; // maintain original order
+    })
+    .slice(0, 5);
+
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -48,10 +73,27 @@ export default function NewsFeed({
 
   const currentHero = heroArticles[carouselIndex] || articles[0];
 
-  // Most Popular Sidebar items
+  // Most Popular Sidebar items - sorted primarily by category search counts, secondary by likes
   const popularArticles = [...articles]
-    .sort((a, b) => b.likes - a.likes)
+    .sort((a, b) => {
+      const countA = getCategoryCount(a.category);
+      const countB = getCategoryCount(b.category);
+      if (countB !== countA) {
+        return countB - countA;
+      }
+      return b.likes - a.likes;
+    })
     .slice(0, 5);
+
+  // Sorted Trending Searches
+  const sortedTrendingSearches = [...trendingSearches].sort((a, b) => {
+    const countA = getKeywordCount(a);
+    const countB = getKeywordCount(b);
+    if (countB !== countA) {
+      return countB - countA;
+    }
+    return 0;
+  });
 
   // Standard stream stories (excluding current hero)
   const streamStories = articles.filter((a) => a.id !== currentHero?.id);
@@ -100,9 +142,10 @@ export default function NewsFeed({
               Trending Searches
             </h3>
             <div className="flex flex-wrap gap-1.5" id="trending-searches-list">
-              {trendingSearches.map((term, i) => (
+              {sortedTrendingSearches.map((term, i) => (
                 <span
                   key={i}
+                  onClick={() => onKeywordClick?.(term)}
                   className="bg-neutral-50 text-neutral-600 text-[11px] font-medium px-2.5 py-1 rounded-xl cursor-pointer hover:bg-purple-50 hover:text-[#6001d2] transition-all border border-neutral-100"
                 >
                   {term}

@@ -1,7 +1,8 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Sparkles, MessageSquare, HelpCircle, Landmark, Compass, Gamepad2, Heart, Award } from "lucide-react";
 import { Article, WeatherData } from "./types";
 import { articlesData, weatherProfiles } from "./data/mockData";
+import { getKeywordCategory, parseStats } from "./data/keywordCategories";
 
 // Components
 import Header from "./components/Header";
@@ -17,6 +18,55 @@ export default function App() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("id");
   });
+
+  const [sessionTicket, setSessionTicket] = useState<string | null>(null);
+  const [searchStats, setSearchStats] = useState<Record<string, number>>({});
+  const [isLoginLoading, setIsLoginLoading] = useState(false);
+
+  // PlayFab Login and fetch stats effect
+  useEffect(() => {
+    if (!playerId) return;
+
+    async function loginToPlayFab() {
+      setIsLoginLoading(true);
+      try {
+        const response = await fetch("/.netlify/functions/playfab", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "login", customId: playerId }),
+        });
+        const data = await response.json();
+        if (response.ok && data.success) {
+          setSessionTicket(data.sessionTicket);
+          console.log("PlayFab Login Successful", data);
+
+          // Fetch stats
+          const statsResponse = await fetch("/.netlify/functions/playfab", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Authorization": data.sessionTicket,
+            },
+            body: JSON.stringify({ action: "get_stats" }),
+          });
+          const statsData = await statsResponse.json();
+          if (statsResponse.ok && statsData.success) {
+            const parsed = parseStats(statsData.stats);
+            setSearchStats(parsed);
+            console.log("Loaded search statistics:", parsed);
+          }
+        } else {
+          console.error("登陆失败", data.error || data);
+        }
+      } catch (err) {
+        console.error("登陆失败", err);
+      } finally {
+        setIsLoginLoading(false);
+      }
+    }
+
+    loginToPlayFab();
+  }, [playerId]);
 
   const [showSignInRequired, setShowSignInRequired] = useState(false);
   const [showSignInInput, setShowSignInInput] = useState(false);
@@ -45,6 +95,42 @@ export default function App() {
     setSelectedArticleId(id);
   };
 
+  const recordSearchInPlayFab = async (query: string) => {
+    if (!query.trim() || !sessionTicket) return;
+    
+    const category = getKeywordCategory(query);
+    const normalizedQuery = query.trim().toLowerCase();
+    
+    // Optimistic local update
+    setSearchStats((prev) => {
+      const copy = { ...prev };
+      copy[category] = (copy[category] || 0) + 1;
+      copy[normalizedQuery] = (copy[normalizedQuery] || 0) + 1;
+      return copy;
+    });
+
+    try {
+      const response = await fetch("/.netlify/functions/playfab", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Authorization": sessionTicket,
+        },
+        body: JSON.stringify({
+          action: "update_stats",
+          keyword: normalizedQuery,
+          category: category,
+        }),
+      });
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setSearchStats(parseStats(data.stats));
+      }
+    } catch (err) {
+      console.error("Failed to sync search stats to PlayFab:", err);
+    }
+  };
+
   const handleSearch = (query: string) => {
     if (!query.trim()) {
       setSearchQuery("");
@@ -55,6 +141,7 @@ export default function App() {
       return;
     }
     setSearchQuery(query);
+    recordSearchInPlayFab(query);
   };
 
   // Article Liking callback (animates and increments count)
@@ -217,6 +304,8 @@ export default function App() {
               weather={weather}
               onWeatherCityChange={setWeather}
               onHoroscopeClick={handleTickerHoroscopeClick}
+              onKeywordClick={handleKeywordSelect}
+              searchStats={searchStats}
             />
           )}
         </div>
