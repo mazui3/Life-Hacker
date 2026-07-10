@@ -38,88 +38,97 @@
     "trending": true
   },
   {
-    "id": "star-city-thriller",
-    "title": "Behind the Scenes of 'Star City': The Dark Secrets of 2026's Best Spy Thriller",
-    "summary": "Director Liam Vance and lead actress Clara Rossi talk about the intense, real-world psychological prep behind their critically-acclaimed geopolitical spy thriller.",
+    "id": "sandbox-cinema-romance",
+    "title": "Before the Last Train Leaves: The Heartbreaking Romance Movie Setting Sandbox Ablaze Next Month",
+    "summary": "Director Liam Vance and lead actress Clara Rossi open up about the intense emotional toll behind next month's most anticipated tear-jerker.",
     "content": [
-      "HOLLYWOOD — No movie this year has gripped audiences and critics quite like 'Star City', a dark, hyper-realistic spy thriller set in the rain-swept alleys of Prague and the pristine boardrooms of Geneva's banking elites.",
-      "Directed by auteur Liam Vance, the film shuns flashy green-screen stunts and Hollywood explosions in favor of cold, calculating tradecraft, double-agents, and slow-burn suspense. Rossi plays Elena Cole, a brilliant Swiss analyst caught between two warring intelligence agencies and her own fracturing sense of loyalty.",
-      "To prepare for the roles, Vance hired former intelligence operatives to run the cast through a grueling 3-week mock interrogation and counter-surveillance course. 'We wanted them to feel the genuine paranoia of being watched,' Vance explained. 'When Clara looks over her shoulder in the subway scene, that's not just acting—it's muscle memory.'",
-      "The result is a masterpiece of modern cinema that currently holds a 98% rating on Rotten Tomatoes. Industry experts predict 'Star City' is a shoo-in for multiple award nominations, particularly for its screenplay and Rossi's haunting lead performance.",
-      "With its high-stakes tension and incredible set designs, 'Star City' raises the bar for geopolitical thrillers in the post-truth era."
+      "SANDBOX — If you've walked past the Downtown Cinema Complex this week, you've undoubtedly seen the massive, rain-blurred posters for 'Before the Last Train Leaves'. Scheduled to premiere early next month, this heavy, hyper-realistic romantic drama is already causing a massive stir among local cinephiles.",
+      "Directed by Sandbox auteur Liam Vance, the film shuns predictable Hollywood happy endings and flashy romance tropes. Instead, it follows a bittersweet, slow-burn story of two young professionals trying to balance their corporate ambitions in a fast-paced city while their relationship quietly fractures under the pressure.",
+      "To capture the raw, devastating emotion of a fading romance, Vance utilized an unusual filming method, keeping the two lead actors isolated from each other except during active takes. 'We wanted the audience to feel the genuine ache of distance,' Vance explained. 'When Clara weeps in the platform scene, those aren't just stage tears—that's pure, unfiltered emotional exhaustion.'",
+      "Early test screenings within Sandstone State have left audiences entirely devastated, with critics warning viewers to bring an entire box of tissues. Local entertainment blogs predict the movie will smash Sandbox box office records for the romance category upon its release.",
+      "With its haunting acoustic soundtrack and deeply relatable themes of youth, love, and sacrifice, 'Before the Last Train Leaves' is poised to be the defining emotional masterpiece of this winter."
     ],
     "category": "entertainment",
     "source": "LifeHacker Entertainment",
     "author": "Sophia Loren",
     "date": "4 hours ago",
     "imageUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=80",
-    "keys": ["star city", "spy", "thriller", "movie", "behind the scenes", "clara rossi", "liam vance", "cinema"],
-    "likes": 842,
+    "keys": ["movie", "romance", "cinema", "behind the scenes", "clara rossi", "liam vance", "entertainment", "sandbox"],
+    "likes": 1245,
     "comments": [
       {
         "id": "c3",
         "user": "Cinephile_99",
         "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
-        "text": "Best movie I've seen in years. Clara Rossi was absolutely phenomenal!",
+        "text": "I saw the 30-second teaser trailer at the Downtown theater and I'm already crying. Clara Rossi is going to destroy me next month.",
         "time": "3 hours ago"
       }
     ],
     "isHero": false,
     "readTime": "3 min read",
-    "trending": true
+    "trending": true,
+    "requiredCategorySearches": 3
   },
   {
-    "id": "green-bonds-surge",
-    "title": "Decentralized Green Bonds Surge as Global Investors Shift Trillions Into Eco-Initiatives",
-    "summary": "Sustainable finance reaches a historic tipping point as micro-investors and traditional institutions drive record capital into certified climate-adaptation projects.",
+    "id": "sandbox-green-bonds",
+    "title": "Local Eco-Bonds Surge as Sandbox Citizens Shift Savings Into Town Green Initiatives",
+    "summary": "Sustainable finance reaches a tipping point in Sandbox as young professionals drive record capital into certified local climate-adaptation projects.",
     "content": [
-      "LONDON — Global capital markets are undergoing a fundamental rewiring. In the first half of this year, certified 'Green Bonds' and decentralized eco-pools attracted a record-breaking $1.4 trillion in fresh investments, outperforming traditional corporate debt indices for the third consecutive quarter.",
-      "The surge has been accelerated by new smart-contract bond platforms that allow everyday individual investors to purchase fractional eco-bonds starting as low as $50. These funds are locked directly into audited, geographic-specific projects such as coastal mangrove restoration, solar canal overlays, and community wind grids.",
-      "Financial analyst Dev Shah explained: 'Historically, green investing was reserved for massive institutional portfolios or sovereign wealth funds. By democratizing access through fractional bonds, we are seeing a massive influx of retail capital from younger generations who demand that their savings do more than just compound—they want to see physical, environmental returns.'",
-      "The trend has forced major Wall Street firms to restructure their offerings. Several investment banks have launched 'Impact Yield' accounts, which automatically funnel interest from savings accounts directly into municipal climate-resilience projects, providing dual returns in cash and verified carbon offset points."
+      "SANDBOX — The town's micro-investment market is undergoing a fundamental rewiring. In the first half of this quarter, Sandbox's newly certified 'Community Green Bonds' attracted record-breaking engagement, outperforming traditional corporate index products among younger demographics.",
+      "The surge has been accelerated by the Sandbox National Bank's digital platform, which allows individual citizens to purchase fractional eco-bonds starting as low as $50. These funds are locked directly into audited, local projects such as the North Sector park reforestation, solar panels over the town highway canals, and community wind grids.",
+      "Financial analyst Dev Shah explained: 'Historically, impactful investing was reserved for major corporate portfolios. By democratizing access through fractional bonds, we are seeing a massive influx of retail capital from 20-somethings in Sandbox who demand that their savings do more than just compound—they want to see physical, environmental improvements in their own neighborhoods.'",
+      "The trend has forced local financial institutions to restructure their offerings. The new 'Impact Yield' accounts automatically funnel interest from standard accounts into municipal eco-resilience projects, providing players with dual returns in stable cash yield and verified town reputation points."
     ],
     "category": "finance",
     "source": "LifeHacker Finance",
     "author": "Dev Shah",
     "date": "3 hours ago",
     "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
-    "keys": ["finance", "bonds", "green", "market", "investing", "eco", "esg", "money"],
+    "keys": ["finance", "bonds", "green", "market", "investing", "eco", "sandbox", "money"],
     "likes": 560,
-    "comments": [],
+    "comments": [
+      {
+        "id": "c301",
+        "user": "EcoSaver_Sandbox",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
+        "text": "Put $200 into the solar canal project. Love seeing the actual solar panels being built while earning a neat return.",
+        "time": "2 hours ago"
+      }
+    ],
     "isHero": false,
     "readTime": "5 min read",
     "trending": false
   },
   {
-    "id": "esports-summer-games",
-    "title": "E-Sports Welcomed as Official Demonstration Sport in the Upcoming Summer Games",
-    "summary": "A historic compromise opens the door for competitive video gaming to share the global athletic stage, complete with national uniforms and mock medal events.",
+    "id": "sandstone-esports-games",
+    "title": "E-Sports Welcomed as Official Demonstration Event in Upcoming Sandstone State Summer Games",
+    "summary": "A historic compromise opens the door for competitive video gaming to share the state athletic stage, featuring Sandbox's local gaming talent.",
     "content": [
-      "TOKYO — In a milestone announcement that has divided traditionalists and thrilled younger fans, the International Athletic Council has officially approved competitive electronic sports (E-sports) as a demonstration category for the upcoming Summer Games.",
-      "Four major games have been selected for competition, covering tactical team arenas, high-octane racing simulators, and digital sports simulations. Competitors will represent their respective nations, complete with Olympic Village housing, professional physical trainers, and national team uniforms.",
-      "While medals won in the E-sports categories will not count toward the official national tally, the move is seen as an essential strategy to revitalize viewership and hook a generation of digital natives who largely bypass traditional broadcast sports.",
-      "President of the E-sports Coalition, Kenji Sato, remarked: 'This is the validation we have worked decades for. The physical training, hand-eye coordination, mental stamina, and tactical genius required at the elite level of gaming are fully on par with any athletic endeavor.'"
+      "SANDBOX — In a milestone announcement that has divided traditionalists and thrilled younger citizens, the Sandstone State Athletic Council has officially approved competitive electronic sports (E-sports) as a demonstration category for the upcoming State Summer Games.",
+      "Four major competitive titles have been selected for the regional tournament, covering tactical team arenas, high-octane racing simulators, and digital sports simulations. Competitors will represent their respective towns, with Sandbox sending its first-ever official esports delegation complete with team uniforms and tactical coaches.",
+      "While medals won in the E-sports categories will not count toward the official physical athletic tally, state planners see the move as an essential strategy to hook a generation of digital natives who bypass traditional track-and-field events.",
+      "Head of the Sandbox Gaming Coalition, Kenji Sato, remarked: 'This is the validation we have worked years for. The mental stamina, hand-eye coordination, and tactical genius required at elite-level gaming are fully on par with any corporate or athletic endeavor. Our local Sandbox players are grinding 8 hours a day after work to bring home the trophy next month.'"
     ],
     "category": "sports",
     "source": "LifeHacker Sports",
     "author": "Kenji Sato",
     "date": "5 hours ago",
     "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80",
-    "keys": ["esports", "gaming", "olympics", "sports", "demonstration", "sato", "tokyo", "competition"],
+    "keys": ["esports", "gaming", "state-games", "sports", "competition", "sato", "sandstone", "sandbox"],
     "likes": 980,
     "comments": [
       {
         "id": "c4",
         "user": "TrackStar_92",
         "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Unbelievable. What's next, competitive spreadsheet entry? Keep gaming separate from physical sports.",
+        "text": "Unbelievable. What's next, competitive spreadsheet entry? Keep gaming separate from physical sports at the State Games.",
         "time": "4 hours ago"
       },
       {
         "id": "c5",
         "user": "PixelPusher",
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80",
-        "text": "Stamina and coordination are real! Elite gamers train 12+ hours a day. Highly deserved recognition.",
+        "text": "Stamina and coordination are real! If you've tried to balance a 9-to-5 job and competitive matchmaking in Sandbox, you know how intense this is. Highly deserved!",
         "time": "2 hours ago"
       }
     ],
@@ -128,28 +137,28 @@
     "trending": false
   },
   {
-    "id": "gemini-edge-compiler",
-    "title": "Gemini Code Assist Launches Ultra-Fast Native Compiler on Client Edge Browsers",
-    "summary": "Google's AI suite rolls out a lightweight local compiler engine that accelerates client-side builds by 400%, completely removing cloud roundtrips during development.",
+    "id": "sandbox-algorithmic-shadow",
+    "title": "The Invisible Guide: How Sandbox's Subtle Choice Algorithms are Quietly Shaping Your Career Path",
+    "summary": "Behavioral scientists warn that everyday app recommendations in Sandbox are changing how young professionals make life-altering decisions without them even noticing.",
     "content": [
-      "MOUNTAIN VIEW — Google has announced a groundbreaking update to its Gemini developer ecosystem, launching a local, edge-optimized compiler that runs directly within modern client web browsers.",
-      "Historically, AI-powered code generation required sending code packages to remote server clusters, causing noticeable latency and sparking security concerns about intellectual property leakage. The new 'Gemini Client Edge' runtime compiles, optimizes, and lints code directly inside the user's web browser using high-performance WebAssembly sandboxes.",
-      "Developers can run instant diagnostic tests, check type-safety, and hot-reload complex web structures entirely offline. Early benchmarks show an astonishing 400% reduction in compile-to-preview latency, providing a near-instantaneous coding workflow.",
-      "An engineer from the Chromium Web Core team explained: 'By leveraging local hardware accelerators via WebGPU and WebAssembly, we're bringing server-class IDE tools straight into standard browsers. Your code stays local, compile times drop to milliseconds, and you can build offline with complete confidence.'"
+      "SANDBOX — It starts with a simple notification. A subtle pop-up on your Banana Phone recommending a 5-minute walk, a specific continuous education course at SSU, or a high-yield savings account. But behavioral scientists within Sandstone State are starting to ask: are we making these choices, or are the algorithms choosing for us?",
+      "A groundbreaking study released this week by the Sandbox Behavioral Institute reveals that over 85% of citizens aged 25-30 now rely entirely on automated feeds to structure their monthly action blocks and daily routines. What seemed like helpful tech shortcuts have subtly evolved into an unnoticeable choice architecture, deeply influencing career pivots, lifestyle habits, and even personal relationships.",
+      "Dr. Julian Vance, lead author of the study, explained: 'We are no longer just consuming content; the algorithm is predicting and reinforcing human behavior loops. By quietly injecting optimal choices into an employee's schedule, it optimizes their short-term productivity metrics, but we have absolutely no historical data on what this total loss of raw spontaneity will do to a human mind by the time they turn 50.'",
+      "Tech companies in Sandbox's commercial district have denied any deliberate manipulation, claiming their engines merely reduce decision fatigue for overwhelmed junior staff. However, independent analysts suggest that this continuous algorithmic nudging creates a predictable workforce, leaving many to wonder if true individual agency still exists inside the town's borders."
     ],
     "category": "tech",
-    "source": "LifeHacker Tech",
+    "source": "LifeHacker Tech & Society",
     "author": "Elena Rostova",
     "date": "1 hour ago",
     "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80",
-    "keys": ["gemini", "compiler", "ai", "coding", "edge", "browser", "tech", "webassembly", "google"],
+    "keys": ["algorithm", "tech", "behavior", "psychology", "choice", "society", "sandbox", "future"],
     "likes": 2045,
     "comments": [
       {
         "id": "c6",
         "user": "ByteCode_Dev",
         "avatar": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&auto=format&fit=crop&q=80",
-        "text": "Running offline is the real game changer here. Absolutely brilliant implementation.",
+        "text": "Honestly, this is terrifying. I literally applied for a night class yesterday because an app notification made it look like a seamless choice. Who am I actually competing with?",
         "time": "30 mins ago"
       }
     ],
@@ -158,29 +167,29 @@
     "trending": true
   },
   {
-    "id": "digital-detox-walks",
-    "title": "The Micro-Habit Movement: Why 5-Minute 'Digital Detox' Walks are Replacing Coffee Runs",
-    "summary": "Office workers are trading their mid-afternoon caffeine crashes for short, screen-free walks, sparking a noticeable surge in focus and cognitive stamina.",
+    "id": "sandbox-detox-walks",
+    "title": "The Micro-Habit Movement: Why 5-Minute 'Digital Detox' Walks are Replacing Coffee Runs in Sandbox Downtown",
+    "summary": "Sandbox office workers are trading their mid-afternoon caffeine crashes for short, screen-free walks, sparking a noticeable surge in focus and cognitive stamina.",
     "content": [
-      "NEW YORK — It's 3:00 PM. Instead of lining up at the local espresso bar for a double-shot macchiato and scrolling social media, a growing number of corporate workers are locking their phones in drawers and stepping outside for five minutes of pure, unstructured walking.",
-      "This shift, dubbed the 'Micro-Habit Movement', is gaining momentum across tech, finance, and creative hubs worldwide. The rules are simple: leave all screens behind, walk in any direction for two and a half minutes, and walk back. No podcasts, no work chats, no step-counting.",
-      "Neuroscientists suggest that this deliberate sensory depletion allows the brain's default mode network to activate, restoring executive cognitive functions and offering a more sustainable energy boost than caffeine.",
-      "Dr. Julian Vance, author of 'The Rested Mind', explains: 'A caffeine shot mask weariness by blocking adenosine receptors, but it triggers an inevitable cortisol and energy crash later. A screen-free micro-walk, by contrast, naturally flushes the brain with fresh oxygen, resets optical focal lengths, and calms the over-stimulated nervous system.'",
-      "Corporate HR departments are taking note, with several startups designating screen-free 'decompression lanes' in urban offices and replacing espresso machines with herbal tea bars and quiet walking pathways."
+      "SANDBOX — It's 3:00 PM. Instead of lining up at the local espresso bar on Maple Street for a double-shot macchiato and scrolling social media, a growing number of corporate workers in Sandbox's business district are locking their Banana Phones in drawers and stepping outside for five minutes of pure, unstructured walking.",
+      "This shift, dubbed the 'Micro-Habit Movement', is gaining major momentum across local tech, finance, and creative startups in town. The rules are simple: leave all screens behind, walk in any direction for two and a half minutes, and walk back. No podcasts, no work chats, no step-counting.",
+      "Neuroscientists at Sandstone State University suggest that this deliberate sensory depletion allows the brain's default mode network to activate, restoring executive cognitive functions and offering a more sustainable energy boost than caffeine.",
+      "Dr. Julian Vance, author of 'The Rested Mind', explains: 'A caffeine shot masks weariness by blocking adenosine receptors, but it triggers an inevitable cortisol and energy crash later. A screen-free micro-walk around Sandbox's green lanes, by contrast, naturally flushes the brain with fresh oxygen and calms the over-stimulated nervous system.'",
+      "Local HR departments are taking note, with several startups in the Sandbox corporate sector designating screen-free 'decompression paths' and replacing espresso machines with herbal tea bars."
     ],
     "category": "lifestyle",
     "source": "LifeHacker Lifestyle",
     "author": "Julian Vance",
     "date": "1 day ago",
     "imageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop&q=80",
-    "keys": ["lifestyle", "detox", "walk", "coffee", "health", "habits", "mindfulness", "wellness"],
+    "keys": ["lifestyle", "detox", "walk", "coffee", "health", "habits", "mindfulness", "wellness", "sandbox"],
     "likes": 1420,
     "comments": [
       {
         "id": "c7",
         "user": "ZenDesk_User",
         "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
-        "text": "Started doing this last week. It actually works! I feel way less fried by 5 PM.",
+        "text": "Started doing this last week around the Downtown square. It actually works! I feel way less fried by 5 PM.",
         "time": "12 hours ago"
       }
     ],
@@ -189,28 +198,28 @@
     "trending": false
   },
   {
-    "id": "canada-mag-rail",
-    "title": "Canada Launches Multi-Billion Dollar High-Speed Magnetic Rail Linking Toronto to Montreal",
-    "summary": "The ambitious infrastructure project promises to slash travel times to just 75 minutes, offering an emission-free alternative to regional flights.",
+    "id": "sandstone-transit-link",
+    "title": "Sandstone State Launches Multi-Million Dollar High-Speed Eco-Rail Linking Sandbox to Capital City",
+    "summary": "The ambitious infrastructure project promises to slash travel times to just 35 minutes, offering an emission-free alternative for regional commuters.",
     "content": [
-      "OTTAWA — In a bold bid to revolutionize regional transport and slash greenhouse gas emissions, the Canadian government has greenlit the construction of a high-speed magnetic levitation (maglev) rail corridor linking Toronto, Ottawa, and Montreal.",
-      "The rail line, estimated to cost $34 billion, will operate train fleets cruising at speeds of up to 450 km/h. At that pace, a commute from downtown Toronto to Montreal's central terminal will take just 75 minutes, compared to nearly six hours of driving or a four-hour airport journey.",
-      "By operating entirely on clean hydroelectric power from northern Quebec, the Maglev network is projected to eliminate over 2.4 million regional car trips and regional air commutes annually, significantly aiding Canada's net-zero carbon goals.",
-      "Transport Minister Chloe Dupont declared: 'This is not just about moving people faster; it's about stitching our economic hubs together, opening up affordable housing in intermediate towns, and setting a world-class standard for sustainable North American infrastructure.'"
+      "SANDBOX — In a bold bid to revolutionize regional transit and ease the housing pressure within the metropolitan hubs, the Sandstone State government has officially greenlit the construction of a high-speed magnetic rail corridor linking Sandbox directly to Capital City.",
+      "The new rail line, estimated to cost $4.2 billion, will operate clean-energy train fleets cruising at high speeds. At that pace, a commute from downtown Sandbox to Capital City's central economic hub will take just 35 minutes, compared to nearly three hours of driving through the mountain passes.",
+      "By operating entirely on clean solar power collected along the highway canal arrays, the eco-rail network is projected to eliminate over 400,000 regional car trips annually, significantly aiding the state's net-zero carbon goals.",
+      "Transport Minister Chloe Dupont declared: 'This is not just about moving people faster; it's about stretching our economic hubs together, opening up affordable housing in intermediate towns like Sandbox, and letting young workers live in quiet neighborhoods while commuting to high-paying jobs.'"
     ],
     "category": "news",
-    "source": "LifeHacker Canada News",
+    "source": "LifeHacker Regional News",
     "author": "Chloe Dupont",
     "date": "6 hours ago",
     "imageUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop&q=80",
-    "keys": ["canada", "rail", "toronto", "montreal", "transit", "speed", "train", "maglev", "infrastructure"],
+    "keys": ["sandstone", "rail", "transit", "speed", "train", "infrastructure", "sandbox"],
     "likes": 1102,
     "comments": [
       {
         "id": "c8",
         "user": "CommuterLife",
         "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
-        "text": "75 minutes to Montreal?! I would move to Kingston tomorrow if I could commute this easily.",
+        "text": "35 minutes to Capital City?! I can finally keep my cozy apartment in Sandbox and apply for those high-tier corporate roles next month!",
         "time": "5 hours ago"
       }
     ],
@@ -219,50 +228,58 @@
     "trending": true
   },
   {
-    "id": "acoustic-tour-record",
-    "title": "Pop Sensation's Acoustic Tour Set to Break Ticket Sales Record Across Asia-Pacific",
-    "summary": "An unplugged, intimate arena tour sells out in minutes, proving that stripped-down organic vocals are drawing massive crowds over high-tech pop spectacles.",
+    "id": "sandbox-acoustic-tour",
+    "title": "Local Icon's Acoustic Tour Set to Break Ticket Sales Record at Sandstone Arena",
+    "summary": "An unplugged, intimate show sells out in minutes, proving that stripped-down organic vocals are drawing massive crowds over high-tech spectacles.",
     "content": [
-      "SINGAPORE — Stripped of backing tracks, holographic projection screens, and backup dancers, pop icon Luna Rose is breaking record books with nothing but a acoustic guitar and an extraordinary five-octave voice.",
-      "Her newly announced 'Unplugged & Raw' Asia-Pacific tour sold out all 24 arena dates within four minutes of going live, causing ticket servers to briefly buckle under the unprecedented demand of over 3.4 million concurrent users.",
-      "Music journalists are calling it a cultural reaction to the over-digitization of modern music. 'We have reached peak automation,' explained industry critic John Chang. 'Audiences are craving raw, human, unquantized connection. Hearing an artist sing in a quiet room with simple acoustic resonance is the ultimate luxury now.'",
-      "Luna Rose plans to record a live album during her three-night residency at Tokyo's Budokan Hall, with all proceeds donated to grass-roots music education schools throughout Southeast Asia."
+      "SANDBOX — Stripped of backing tracks, holographic projection screens, and backup dancers, Sandstone State's favorite indie pop icon Luna Rose is breaking local record books with nothing but an acoustic guitar and an extraordinary voice.",
+      "Her newly announced 'Unplugged & Raw' hometown show at the Sandstone Arena sold out all available seating tiers within four minutes of going live, causing the local ticket booking servers to briefly buckle under unprecedented traffic from local fans.",
+      "Music journalists are calling it a cultural reaction to the over-digitization of modern entertainment. 'We have reached peak automation,' explained local industry critic John Chang. 'Audiences in Sandbox are craving raw, human connection. Hearing an artist sing in a quiet room with simple acoustic resonance is the ultimate luxury now.'",
+      "Luna Rose plans to record a live album during her two-night residency at the arena, with all proceeds donated to grass-roots music and art education programs throughout the Sandbox youth community center."
     ],
     "category": "entertainment",
     "source": "LifeHacker Music",
     "author": "John Chang",
     "date": "12 hours ago",
     "imageUrl": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&auto=format&fit=crop&q=80",
-    "keys": ["music", "concert", "tour", "records", "pop", "luna rose", "acoustic", "singapore"],
+    "keys": ["music", "concert", "tour", "records", "pop", "luna rose", "acoustic", "sandbox", "entertainment"],
     "likes": 1590,
-    "comments": [],
+    "comments": [
+      {
+        "id": "c302",
+        "user": "GuitarStrings",
+        "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80",
+        "text": "Managed to snip a balcony ticket! Can't wait to see a raw performance instead of the usual flashing neon stage stuff.",
+        "time": "10 hours ago"
+      }
+    ],
     "isHero": false,
     "readTime": "3 min read",
     "trending": false
   },
   {
-    "id": "super-earth-water",
-    "title": "Deep Space Telescope Detects Atmospheric Water Vapor on Nearby Super-Earth Planet",
-    "summary": "Astronomers locate clear signatures of atmospheric moisture on Kepler-186f, boosting hopes of locating liquid oceans within our galactic neighborhood.",
+    "id": "ssu-observatory-discovery",
+    "title": "SSU Observatory Detects High-Density Deep Sky Anomalies Using New Ridge Telescope",
+    "summary": "Local astronomers locate clear orbital patterns on a nearby planet candidate, boosting hopes for advanced planetary studies within the state curriculum.",
     "content": [
-      "PASADENA — In a discovery that has sent shockwaves through the scientific community, the James Webb successor telescope, 'Voyager-3', has detected clear, indisputable signatures of gaseous water vapor in the atmosphere of Kepler-186f.",
-      "Kepler-186f is a rocky world approximately 1.2 times the size of Earth, orbiting within the habitable 'Goldilocks' zone of a red dwarf star some 500 light-years away. It is the first time water vapor has been identified on a terrestrial planet in a temperate orbital range.",
-      "Using high-resolution transmission spectroscopy, scientists analyzed starlight filtering through the planet's atmospheric fringes, identifying heavy absorption bands corresponding directly to H2O molecules and methane.",
-      "Lead astrophysicist Dr. Sarah Vance cautioned: 'While water vapor indicates an active hydrological cycle, it doesn't guarantee liquid oceans or biological life. The planet's stellar wind exposure and atmospheric density are still being analyzed. However, this is the most promising candidate for a habitable environment we have ever seen in the deep sky.'"
+      "SANDBOX — In a discovery that has sent shockwaves through the local academic community, researchers at the Sandstone State University (SSU) Observatory have detected unique, high-density atmospheric signatures on a nearby planet candidate using the new deep-sky telescope on Sandbox North Ridge.",
+      "The planet candidate, cataloged as 'Sandstone-1b', is a rocky world orbiting within a temperate range. It marks the first time that the university's astronomy department has identified potential atmospheric data using their own localized hardware arrays.",
+      "Using high-resolution spectroscopy during their night shifts, student researchers and faculty analyzed light filtering through the system, identifying heavy absorption bands that indicate an active molecular environment.",
+      "Lead astrophysicist Dr. Sarah Vance cautioned: 'While the data indicates an active atmosphere, it requires further peer reviews from the main campus. However, having this level of scientific discovery happening right in Sandbox's backyard is an incredible achievement for our local students and night school programs.'"
     ],
     "category": "tech",
     "source": "LifeHacker Space Science",
     "author": "Dr. Sarah Vance",
     "date": "2 days ago",
     "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
-    "keys": ["space", "telescope", "water", "planet", "science", "kepler", "nasa", "astronomy"],
+    "keys": ["space", "telescope", "science", "ssu", "university", "astronomy", "sandbox"],
     "likes": 2341,
     "comments": [
       {
         "id": "c9",
         "user": "Stargazer_Dave",
         "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Simply mind-blowing. 500 light-years is far, but discovering water vapor is a giant leap for astrobiology!",
+        "text": "Simply mind-blowing for a local campus observatory! Definitely walking up to the ridge park tonight to see if the facility is open to visitors.",
         "time": "1 day ago"
       }
     ],

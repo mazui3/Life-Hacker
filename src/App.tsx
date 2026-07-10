@@ -21,6 +21,7 @@ export default function App() {
 
   const [sessionTicket, setSessionTicket] = useState<string | null>(null);
   const [searchStats, setSearchStats] = useState<Record<string, number>>({});
+  const [searchCate, setSearchCate] = useState<Record<string, number>>({});
   const [isLoginLoading, setIsLoginLoading] = useState(false);
 
   // PlayFab Login and fetch stats effect
@@ -51,7 +52,9 @@ export default function App() {
         if (response.ok && data.success) {
           const parsed = parseStats(data.stats);
           setSearchStats(parsed);
-          console.log("成功同步 Unity 玩家的 PlayFab 统计数据:", parsed);
+          const parsedCate = parseStats(data.cate);
+          setSearchCate(parsedCate);
+          console.log("成功同步 Unity 玩家的 PlayFab 统计数据:", parsed, "分类搜索统计数据:", parsedCate);
         } else {
           console.error("无法获取该 Unity 玩家数据，请检查后台是否存在该 ID:", data.error || data);
         }
@@ -171,6 +174,11 @@ export default function App() {
       copy[normalizedKeyword] = (copy[normalizedKeyword] || 0) + 1;
       return copy;
     });
+    setSearchCate((prev) => {
+      const copy = { ...prev };
+      copy[category] = (copy[category] || 0) + 1;
+      return copy;
+    });
 
     try {
       const response = await fetch("/.netlify/functions/playfab", {
@@ -188,7 +196,8 @@ export default function App() {
       const data = await response.json();
       if (response.ok && data.success) {
         setSearchStats(parseStats(data.stats));
-        console.log(`已成功在 PlayFab 中为 [${normalizedKeyword}] 搜索次数加1！`);
+        setSearchCate(parseStats(data.cate));
+        console.log(`已成功在 PlayFab 中为 [${normalizedKeyword}] 搜索次数加1，分类 [${category}] 搜索次数加1！`);
       }
     } catch (err) {
       console.error("Failed to sync search stats to PlayFab:", err);
@@ -246,6 +255,16 @@ export default function App() {
     handleSelectArticle("star-city-thriller");
   };
 
+  // Filter visible articles based on search_cate counts
+  const visibleArticles = useMemo(() => {
+    return articles.filter((art) => {
+      const required = art.requiredCategorySearches || 0;
+      if (required === 0) return true;
+      const count = searchCate[art.category.toLowerCase().trim()] || 0;
+      return count >= required;
+    });
+  }, [articles, searchCate]);
+
   // Search Matching Algorithm
   const filteredSearchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
@@ -256,7 +275,7 @@ export default function App() {
     // Otherwise, we fallback to filtering by the raw searchQuery.
     const query = hit ? hit.toLowerCase().trim() : searchQuery.toLowerCase().trim();
 
-    return articles.filter((art) => {
+    return visibleArticles.filter((art) => {
       // Check title
       const titleMatch = art.title.toLowerCase().includes(query);
       // Check summary
@@ -270,7 +289,7 @@ export default function App() {
 
       return titleMatch || summaryMatch || categoryMatch || keywordMatch || bodyMatch;
     });
-  }, [searchQuery, articles]);
+  }, [searchQuery, visibleArticles]);
 
   // Secondary search selector (for keywords clicks)
   const handleKeywordSelect = (term: string) => {
@@ -279,23 +298,23 @@ export default function App() {
 
   // Category news filtering
   const categoryArticles = useMemo(() => {
-    if (activeCategory === "all") return articles;
-    return articles.filter((art) => art.category === activeCategory);
-  }, [activeCategory, articles]);
+    if (activeCategory === "all") return visibleArticles;
+    return visibleArticles.filter((art) => art.category === activeCategory);
+  }, [activeCategory, visibleArticles]);
 
   // Selected active article detail object
   const activeArticleObj = useMemo(() => {
     if (!selectedArticleId) return null;
-    return articles.find((a) => a.id === selectedArticleId) || null;
-  }, [selectedArticleId, articles]);
+    return visibleArticles.find((a) => a.id === selectedArticleId) || null;
+  }, [selectedArticleId, visibleArticles]);
 
   // Related articles suggestion (excluding current article, prioritizing matching category)
   const relatedArticles = useMemo(() => {
     if (!activeArticleObj) return [];
-    return articles
+    return visibleArticles
       .filter((a) => a.id !== activeArticleObj.id && a.category === activeArticleObj.category)
       .slice(0, 2);
-  }, [activeArticleObj, articles]);
+  }, [activeArticleObj, visibleArticles]);
 
   const handleCategorySelect = (catId: string) => {
     setActiveCategory(catId);
@@ -377,6 +396,7 @@ export default function App() {
               onHoroscopeClick={handleTickerHoroscopeClick}
               onKeywordClick={handleKeywordSelect}
               searchStats={searchStats}
+              searchCate={searchCate}
             />
           )}
         </div>

@@ -62,7 +62,7 @@ export const handler = async (event, context) => {
         },
         body: JSON.stringify({
           PlayFabId: playFabId, // 👈 直接用 Unity 那个 ID 查
-          Keys: ["search_stats"],
+          Keys: ["search_stats", "search_cate"],
         }),
       });
 
@@ -71,10 +71,11 @@ export const handler = async (event, context) => {
       if (response.ok && data.code === 200) {
         const userData = data.data.Data || {};
         const searchStatsStr = userData.search_stats ? userData.search_stats.Value : "";
+        const searchCateStr = userData.search_cate ? userData.search_cate.Value : "";
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({ success: true, stats: searchStatsStr }),
+          body: JSON.stringify({ success: true, stats: searchStatsStr, cate: searchCateStr }),
         };
       } else {
         return {
@@ -97,17 +98,20 @@ export const handler = async (event, context) => {
         },
         body: JSON.stringify({
           PlayFabId: playFabId,
-          Keys: ["search_stats"],
+          Keys: ["search_stats", "search_cate"],
         }),
       });
 
       const getData = await getResponse.json();
       let statsMap = {};
+      let cateMap = {};
       
       if (getResponse.ok && getData.code === 200) {
         const userData = getData.data.Data || {};
         const searchStatsStr = userData.search_stats ? userData.search_stats.Value : "";
         statsMap = parseStats(searchStatsStr);
+        const searchCateStr = userData.search_cate ? userData.search_cate.Value : "";
+        cateMap = parseStats(searchCateStr);
       }
 
       // 递增计数
@@ -119,10 +123,15 @@ export const handler = async (event, context) => {
           if (itemKw) statsMap[itemKw.toLowerCase().trim()] = (statsMap[itemKw.toLowerCase().trim()] || 0) + 1;
         }
       } else {
-        if (category) statsMap[category.toLowerCase().trim()] = (statsMap[category.toLowerCase().trim()] || 0) + 1;
+        if (category) {
+          statsMap[category.toLowerCase().trim()] = (statsMap[category.toLowerCase().trim()] || 0) + 1;
+          // Also increment search_cate for this category
+          cateMap[category.toLowerCase().trim()] = (cateMap[category.toLowerCase().trim()] || 0) + 1;
+        }
         if (keyword) statsMap[keyword.toLowerCase().trim()] = (statsMap[keyword.toLowerCase().trim()] || 0) + 1;
       }
       const updatedStatsStr = serializeStats(statsMap);
+      const updatedCateStr = serializeStats(cateMap);
 
       // 💡 注意：这里改用了 Server 端的 API (Server/UpdateUserData)
       const updateResponse = await fetch(`https://${titleId}.playfabapi.com/Server/UpdateUserData`, {
@@ -133,7 +142,10 @@ export const handler = async (event, context) => {
         },
         body: JSON.stringify({
           PlayFabId: playFabId, // 👈 锁定该 Unity 玩家
-          Data: { search_stats: updatedStatsStr },
+          Data: { 
+            search_stats: updatedStatsStr,
+            search_cate: updatedCateStr
+          },
         }),
       });
 
@@ -143,7 +155,7 @@ export const handler = async (event, context) => {
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({ success: true, stats: updatedStatsStr }),
+          body: JSON.stringify({ success: true, stats: updatedStatsStr, cate: updatedCateStr }),
         };
       } else {
         return {

@@ -23,6 +23,7 @@ export interface Article {
   isHero?: boolean;
   readTime: string;
   trending?: boolean;
+  requiredCategorySearches?: number;
 }
 
 export interface WeatherData {

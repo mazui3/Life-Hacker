@@ -15,6 +15,7 @@ interface NewsFeedProps {
   onHoroscopeClick: () => void;
   onKeywordClick?: (term: string) => void;
   searchStats?: Record<string, number>;
+  searchCate?: Record<string, number>;
 }
 
 export default function NewsFeed({
@@ -26,10 +27,11 @@ export default function NewsFeed({
   onHoroscopeClick,
   onKeywordClick,
   searchStats = {},
+  searchCate = {},
 }: NewsFeedProps) {
   // Helper to get category count from PlayFab stats
   const getCategoryCount = (category: string) => {
-    return searchStats[category.toLowerCase().trim()] || 0;
+    return searchCate[category.toLowerCase().trim()] || 0;
   };
 
   // Helper to get keyword count from PlayFab stats
