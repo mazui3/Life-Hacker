@@ -4,6 +4,7 @@ import { Play, Pause, ChevronLeft, ChevronRight, ThumbsUp, MessageSquare, Extern
 import { Article, WeatherData } from "../types";
 import WeatherWidget from "./WeatherWidget";
 import { mockGames, trendingSearches } from "../data/mockData";
+import { keywordCategoryMap } from "../data/keywordCategories";
 
 interface NewsFeedProps {
   articles: Article[];
@@ -85,15 +86,43 @@ export default function NewsFeed({
     })
     .slice(0, 5);
 
-  // Sorted Trending Searches
-  const sortedTrendingSearches = [...trendingSearches].sort((a, b) => {
-    const countA = getKeywordCount(a);
-    const countB = getKeywordCount(b);
-    if (countB !== countA) {
-      return countB - countA;
-    }
-    return 0;
-  });
+  // Sorted Trending Searches based on user's hit history from PlayFab
+  const excludedCategories = ["news", "entertainment", "finance", "sports", "tech", "lifestyle"];
+  
+  const historyKeywords = Object.entries(searchStats)
+    .filter(([key, count]) => !excludedCategories.includes(key.toLowerCase().trim()) && count > 0)
+    .map(([key, count]) => {
+      // Find proper capitalization for the keyword
+      let properName = key;
+      const originalMapKey = Object.keys(keywordCategoryMap).find(
+        (k) => k.toLowerCase() === key.toLowerCase().trim()
+      );
+      if (originalMapKey) {
+        properName = originalMapKey;
+      } else {
+        const originalTrendingKey = trendingSearches.find(
+          (k) => k.toLowerCase() === key.toLowerCase().trim()
+        );
+        if (originalTrendingKey) {
+          properName = originalTrendingKey;
+        } else {
+          properName = key.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+        }
+      }
+      return { name: properName, count };
+    })
+    .sort((a, b) => b.count - a.count);
+
+  const sortedTrendingSearches = historyKeywords.length > 0
+    ? historyKeywords.slice(0, 7).map((item) => item.name)
+    : [...trendingSearches].sort((a, b) => {
+        const countA = getKeywordCount(a);
+        const countB = getKeywordCount(b);
+        if (countB !== countA) {
+          return countB - countA;
+        }
+        return 0;
+      });
 
   // Standard stream stories (excluding current hero)
   const streamStories = articles.filter((a) => a.id !== currentHero?.id);

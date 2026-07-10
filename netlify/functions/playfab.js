@@ -86,8 +86,8 @@ export const handler = async (event, context) => {
     }
 
     // 2. 修改/递增 Unity 玩家在 PlayFab 上的数据
-    if (action === "update_stats") {
-      const { keyword, category } = body;
+    if (action === "update_stats" || action === "update_batch_stats") {
+      const { keyword, category, items } = body;
       // 先获取当前数据
       const getResponse = await fetch(`https://${titleId}.playfabapi.com/Server/GetUserData`, {
         method: "POST",
@@ -111,8 +111,17 @@ export const handler = async (event, context) => {
       }
 
       // 递增计数
-      if (category) statsMap[category.toLowerCase().trim()] = (statsMap[category.toLowerCase().trim()] || 0) + 1;
-      if (keyword) statsMap[keyword.toLowerCase().trim()] = (statsMap[keyword.toLowerCase().trim()] || 0) + 1;
+      if (action === "update_batch_stats" && Array.isArray(items)) {
+        for (const item of items) {
+          const itemCat = item.category;
+          const itemKw = item.keyword;
+          if (itemCat) statsMap[itemCat.toLowerCase().trim()] = (statsMap[itemCat.toLowerCase().trim()] || 0) + 1;
+          if (itemKw) statsMap[itemKw.toLowerCase().trim()] = (statsMap[itemKw.toLowerCase().trim()] || 0) + 1;
+        }
+      } else {
+        if (category) statsMap[category.toLowerCase().trim()] = (statsMap[category.toLowerCase().trim()] || 0) + 1;
+        if (keyword) statsMap[keyword.toLowerCase().trim()] = (statsMap[keyword.toLowerCase().trim()] || 0) + 1;
+      }
       const updatedStatsStr = serializeStats(statsMap);
 
       // 💡 注意：这里改用了 Server 端的 API (Server/UpdateUserData)

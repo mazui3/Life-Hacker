@@ -80,6 +80,62 @@ export default function App() {
   const [weather, setWeather] = useState<WeatherData>(weatherProfiles.montreal);
   const [activeHoroscopeSign, setActiveHoroscopeSign] = useState("cancer");
 
+  const recordArticleViewInPlayFab = async (articleId: string) => {
+    if (!playerId) return;
+
+    const art = articles.find((a) => a.id === articleId);
+    if (!art) return;
+
+    // Filter article keys to only include those registered in our keyword map
+    const items = art.keys
+      .map((k) => {
+        const hit = findHitKeyword(k);
+        if (!hit) return null;
+        const category = getKeywordCategory(hit);
+        const normalizedKeyword = hit.trim().toLowerCase();
+        return { keyword: normalizedKeyword, category };
+      })
+      .filter((item): item is { keyword: string; category: string } => item !== null);
+
+    if (items.length === 0) {
+      console.log(`文章 "${art.title}" 未包含任何注册关键词。`);
+      return;
+    }
+
+    console.log(`正在为文章 "${art.title}" 同步注册关键词点击量至 PlayFab:`, items);
+
+    // Optimistic local update
+    setSearchStats((prev) => {
+      const copy = { ...prev };
+      for (const item of items) {
+        if (item.category) copy[item.category] = (copy[item.category] || 0) + 1;
+        if (item.keyword) copy[item.keyword] = (copy[item.keyword] || 0) + 1;
+      }
+      return copy;
+    });
+
+    try {
+      const response = await fetch("/.netlify/functions/playfab", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          action: "update_batch_stats",
+          playFabId: playerId,
+          items: items,
+        }),
+      });
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setSearchStats(parseStats(data.stats));
+        console.log(`已成功在 PlayFab 中为文章中的所有注册关键词增加点击量！`);
+      }
+    } catch (err) {
+      console.error("Failed to sync article view stats to PlayFab:", err);
+    }
+  };
+
   const handleSelectArticle = (id: string | null) => {
     if (id === null) {
       setSelectedArticleId(null);
@@ -90,6 +146,7 @@ export default function App() {
       return;
     }
     setSelectedArticleId(id);
+    recordArticleViewInPlayFab(id);
   };
 
   const recordSearchInPlayFab = async (query: string) => {
