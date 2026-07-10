@@ -269,5 +269,365 @@
     "isHero": false,
     "readTime": "4 min read",
     "trending": true
+  },
+  {
+    "id": "sandbox-farmers-coop",
+    "title": "Fresh Off the Soil: Local Farmers Open Organic Drive-Thru Market at Sandbox Highway Exit 4",
+    "summary": "A collective of Sandbox valley farmers is cutting out the middleman, offering pesticide-free produce directly to daily commuters.",
+    "content": [
+      "SANDBOX — Commuters driving into Sandbox's corporate district now have a healthier pitstop options. Starting this Tuesday, the newly formed Sandbox Agricultural Co-operative has officially opened 'The Green Exit' — a rustic, drive-thru market located right off Highway Exit 4.",
+      "The initiative aims to provide busy 20-somethings and office workers with affordable, organic groceries on their way home. By skipping major supermarket supply chains, the cooperative offers fruits, vegetables, and dairy products that were harvested less than six hours prior.",
+      "Local farmer Thomas Miller, who organized the cooperative, said: 'We saw young professionals living in the town center buying stale, expensive greens from big retail chains. We have the best soil right here in Sandbox. Why not bring the farm straight to their car windows?'",
+      "Early reviews on social media praise the reasonable pricing. Health coaches in Sandbox are already recommending the market as a budget-friendly way for young corporate workers to fix their meal prep routines."
+    ],
+    "category": "lifestyle",
+    "source": "LifeHacker Local",
+    "author": "Thomas Miller",
+    "date": "2 hours ago",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1664299231810-29d1caf6f753?w=800&auto=format&fit=crop&q=80",
+    "keys": ["sandbox", "farming", "organic", "market", "lifestyle", "food", "budget"],
+    "likes": 845,
+    "comments": [
+      {
+        "id": "c101",
+        "user": "MealPrepKing",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Grabbed a basket of avocados and fresh eggs after work. Half the price of the downtown organic store!",
+        "time": "1 hour ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "3 min read",
+    "trending": true
+  },
+  {
+    "id": "sandbox-bank-yield",
+    "title": "Sandbox National Bank Unveils 3.5% High-Yield Investment Plan Tailored for Young Professionals",
+    "summary": "With inflation pressing down, the town's primary financial institution launches an aggressive entry-level savings product.",
+    "content": [
+      "SANDBOX — In a surprise market move, Sandbox National Bank (SNB) announced its new 'First-Step High-Yield Account', boasting a guaranteed 3.5% annual interest rate. The product is explicitly designed to help young citizens secure their early-career savings.",
+      "Unlike traditional wealth management portfolios that require hefty upfront capital, this new account features a low entry barrier, requiring a minimum deposit of just $500. Financial advisors note that this is a direct response to the growing anxiety among the town's 25-to-30 demographic regarding house down payments.",
+      "Chief Financial Analyst Sarah Jenkins stated: 'The first five years of your career dictate your long-term financial freedom. A 3.5% low-risk yield allows young workers to beat inflation while keeping their capital liquid for future career transitions or life milestones.'",
+      "Economists suggest that if a standard Sandbox citizen deposits 15% of their monthly starting salary into this account, they could significantly accelerate their financial independence tracker before turning 30."
+    ],
+    "category": "finance",
+    "source": "LifeHacker Money",
+    "author": "Sarah Jenkins",
+    "date": "1 day ago",
+    "imageUrl": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&auto=format&fit=crop&q=80",
+    "keys": ["finance", "savings", "investment", "bank", "interest", "money", "sandbox"],
+    "likes": 1920,
+    "comments": [
+      {
+        "id": "c102",
+        "user": "CompoundInterestFan",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Finally, a place to dump my emergency fund where it won't just rot. Moving my money tomorrow.",
+        "time": "18 hours ago"
+      }
+    ],
+    "isHero": true,
+    "readTime": "4 min read",
+    "trending": true
+  },
+  {
+    "id": "wanderlust-sandbox-agency",
+    "title": "Escape the Sandbox: New 'Wanderlust' Travel Agency Promises Personalized Life-Leave Blueprints",
+    "summary": "Feeling burnt out by the 9-to-5 grind? A boutique agency in town is mapping out custom journeys to explore the world beyond Sandbox borders.",
+    "content": [
+      "SANDBOX — For those who feel the walls of Sandbox closing in after months of endless corporate tasks, a new startup called 'Wanderlust Itineraries' has opened its doors on Maple Street. Its mission? To help citizens curate customized travel experiences that offer a perspective on life outside the simulation.",
+      "Wanderlust doesn't just book flights; they use personality quizzes and stress-level evaluations to build personalized 'sabbatical blueprints.' Whether it's a 3-day digital detox in the mountain ranges or a month-long cultural immersion, the plans focus heavily on mental restoration.",
+      "Agency founder Marcus Vance noted: 'We see so many 25-year-olds entering the workforce who immediately burn out because they think Sandbox is the entire universe. There is a massive world out there. Sometimes, taking a planned break actually advances your career more than grinding through the weekend.'",
+      "The agency also partners with local HR departments to promote 'well-being leaves,' allowing workers to pause their career progression counters temporarily without losing their job security."
+    ],
+    "category": "travel",
+    "source": "LifeHacker Lifestyle",
+    "author": "Marcus Vance",
+    "date": "2 days ago",
+    "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=80",
+    "keys": ["travel", "burnout", "agency", "vacation", "mentalhealth", "sandbox"],
+    "likes": 650,
+    "comments": [
+      {
+        "id": "c103",
+        "user": "OvertimeSurvivor",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "I desperately need this. Booked a consultation. Sandbox's office lights are draining my soul.",
+        "time": "1 day ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "4 min read",
+    "trending": false
+  },
+  {
+    "id": "sandbox-side-hustle",
+    "title": "The Rise of the 'Side-Hustle Economy' in Sandbox: How Gen Z Workers are Making Extra Cash After 6 PM",
+    "summary": "From remote coding to artisanal candle making, young professionals are redefining the standard 40-hour work week.",
+    "content": [
+      "SANDBOX — The concept of a single, stable career path is shifting rapidly inside Sandbox. A recent survey conducted by LifeHacker reveals that over 43% of citizens aged 25-30 are operating a active 'side hustle' after completing their primary daytime office hours.",
+      "The trend is driven by two factors: the rising cost of living in Sandbox's downtown district, and a deep-seated desire for creative expression that corporate corporate structures rarely provide. Popular secondary roles include freelance asset design, online tutoring, and selling boutique goods via digital platforms.",
+      "Economic experts warn, however, of the hidden health costs. While an extra $800 a month drastically improves short-term purchasing power in the game, it severely limits the 'Energy' stat required for next-morning corporate performance.",
+      "Career advisor Liam Frost states: 'A side hustle is a double-edged sword. It accelerates early-game capital accumulation, but if you don't manage your stamina, you will face a severe burnout penalty before you hit your 30s.'"
+    ],
+    "category": "career",
+    "source": "LifeHacker Work",
+    "author": "Liam Frost",
+    "date": "12 hours ago",
+    "imageUrl": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&auto=format&fit=crop&q=80",
+    "keys": ["career", "sidehustle", "money", "hustle", "work", "burnout", "sandbox"],
+    "likes": 1530,
+    "comments": [
+      {
+        "id": "c104",
+        "user": "NoMoreOvertime",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Doing some freelance tech support after my main job. It's tough, but hey, rent in Sandbox isn't getting any cheaper.",
+        "time": "8 hours ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "3 min read",
+    "trending": true
+  },
+  {
+    "id": "sandbox-capsule-housing",
+    "title": "Sandbox Housing Micro-Trends: Are 'Capsule Co-Living' Spaces Worth the Lower Rent?",
+    "summary": "As standard apartment leases skyrocket, a new communal housing project offers ultra-budget rooms with shared amenities.",
+    "content": [
+      "SANDBOX — Rent prices in the Sandbox metropolitan sector have hit an all-time high this quarter, forcing fresh graduates and junior staff to reconsider their living arrangements. Enter 'The Hive' — Sandbox’s first massive Capsule Co-Living complex.",
+      "Located in the trendy industrial-turned-residential district, the building replaces traditional apartments with private, soundproofed sleeping pods. Kitchens, lounges, gym facilities, and high-speed working spaces are completely shared among the hundreds of residents.",
+      "The biggest selling point is the price tag: rent is exactly 40% lower than a standard studio apartment in town, effectively solving the initial budget crunch that most 25-year-old characters face upon moving into Sandbox.",
+      "However, psychologists note the psychological trade-offs. 'Living in a micro-space limits your long-term Mood recovery metrics,' warns Dr. Elena Rostova. 'It is fantastic for a fast financial start, but human beings eventually crave dedicated privacy as they mature into their 30s.'"
+    ],
+    "category": "lifestyle",
+    "source": "LifeHacker Housing",
+    "author": "Elena Rostova",
+    "date": "3 days ago",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1680367480804-12033b523184?w=800&auto=format&fit=crop&q=80",
+    "keys": ["housing", "rent", "budget", "coliving", "apartment", "sandbox", "lifestyle"],
+    "likes": 980,
+    "comments": [
+      {
+        "id": "c105",
+        "user": "StudioHunter",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Honestly, considering this for my first year just to hoard cash for that investment account mentioned in the other article.",
+        "time": "2 days ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "5 min read",
+    "trending": false
+  },
+  {
+    "id": "sandstone-university-night-school",
+    "title": "Level Up Your Career: Sandstone State University Launches Flexible Night School for Working Professionals",
+    "summary": "Whether you want a quick professional certificate or a part-time Master's degree, SSU's continuous education catalog is now open.",
+    "content": [
+      "SANDBOX — As the local job market becomes increasingly competitive, Sandstone State University (SSU) has officially expanded its Continuing Education Division, introducing a robust slate of evening programs tailored entirely for the 9-to-5 workforce.",
+      "The program allows Sandbox citizens to attend lectures after 7:00 PM, offering three distinct tracks: short-term professional certificates for immediate corporate skill boosts, continuous education courses for industry pivots, and accredited part-time Master's degrees.",
+      "Dean Robert Chen commented: 'Many 25-year-olds enter Sandbox's corporate ladder only to realize they lack the specialized credentials for management roles. This night school bridges that gap without requiring them to sacrifice their primary source of income.'",
+      "While the tuition fees require a careful look at your monthly budget, career data suggests that graduates from SSU's evening programs see an average 22% bump in their promotion velocity and intelligence-based career paths."
+    ],
+    "category": "career",
+    "source": "LifeHacker Work",
+    "author": "Robert Chen",
+    "date": "5 hours ago",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1724061886937-5f75a7907dcd?w=800&auto=format&fit=crop&q=80",
+    "keys": ["career", "education", "university", "degree", "promotion", "sandbox", "sandstone"],
+    "likes": 2105,
+    "comments": [
+      {
+        "id": "c201",
+        "user": "JuniorDev_Alpha",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Signing up for the Data Science Certificate. Goodbye to my weekday free time, hello to a potential promotion!",
+        "time": "4 hours ago"
+      }
+    ],
+    "isHero": true,
+    "readTime": "5 min read",
+    "trending": true
+  },
+  {
+    "id": "sandbox-community-volunteers",
+    "title": "Sandbox Community Center Seeks Weekend Volunteers: Give Back and Build Your Local Network",
+    "summary": "The town's primary social hub is looking for passionate citizens to assist with youth mentoring and elderly care programs.",
+    "content": [
+      "SANDBOX — The Sandbox Community Center has launched its annual winter volunteer recruitment drive, urging young professionals to donate a few hours of their weekend action blocks to local social causes.",
+      "Open positions include organizing after-school coding camps for teenagers, assisting at the regional food pantry, and hosting digital literacy workshops for elderly Sandbox residents. No prior experience is required, as the center provides full onboarding orientation.",
+      "Social workers highlight that while volunteering doesn't pay a direct financial salary, it drastically accelerates a character's local Reputation metric and builds deep relationships with influential town elders.",
+      "Volunteer Coordinator Clara Higgins added: 'It’s a fantastic antidote to corporate isolation. Spending two hours here on a Saturday morning completely resets your mental stress parameters.'"
+    ],
+    "category": "lifestyle",
+    "source": "LifeHacker Local",
+    "author": "Clara Higgins",
+    "date": "1 day ago",
+    "imageUrl": "https://images.unsplash.com/photo-1464863979621-258859e62245?w=800&auto=format&fit=crop&q=80",
+    "keys": ["community", "volunteer", "reputation", "lifestyle", "sandbox", "networking"],
+    "likes": 420,
+    "comments": [
+      {
+        "id": "c202",
+        "user": "KindHearted",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+        "text": "Did the youth mentoring last semester. Met some amazing people and honestly, it looked great on my CV.",
+        "time": "12 hours ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "3 min read",
+    "trending": false
+  },
+  {
+    "id": "downtown-free-hugs",
+    "title": "Chilling Winter, Warming Hearts: 'Free Hugs' Movement Takes Over Sandbox Downtown Square",
+    "summary": "A grassroots group of citizens is braving the winter cold to combat urban loneliness with a simple, impactful gesture.",
+    "content": [
+      "SANDBOX — If you are walking through the Downtown commercial district this week, you might notice a vibrant group of people holding bright cardboard signs offering free, warm embraces to stressed commuters.",
+      "The 'Free Hugs Sandbox' initiative was started by a group of local artists aimed at easing the seasonal depression and high anxiety levels often felt by young corporate workers during the grueling winter quarters.",
+      "Organizers state that urban loneliness peaks during this time of the year, especially for 20-somethings living away from their families for the first time in capsule apartments or studios.",
+      "Psychology reports on LifeHacker indicate that a 10-second embrace triggers an instant release of oxytocin, providing a massive, completely free boost to a character's Mood meter when walking past the square."
+    ],
+    "category": "lifestyle",
+    "source": "LifeHacker Culture",
+    "author": "Elena Rostova",
+    "date": "2 days ago",
+    "imageUrl": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&auto=format&fit=crop&q=80",
+    "keys": ["lifestyle", "winter", "mentalhealth", "mood", "downtown", "sandbox"],
+    "likes": 1890,
+    "comments": [
+      {
+        "id": "c203",
+        "user": "LonelyCommuter",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+        "text": "I was having a terrible day after a rough performance review, and this completely turned my week around. God bless them.",
+        "time": "1 day ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "2 min read",
+    "trending": true
+  },
+  {
+    "id": "sandbox-secondhand-furniture",
+    "title": "Skip the Showroom Prices: Sandbox's New Secondhand Furniture Depot Opens in Industrial Sector",
+    "summary": "Ditch the expensive retail chains; 'The Retro Nest' offers vintage, upcycled, and budget-friendly decor for first-time renters.",
+    "content": [
+      "SANDBOX — Furnishing a new apartment in downtown Sandbox usually means draining your early-career savings account. However, a massive new warehouse called 'The Retro Nest' is changing the game for budget-conscious citizens.",
+      "Located in the town's North Industrial Sector, the depot sources high-quality, pre-owned desks, sofas, and ergonomic office chairs, selling them at up to 70% off retail prices. Many items are upcycled by local designers, giving them a trendy, mid-century modern aesthetic.",
+      "Store manager Gary Vance said: 'You don't need a $3,000 designer couch to make your studio feel like home. Our customers are mostly 25-year-olds who just want a sturdy desk for their side-hustles and a comfortable bed that won't ruin their credit score.'",
+      "Interior design blogs note that shopping here fulfills a character's Home Comfort requirement perfectly without triggering the financial stress penalty caused by heavy credit card debt."
+    ],
+    "category": "lifestyle",
+    "source": "LifeHacker Housing",
+    "author": "Gary Vance",
+    "date": "3 days ago",
+    "imageUrl": "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&auto=format&fit=crop&q=80",
+    "keys": ["housing", "furniture", "budget", "apartment", "lifestyle", "sandbox", "saving"],
+    "likes": 950,
+    "comments": [
+      {
+        "id": "c204",
+        "user": "StudioHunter",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
+        "text": "Got an amazing solid oak drafting table here for fifty bucks. It has a few scratches, but it adds character!",
+        "time": "2 days ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "3 min read",
+    "trending": false
+  },
+  {
+    "id": "sandbox-first-asian-cuisine",
+    "title": "Massive Lineups Reported at 'Umami House', Sandbox's First Authentic Asian Fusion Restaurant",
+    "summary": "Foodies are braving two-hour wait times to try the town's highly anticipated handmade ramen and artisanal dim sum.",
+    "content": [
+      "SANDBOX — The culinary scene in Sandbox just took a major leap forward. This morning, 'Umami House' officially opened its doors on Eastern Avenue, marking the town’s first dedicated authentic Asian culinary establishment.",
+      "By noon, the queue wrapped completely around the block, with hungry office workers and food bloggers eagerly waiting to taste Master Chef Kenji Tanaka’s signature 18-hour broth ramen and delicate handmade dumplings.",
+      "The restaurant features an open-kitchen concept and mid-tier pricing, making it an attractive destination for weekend social gatherings or dating spots for Sandbox's younger demographic.",
+      "Food critics report that dining here gives an immediate, exceptional boost to a character's Satiety and Taste appreciation stats, though players should budget their time carefully to avoid waiting in lines during peak operational hours."
+    ],
+    "category": "lifestyle",
+    "source": "LifeHacker Lifestyle",
+    "author": "FoodieSam",
+    "date": "4 hours ago",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop&q=80",
+    "keys": ["food", "restaurant", "lifestyle", "asian", "ramen", "sandbox", "social"],
+    "likes": 1640,
+    "comments": [
+      {
+        "id": "c205",
+        "user": "RamenLover99",
+        "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80",
+        "text": "The spicy miso ramen is absolutely legendary. Totally worth the 90-minute wait in the cold!",
+        "time": "3 hours ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "3 min read",
+    "trending": true
+  },
+  {
+    "id": "banana-phone-launch",
+    "title": "Tech Frenzy: Hundreds Camp Overnight Outside Banana Store for the All-New Banana Phone 15 Pro",
+    "summary": "Tech enthusiasts and trend-chasers queue up on Maple Street to secure the latest flagship device featuring a titanium chassis.",
+    "content": [
+      "SANDBOX — The global tech hype has landed squarely in Sandbox. Tech giant Banana Inc. officially launched its next-generation smartphone, the Banana Phone 15 Pro, triggering massive overnight camping lines outside its flagship Maple Street retail store.",
+      "Equipped with a cutting-edge holographic display and an AI-driven lifestyle tracker, the device has become the ultimate status symbol among Sandbox's young tech and corporate elite, despite its eye-watering $1,299 starting price tag.",
+      "Financial columnists on LifeHacker have issued mild warnings, pointing out that buying the phone on launch day often requires entry-level workers to exhaust their emergency funds or rely heavily on high-interest monthly installments.",
+      "However, tech reviewer Leo TechTips claims: 'The social prestige and productivity metrics boost you get from pulling this out during a corporate boardroom meeting is undeniable. It's a luxury tax that many are willing to pay.'"
+    ],
+    "category": "news",
+    "source": "LifeHacker Tech",
+    "author": "Leo TechTips",
+    "date": "10 hours ago",
+    "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+    "keys": ["tech", "gadget", "banana", "phone", "launch", "status", "sandbox"],
+    "likes": 3240,
+    "comments": [
+      {
+        "id": "c206",
+        "user": "EarlyAdopter",
+        "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80",
+        "text": "Camped out since 10 PM yesterday and secured the Titanium Yellow model! My bank account hurts, but the screen is beautiful.",
+        "time": "6 hours ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "4 min read",
+    "trending": true
+  },
+  {
+    "id": "residential-charity-artshow",
+    "title": "Lemonade & Local Art: Sandbox Artists Guild Announces Neighborhood Charity Art Show Next Month",
+    "summary": "Grab a fresh drink and browse original works by local painters at this intimate, open-air community gallery.",
+    "content": [
+      "SANDBOX — Early next month, the quiet streets of the Sandbox Residential District will transform into a vibrant, open-air cultural gallery. The Sandbox Artists Guild has officially announced its upcoming 'Spring Awakening' Charity Art Show.",
+      "The event is uniquely decentralized, with local painters, sculptors, and photographers displaying their original works directly on front lawns, driveways, and community parks. Admission is entirely free, and local youths will be running old-school lemonade stands at every intersection, with all proceeds going to the town's homeless shelters.",
+      "Guild president Maya Lin stated: 'We wanted to pull fine art out of cold, intimidating downtown museums and bring it right to where people live. It's a casual, sunny weekend event where you can buy amazing local art and chat with your neighbors.'",
+      "Attending this event provides a relaxed, low-cost way to max out a character's Stress Relief counter and gives an opportunity to purchase affordable, original artwork to boost your home's aesthetic score."
+    ],
+    "category": "lifestyle",
+    "source": "LifeHacker Culture",
+    "author": "Maya Lin",
+    "date": "3 days ago",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
+    "keys": ["art", "community", "lifestyle", "charity", "weekend", "sandbox", "culture"],
+    "likes": 710,
+    "comments": [
+      {
+        "id": "c207",
+        "user": "ArtLover_Sandbox",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80",
+        "text": "This sounds wonderful! Definitely taking a walk through the residential area next month. And I can never say no to fresh lemonade.",
+        "time": "2 days ago"
+      }
+    ],
+    "isHero": false,
+    "readTime": "3 min read",
+    "trending": false
   }
 ]

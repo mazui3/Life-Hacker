@@ -297,62 +297,7 @@ export default function NewsFeed({
             ))}
           </div>
 
-          {/* Top News Stream list */}
-          <div className="space-y-4" id="news-stream-list">
-            <h3 className="text-sm font-extrabold text-neutral-900 tracking-tight uppercase border-b border-neutral-100 pb-3 mb-2 text-left">
-              Today's Top Stories
-            </h3>
 
-            {streamStories.slice(2).map((story) => (
-              <div
-                key={story.id}
-                onClick={() => onSelectArticle(story.id)}
-                className="bento-item p-4 flex flex-col sm:flex-row gap-4 items-start text-left group cursor-pointer"
-                id={`stream-card-${story.id}`}
-              >
-                <div className="w-full sm:w-1/3 aspect-[16/10] sm:aspect-square rounded-xl bg-neutral-50 overflow-hidden flex-shrink-0">
-                  <img
-                    src={story.imageUrl}
-                    alt={story.title}
-                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="flex-1 flex flex-col justify-between h-full space-y-2">
-                  <div className="space-y-1.5">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-[10px] font-extrabold text-[#6001d2] uppercase tracking-widest">
-                        {story.category}
-                      </span>
-                      <span className="text-neutral-300">•</span>
-                      <span className="text-[11px] text-neutral-400 font-semibold">{story.source}</span>
-                    </div>
-                    <h3 className="text-base font-extrabold text-neutral-850 leading-snug group-hover:text-[#6001d2] transition-colors">
-                      {story.title}
-                    </h3>
-                    <p className="text-xs text-neutral-500 line-clamp-2 leading-relaxed">
-                      {story.summary}
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between text-[11px] text-neutral-400 pt-1.5">
-                    <span>{story.date} • {story.readTime}</span>
-                    <span className="flex items-center space-x-2.5">
-                      <span className="flex items-center space-x-1">
-                        <ThumbsUp className="w-3 h-3 text-[#6001d2]" />
-                        <span>{story.likes}</span>
-                      </span>
-                      {story.comments.length > 0 && (
-                        <span className="flex items-center space-x-1">
-                          <MessageSquare className="w-3 h-3 text-[#6001d2]" />
-                          <span>{story.comments.length}</span>
-                        </span>
-                      )}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
 
         </div>
 
