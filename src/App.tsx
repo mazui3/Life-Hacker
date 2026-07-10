@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import { Sparkles, MessageSquare, HelpCircle, Landmark, Compass, Gamepad2, Heart, Award } from "lucide-react";
 import { Article, WeatherData } from "./types";
 import { articlesData, weatherProfiles } from "./data/mockData";
-import { getKeywordCategory, parseStats } from "./data/keywordCategories";
+import { getKeywordCategory, parseStats, findHitKeyword } from "./data/keywordCategories";
 
 // Components
 import Header from "./components/Header";
@@ -95,14 +95,23 @@ export default function App() {
   const recordSearchInPlayFab = async (query: string) => {
     if (!query.trim() || !playerId) return;
 
-    const category = getKeywordCategory(query);
-    const normalizedQuery = query.trim().toLowerCase();
+    // Check if there is a registered keyword hit
+    const hit = findHitKeyword(query);
+    if (!hit) {
+      console.log(`查询 "${query}" 未命中任何注册关键词，不会同步到 PlayFab。`);
+      return;
+    }
+
+    const category = getKeywordCategory(hit);
+    const normalizedKeyword = hit.trim().toLowerCase();
+
+    console.log(`查询 "${query}" 命中了注册关键词: [${normalizedKeyword}] (分类: ${category})。正在同步至 PlayFab...`);
 
     // Optimistic local update
     setSearchStats((prev) => {
       const copy = { ...prev };
       copy[category] = (copy[category] || 0) + 1;
-      copy[normalizedQuery] = (copy[normalizedQuery] || 0) + 1;
+      copy[normalizedKeyword] = (copy[normalizedKeyword] || 0) + 1;
       return copy;
     });
 
@@ -111,18 +120,18 @@ export default function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Authorization": sessionTicket,
         },
         body: JSON.stringify({
           action: "update_stats",
           playFabId: playerId,
-          keyword: normalizedQuery,
+          keyword: normalizedKeyword,
           category: category,
         }),
       });
       const data = await response.json();
       if (response.ok && data.success) {
         setSearchStats(parseStats(data.stats));
+        console.log(`已成功在 PlayFab 中为 [${normalizedKeyword}] 搜索次数加1！`);
       }
     } catch (err) {
       console.error("Failed to sync search stats to PlayFab:", err);
@@ -138,6 +147,8 @@ export default function App() {
       setShowSignInRequired(true);
       return;
     }
+    // Set selected article to null so search results are shown even if they were reading an article
+    setSelectedArticleId(null);
     setSearchQuery(query);
     recordSearchInPlayFab(query);
   };
@@ -181,7 +192,12 @@ export default function App() {
   // Search Matching Algorithm
   const filteredSearchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
-    const query = searchQuery.toLowerCase().trim();
+    
+    // Check if there is a registered keyword hit
+    const hit = findHitKeyword(searchQuery);
+    // If we hit a registered keyword, we filter articles by that registered keyword.
+    // Otherwise, we fallback to filtering by the raw searchQuery.
+    const query = hit ? hit.toLowerCase().trim() : searchQuery.toLowerCase().trim();
 
     return articles.filter((art) => {
       // Check title
@@ -245,7 +261,7 @@ export default function App() {
           setShowSignInInput(true);
         }}
         onShowPlayerId={() => setShowPlayerId(true)}
-        isSearchDisabled={!!selectedArticleId}
+        isSearchDisabled={!playerId}
       />
 
       <main className="max-w-7xl mx-auto px-4 mt-2">
@@ -311,7 +327,7 @@ export default function App() {
 
       {/* Footer copyright */}
       <footer className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-neutral-200 text-center text-xs text-neutral-500 space-y-2">
-        <p>© 2026 Life Hacker Client Corporation. All rights reserved. Simulated for demo representation.</p>
+        <p>© 2026 Life Hacker Client Corporation. All rights reserved.</p>
       </footer>
 
       {/* Custom authentication modals */}
@@ -322,7 +338,7 @@ export default function App() {
               LifeHacker! Client Sign In
             </h3>
             <p className="text-xs text-neutral-500 leading-relaxed font-medium">
-              Please enter your Player ID to enable interactive mock layouts and premium feeds.
+              Please enter your ID to enable interactive mock layouts and premium feeds.
             </p>
             <div>
               <input

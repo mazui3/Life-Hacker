@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowLeft, Search, ThumbsUp, Calendar, ArrowRight, CornerDownRight } from "lucide-react";
 import { Article } from "../types";
+import { findHitKeyword } from "../data/keywordCategories";
 
 interface SearchResultsProps {
   query: string;
@@ -18,6 +19,7 @@ export default function SearchResults({
   onSearchKeyClick,
 }: SearchResultsProps) {
   const recommendations = ["solar", "fusion", "spy", "olympics", "esports", "gemini", "wellness"];
+  const hitKeyword = findHitKeyword(query);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6 font-sans text-left" id="search-results-viewport">
@@ -32,10 +34,17 @@ export default function SearchResults({
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Clear Search & Back to Feed</span>
           </button>
-          <h2 className="text-xl font-extrabold text-neutral-900 flex items-center space-x-2">
-            <Search className="w-5 h-5 text-[#6001d2]" />
-            <span>Search results for "{query}"</span>
-          </h2>
+          <div className="flex flex-wrap items-center gap-2">
+            <h2 className="text-xl font-extrabold text-neutral-900 flex items-center space-x-2">
+              <Search className="w-5 h-5 text-[#6001d2]" />
+              <span>Search results for "{query}"</span>
+            </h2>
+            {hitKeyword && (
+              <span className="text-[11px] bg-purple-100 text-[#6001d2] font-extrabold px-3 py-1 rounded-full border border-purple-200">
+                Keyword Hit: #{hitKeyword}
+              </span>
+            )}
+          </div>
         </div>
         <span className="text-xs text-neutral-400 font-mono">
           Found {results.length} matching stories
@@ -108,14 +117,18 @@ export default function SearchResults({
                   </p>
                 </div>
 
-                {/* Keyword Highlights match */}
+                 {/* Keyword Highlights match */}
                 <div className="flex items-center space-x-1 pt-1">
                   <CornerDownRight className="w-3.5 h-3.5 text-purple-400" />
                   <span className="text-[10px] text-neutral-400 font-semibold uppercase mr-1">Matches:</span>
                   <div className="flex flex-wrap gap-1">
                     {art.keys.map((k) => {
                       const lowerQuery = query.toLowerCase();
-                      const isMatch = k.toLowerCase().includes(lowerQuery) || art.title.toLowerCase().includes(lowerQuery);
+                      const lowerHit = hitKeyword ? hitKeyword.toLowerCase() : "";
+                      const isMatch = 
+                        k.toLowerCase().includes(lowerQuery) || 
+                        art.title.toLowerCase().includes(lowerQuery) ||
+                        (lowerHit && (k.toLowerCase().includes(lowerHit) || art.title.toLowerCase().includes(lowerHit)));
                       return (
                         <span
                           key={k}

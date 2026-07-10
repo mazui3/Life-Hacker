@@ -129,6 +129,22 @@ export function getKeywordCategory(keyword: string): string {
   return "news";
 }
 
+export function findHitKeyword(query: string): string | null {
+  const normalizedQuery = query.toLowerCase().trim();
+  if (!normalizedQuery) return null;
+
+  // Sort keywords by length descending so we match the most specific/longest keywords first
+  const sortedKeywords = Object.keys(keywordCategoryMap).sort((a, b) => b.length - a.length);
+
+  for (const keyword of sortedKeywords) {
+    if (normalizedQuery.includes(keyword.toLowerCase())) {
+      return keyword;
+    }
+  }
+
+  return null;
+}
+
 // Client helper to parse stats
 export function parseStats(statsStr: string): Record<string, number> {
   const result: Record<string, number> = {};

@@ -89,7 +89,7 @@ export default function Header({
           <div className="relative flex items-center">
             <input
               type="text"
-              placeholder={isSearchDisabled ? "Search is unavailable in article reading view" : "Search custom articles by keywords (e.g. fusion, spy, esports)..."}
+              placeholder={isSearchDisabled ? "Please sign in to search custom articles..." : "Search custom articles by keywords (e.g. fusion, spy, esports)..."}
               value={isSearchDisabled ? "" : searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               disabled={isSearchDisabled}
