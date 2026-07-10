@@ -24,173 +24,79 @@ function serializeStats(stats) {
 }
 
 export const handler = async (event, context) => {
-  // CORS Headers
   const headers = {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type, X-Authorization",
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Content-Type": "application/json",
   };
 
-  // Handle preflight OPTIONS request
   if (event.httpMethod === "OPTIONS") {
-    return {
-      statusCode: 200,
-      headers,
-      body: ""
-    };
+    return { statusCode: 200, headers, body: "" };
   }
 
   try {
-    const titleId = process.env.PLAYFAB_TITLE_ID || "F6CF6"; // Fallback Title ID if not set
-    const secretKey = process.env.PLAYFAB_SECRET_KEY; // Optional secret key
+    const titleId = process.env.PLAYFAB_TITLE_ID || "F6CF6";
+    const secretKey = process.env.PLAYFAB_SECRET_KEY; // 必须在 Netlify 后台配置好
 
-    // 打印日志，方便我们在 Netlify 部署面板或本地终端一眼看出问题
-    console.log("收到的原始 Body:", event.body);
+    const body = event.body ? JSON.parse(event.body) : {};
+    const { action, playFabId } = body; // 👈 统一改为接收前端传来的 playFabId
 
-    let body = {};
-    if (event.body) {
-      try {
-        // 如果原本就是对象，直接用；如果是字符串，才去 parse
-        body = typeof event.body === "string" ? JSON.parse(event.body) : event.body;
-      } catch (parseError) {
-        return {
-          statusCode: 400,
-          headers,
-          body: JSON.stringify({ success: false, error: "JSON 解析失败: " + parseError.message, raw: event.body }),
-        };
-      }
-    }
-    const { action } = body;
-
-    if (!action) {
+    if (!action || !playFabId) {
       return {
         statusCode: 400,
         headers,
-        body: JSON.stringify({
-          success: false,
-          error: "Missing action in request body",
-          debugReceivedBody: body, // 👈 把收到的东西原封不动丢回给前端，让我们在浏览器里看看它到底收到了啥
-          debugRawBody: event.body
-        }),
+        body: JSON.stringify({ success: false, error: "Missing action or playFabId" }),
       };
     }
 
-    if (action === "login") {
-      const { customId } = body;
-      if (!customId) {
-        return {
-          statusCode: 400,
-          headers,
-          body: JSON.stringify({ success: false, error: "Missing customId" }),
-        };
-      }
-
-      // Call PlayFab Client/LoginWithCustomID
-      const response = await fetch(`https://${titleId}.playfabapi.com/Client/LoginWithCustomID`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          TitleId: titleId,
-          CustomId: customId,
-          CreateAccount: false,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.code === 200 && data.status === "OK") {
-        return {
-          statusCode: 200,
-          headers,
-          body: JSON.stringify({
-            success: true,
-            sessionTicket: data.data.SessionTicket,
-            playFabId: data.data.PlayFabId,
-          }),
-        };
-      } else {
-        return {
-          statusCode: 400,
-          headers,
-          body: JSON.stringify({
-            success: false,
-            error: data.errorMessage || "PlayFab login failed",
-            details: data,
-          }),
-        };
-      }
-    }
-
+    // 1. 获取 Unity 玩家在 PlayFab 上的数据
     if (action === "get_stats") {
-      const sessionTicket = event.headers["x-authorization"] || event.headers["X-Authorization"] || body.sessionTicket;
-      if (!sessionTicket) {
-        return {
-          statusCode: 400,
-          headers,
-          body: JSON.stringify({ success: false, error: "Missing Session Ticket" }),
-        };
-      }
-
-      // Call PlayFab Client/GetUserData
-      const response = await fetch(`https://${titleId}.playfabapi.com/Client/GetUserData`, {
+      // 💡 注意：这里改用了 Server 端的 API (Server/GetUserData)
+      const response = await fetch(`https://${titleId}.playfabapi.com/Server/GetUserData`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Authorization": sessionTicket,
-          'X-SecretKey': process.env.PLAYFAB_SECRET_KEY
+          "X-SecretKey": secretKey // 👈 使用管理员密钥鉴权
         },
         body: JSON.stringify({
+          PlayFabId: playFabId, // 👈 直接用 Unity 那个 ID 查
           Keys: ["search_stats"],
         }),
       });
 
       const data = await response.json();
 
-      if (response.ok && data.code === 200 && data.status === "OK") {
+      if (response.ok && data.code === 200) {
         const userData = data.data.Data || {};
         const searchStatsStr = userData.search_stats ? userData.search_stats.Value : "";
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({
-            success: true,
-            stats: searchStatsStr,
-          }),
+          body: JSON.stringify({ success: true, stats: searchStatsStr }),
         };
       } else {
         return {
           statusCode: 400,
           headers,
-          body: JSON.stringify({
-            success: false,
-            error: data.errorMessage || "Failed to fetch user stats",
-          }),
+          body: JSON.stringify({ success: false, error: data.errorMessage || "Failed to fetch user stats" }),
         };
       }
     }
 
+    // 2. 修改/递增 Unity 玩家在 PlayFab 上的数据
     if (action === "update_stats") {
-      const sessionTicket = event.headers["x-authorization"] || event.headers["X-Authorization"] || body.sessionTicket;
       const { keyword, category } = body;
 
-      if (!sessionTicket) {
-        return {
-          statusCode: 400,
-          headers,
-          body: JSON.stringify({ success: false, error: "Missing Session Ticket" }),
-        };
-      }
-
-      // 1. Fetch current user data
-      const getResponse = await fetch(`https://${titleId}.playfabapi.com/Client/GetUserData`, {
+      // 先获取当前数据
+      const getResponse = await fetch(`https://${titleId}.playfabapi.com/Server/GetUserData`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Authorization": sessionTicket,
-          'X-SecretKey': process.env.PLAYFAB_SECRET_KEY
+          "X-SecretKey": secretKey
         },
         body: JSON.stringify({
+          PlayFabId: playFabId,
           Keys: ["search_stats"],
         }),
       });
@@ -198,72 +104,50 @@ export const handler = async (event, context) => {
       const getData = await getResponse.json();
       let statsMap = {};
 
-      if (getResponse.ok && getData.code === 200 && getData.status === "OK") {
+      if (getResponse.ok && getData.code === 200) {
         const userData = getData.data.Data || {};
         const searchStatsStr = userData.search_stats ? userData.search_stats.Value : "";
         statsMap = parseStats(searchStatsStr);
       }
 
-      // 2. Increment counts
-      if (category) {
-        const catKey = category.toLowerCase().trim();
-        statsMap[catKey] = (statsMap[catKey] || 0) + 1;
-      }
-      if (keyword) {
-        const kwKey = keyword.toLowerCase().trim();
-        statsMap[kwKey] = (statsMap[kwKey] || 0) + 1;
-      }
+      // 递增计数
+      if (category) statsMap[category.toLowerCase().trim()] = (statsMap[category.toLowerCase().trim()] || 0) + 1;
+      if (keyword) statsMap[keyword.toLowerCase().trim()] = (statsMap[keyword.toLowerCase().trim()] || 0) + 1;
 
       const updatedStatsStr = serializeStats(statsMap);
 
-      // 3. Save back to PlayFab Client/UpdateUserData
-      const updateResponse = await fetch(`https://${titleId}.playfabapi.com/Client/UpdateUserData`, {
+      // 💡 注意：这里改用了 Server 端的 API (Server/UpdateUserData)
+      const updateResponse = await fetch(`https://${titleId}.playfabapi.com/Server/UpdateUserData`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "X-Authorization": sessionTicket,
-          'X-SecretKey': process.env.PLAYFAB_SECRET_KEY
+          "X-SecretKey": secretKey
         },
         body: JSON.stringify({
-          Data: {
-            search_stats: updatedStatsStr,
-          },
+          PlayFabId: playFabId, // 👈 锁定该 Unity 玩家
+          Data: { search_stats: updatedStatsStr },
         }),
       });
 
       const updateData = await updateResponse.json();
 
-      if (updateResponse.ok && updateData.code === 200 && updateData.status === "OK") {
+      if (updateResponse.ok && updateData.code === 200) {
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({
-            success: true,
-            stats: updatedStatsStr,
-          }),
+          body: JSON.stringify({ success: true, stats: updatedStatsStr }),
         };
       } else {
         return {
           statusCode: 400,
           headers,
-          body: JSON.stringify({
-            success: false,
-            error: updateData.errorMessage || "Failed to update user stats",
-          }),
+          body: JSON.stringify({ success: false, error: updateData.errorMessage || "Failed to update user stats" }),
         };
       }
     }
 
-    return {
-      statusCode: 400,
-      headers,
-      body: JSON.stringify({ success: false, error: "Invalid action" }),
-    };
+    return { statusCode: 400, headers, body: JSON.stringify({ success: false, error: "Invalid action" }) };
   } catch (error) {
-    return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({ success: false, error: error.message || "Internal server error" }),
-    };
+    return { statusCode: 500, headers, body: JSON.stringify({ success: false, error: error.message }) };
   }
 };
