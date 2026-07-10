@@ -37,21 +37,42 @@ export const handler = async (event, context) => {
     return {
       statusCode: 200,
       headers,
-      body: "",
+      body: ""
     };
   }
 
   try {
     const titleId = process.env.PLAYFAB_TITLE_ID || "F6CF6"; // Fallback Title ID if not set
     const secretKey = process.env.PLAYFAB_SECRET_KEY; // Optional secret key
-    const body = event.body ? JSON.parse(event.body) : {};
+
+    // 打印日志，方便我们在 Netlify 部署面板或本地终端一眼看出问题
+    console.log("收到的原始 Body:", event.body);
+
+    let body = {};
+    if (event.body) {
+      try {
+        // 如果原本就是对象，直接用；如果是字符串，才去 parse
+        body = typeof event.body === "string" ? JSON.parse(event.body) : event.body;
+      } catch (parseError) {
+        return {
+          statusCode: 400,
+          headers,
+          body: JSON.stringify({ success: false, error: "JSON 解析失败: " + parseError.message, raw: event.body }),
+        };
+      }
+    }
     const { action } = body;
 
     if (!action) {
       return {
         statusCode: 400,
         headers,
-        body: JSON.stringify({ success: false, error: "Missing action in request body" }),
+        body: JSON.stringify({
+          success: false,
+          error: "Missing action in request body",
+          debugReceivedBody: body, // 👈 把收到的东西原封不动丢回给前端，让我们在浏览器里看看它到底收到了啥
+          debugRawBody: event.body
+        }),
       };
     }
 
