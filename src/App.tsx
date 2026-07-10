@@ -24,23 +24,78 @@ export default function App() {
   const [isLoginLoading, setIsLoginLoading] = useState(false);
 
   // PlayFab Login and fetch stats effect
+  // useEffect(() => {
+  //   if (!playerId) return;
+  //
+  //   async function loginToPlayFab() {
+  //     setIsLoginLoading(true);
+  //     try {
+  //       const response = await fetch("/.netlify/functions/playfab", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({ action: "login", customId: playerId }),
+  //       });
+  //       const data = await response.json();
+  //       if (response.ok && data.success) {
+  //         setSessionTicket(data.sessionTicket);
+  //         console.log("PlayFab Login Successful", data);
+  //
+  //         // Fetch stats
+  //         const statsResponse = await fetch("/.netlify/functions/playfab", {
+  //           method: "POST",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //             "X-Authorization": data.sessionTicket,
+  //           },
+  //           body: JSON.stringify({ action: "get_stats" }),
+  //         });
+  //         const statsData = await statsResponse.json();
+  //         if (statsResponse.ok && statsData.success) {
+  //           const parsed = parseStats(statsData.stats);
+  //           setSearchStats(parsed);
+  //           console.log("Loaded search statistics:", parsed);
+  //         }
+  //       } else {
+  //         console.error("登陆失败", data.error || data);
+  //       }
+  //     } catch (err) {
+  //       console.error("登陆失败", err);
+  //     } finally {
+  //       setIsLoginLoading(false);
+  //     }
+  //   }
+  //
+  //   loginToPlayFab();
+  // }, [playerId]);
+  
+  // 引入一个 Ref 用来做请求锁
+  const isLoginingRef = React.useRef(false);
+
+  // PlayFab Login and fetch stats effect
   useEffect(() => {
-    if (!playerId) return;
+    // 如果没有 ID，或者当前已经在登录中了，直接拦截，拒绝重复发送！
+    if (!playerId || isLoginingRef.current) return;
 
     async function loginToPlayFab() {
+      isLoginingRef.current = true; // 🔒 立即上锁
       setIsLoginLoading(true);
+
       try {
+        console.log("发起 PlayFab 登录请求...");
         const response = await fetch("/.netlify/functions/playfab", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ action: "login", customId: playerId }),
         });
+
         const data = await response.json();
+
         if (response.ok && data.success) {
           setSessionTicket(data.sessionTicket);
           console.log("PlayFab Login Successful", data);
 
-          // Fetch stats
+          // 延迟或确保隔离地去拿 Stats
+          console.log("开始获取玩家统计数据...");
           const statsResponse = await fetch("/.netlify/functions/playfab", {
             method: "POST",
             headers: {
@@ -49,19 +104,24 @@ export default function App() {
             },
             body: JSON.stringify({ action: "get_stats" }),
           });
+
           const statsData = await statsResponse.json();
           if (statsResponse.ok && statsData.success) {
             const parsed = parseStats(statsData.stats);
             setSearchStats(parsed);
             console.log("Loaded search statistics:", parsed);
+          } else {
+            console.error("获取 Stats 失败:", statsData.error || statsData);
           }
         } else {
-          console.error("登陆失败", data.error || data);
+          console.error("登录失败，后台返回：", data.error || data);
         }
       } catch (err) {
-        console.error("登陆失败", err);
+        console.error("网络请求发生硬错误：", err);
       } finally {
         setIsLoginLoading(false);
+        // 注意：这里不要轻易解锁 `isLoginingRef.current = false`，
+        // 因为单页应用初始化只需要登录一次。这样能彻底焊死死循环的可能！
       }
     }
 
@@ -97,10 +157,10 @@ export default function App() {
 
   const recordSearchInPlayFab = async (query: string) => {
     if (!query.trim() || !sessionTicket) return;
-    
+
     const category = getKeywordCategory(query);
     const normalizedQuery = query.trim().toLowerCase();
-    
+
     // Optimistic local update
     setSearchStats((prev) => {
       const copy = { ...prev };
@@ -234,7 +294,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f0f2f5] text-neutral-900 font-sans antialiased pb-12 transition-colors duration-300">
-      
+
       {/* Header component */}
       <Header
         onSearch={handleSearch}
