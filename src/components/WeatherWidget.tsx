@@ -1,7 +1,7 @@
 import React from "react";
 import { MapPin, ChevronRight, Sun } from "lucide-react";
 import { MonthlyWeatherDay } from "../types";
-import { DEFAULT_MONTHLY_WEATHER, getWeatherConditionInfo } from "../data/mockWeather";
+import { DEFAULT_MONTHLY_WEATHER, getWeatherConditionInfo, parseDateToRead } from "../data/mockWeather";
 
 interface WeatherWidgetProps {
   monthlyWeather?: MonthlyWeatherDay[];
@@ -19,6 +19,10 @@ export default function WeatherWidget({
   const prognosis5Days = weatherList.slice(0, 5);
 
   const formatDateStr = (dayObj: MonthlyWeatherDay) => {
+    if (dayObj.dateToRead) {
+      const { monthDayStr } = parseDateToRead(dayObj.dateToRead);
+      return monthDayStr;
+    }
     if (dayObj.date) {
       const d = new Date(dayObj.date * 1000);
       if (!isNaN(d.getTime())) {

@@ -62,7 +62,7 @@ export const handler = async (event, context) => {
         },
         body: JSON.stringify({
           PlayFabId: playFabId, // 👈 直接用 Unity 那个 ID 查
-          Keys: ["search_stats", "search_cate", "game_time", "game_timestamp", "timestamp", "time_stamp", "weather_data", "weather", "forecast", "weather_forecast"],
+          Keys: ["search_stats", "search_cate", "game_time", "game_timestamp", "timestamp", "time_stamp", "weather_data", "weather", "forecast", "weather_forecast", "player_state"],
         }),
       });
 
@@ -74,10 +74,18 @@ export const handler = async (event, context) => {
         const searchCateStr = userData.search_cate ? userData.search_cate.Value : "";
         const gameTimeVal = (userData.game_time || userData.game_timestamp || userData.timestamp || userData.time_stamp)?.Value || "";
         const weatherVal = (userData.weather_data || userData.weather || userData.forecast || userData.weather_forecast)?.Value || "";
+        const playerStateVal = userData.player_state ? userData.player_state.Value : "";
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({ success: true, stats: searchStatsStr, cate: searchCateStr, gameTime: gameTimeVal, weatherData: weatherVal }),
+          body: JSON.stringify({
+            success: true,
+            stats: searchStatsStr,
+            cate: searchCateStr,
+            gameTime: gameTimeVal,
+            weatherData: weatherVal,
+            playerState: playerStateVal,
+          }),
         };
       } else {
         return {

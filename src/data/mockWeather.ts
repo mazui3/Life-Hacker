@@ -1,4 +1,68 @@
 import { MonthlyWeatherDay } from "../types";
+import tableTbWeather from "./table_tbweather.json";
+
+// Helper to parse integer YYYYMMDD dateToRead into year, month, day components safely without timezone offsets
+export function parseDateToRead(dateToRead: number | string) {
+  const str = String(dateToRead).padStart(8, "0");
+  const year = parseInt(str.substring(0, 4), 10) || 2025;
+  const month = parseInt(str.substring(4, 6), 10) || 1;
+  const day = parseInt(str.substring(6, 8), 10) || 1;
+  const yearMonthKey = Math.floor(Number(dateToRead) / 100);
+  return {
+    year,
+    month,
+    day,
+    monthDayStr: `${month}/${day}`,
+    yearMonthKey,
+  };
+}
+
+// Get all weather records for the specific month given a target dateToRead (e.g. 20250201)
+export function getMonthlyWeatherForDateToRead(targetDateNum: number | string): MonthlyWeatherDay[] {
+  let dateVal = Number(targetDateNum);
+  if (isNaN(dateVal) || dateVal <= 0) {
+    dateVal = 20250101;
+  }
+
+  // If passed an 8-digit date like 20250201, extract year-month key 202502
+  const targetYearMonth = dateVal > 1000000 ? Math.floor(dateVal / 100) : dateVal;
+
+  const matched = (tableTbWeather as MonthlyWeatherDay[]).filter((item) => {
+    if (!item.dateToRead) return false;
+    const itemYM = Math.floor(item.dateToRead / 100);
+    return itemYM === targetYearMonth;
+  });
+
+  if (matched.length > 0) {
+    return matched;
+  }
+
+  // Fallback: return January 2025 data if target month isn't found
+  return (tableTbWeather as MonthlyWeatherDay[]).filter(
+    (item) => item.dateToRead && Math.floor(item.dateToRead / 100) === 202501
+  );
+}
+
+// Helper to safely parse PlayFab player_state JSON or object
+export function parsePlayerState(rawPlayerState: any): { date?: number; major?: number; statuses?: number[] } | null {
+  if (!rawPlayerState) return null;
+  try {
+    let parsed = rawPlayerState;
+    if (typeof rawPlayerState === "string") {
+      parsed = JSON.parse(rawPlayerState);
+    }
+    if (parsed && typeof parsed === "object") {
+      return {
+        date: typeof parsed.date === "number" ? parsed.date : (parsed.date ? Number(parsed.date) : undefined),
+        major: typeof parsed.major === "number" ? parsed.major : undefined,
+        statuses: Array.isArray(parsed.statuses) ? parsed.statuses : undefined,
+      };
+    }
+  } catch (err) {
+    console.warn("Failed to parse player_state JSON:", err);
+  }
+  return null;
+}
 
 // Helper to map integer weatherCondition to label, icon, and colors
 // WeatherCondition Enum:
@@ -154,6 +218,7 @@ export function parsePlayFabWeatherData(raw: any): MonthlyWeatherDay[] {
       return parsed.map((item, idx) => ({
         id: typeof item.id === "number" ? item.id : idx,
         date: Number(item.date) || (1735660800 + idx * 86400),
+        dateToRead: typeof item.dateToRead === "number" ? item.dateToRead : (item.dateToRead ? Number(item.dateToRead) : undefined),
         DayofWeek: typeof item.DayofWeek === "number" ? item.DayofWeek : (3 + idx) % 7,
         isDayOff: Boolean(item.isDayOff),
         ifIsHoliday: item.ifIsHoliday || item.if_is_holiday || item.holiday || "",

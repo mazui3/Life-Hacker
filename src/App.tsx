@@ -3,7 +3,7 @@ import { Sparkles, MessageSquare, HelpCircle, Landmark, Compass, Gamepad2, Heart
 import { Article, WeatherData, MonthlyWeatherDay } from "./types";
 import { articlesData, weatherProfiles } from "./data/mockData";
 import { getKeywordCategory, parseStats, findHitKeyword } from "./data/keywordCategories";
-import { DEFAULT_MONTHLY_WEATHER, parsePlayFabWeatherData } from "./data/mockWeather";
+import { DEFAULT_MONTHLY_WEATHER, parsePlayFabWeatherData, getMonthlyWeatherForDateToRead, parsePlayerState } from "./data/mockWeather";
 
 // Components
 import Header from "./components/Header";
@@ -61,10 +61,30 @@ export default function App() {
           const userGameTime = data.gameTime || "2025-01-01";
           setGameTime(userGameTime);
 
-          if (data.weatherData) {
+          // 1. 尝试读取 player_state 中的 date (如 20250201)
+          const playerStateObj = parsePlayerState(data.playerState);
+          let targetDateNum: number | undefined = playerStateObj?.date;
+
+          // 2. 如果 player_state 没有 date，从 userGameTime ("2025-01-01") 提取 dateToRead 数字
+          if (!targetDateNum) {
+            const digits = userGameTime.replace(/[^0-9]/g, "");
+            if (digits.length >= 8) {
+              targetDateNum = parseInt(digits.substring(0, 8), 10);
+            }
+          }
+
+          // 3. 读取 table_tbweather.json 中本月的所有天气预测
+          if (targetDateNum) {
+            const monthWeather = getMonthlyWeatherForDateToRead(targetDateNum);
+            setMonthlyWeather(monthWeather);
+            console.log(`🎮 [PlayFab player_state] 读取 PlayFab dateToRead (${targetDateNum}), 加载本月 (${Math.floor(targetDateNum / 100)}) 天气预测 (共 ${monthWeather.length} 天):`, monthWeather);
+          } else if (data.weatherData) {
             const parsedWeather = parsePlayFabWeatherData(data.weatherData);
             setMonthlyWeather(parsedWeather);
             console.log("🎮 [PlayFab Weather] 成功同步 PlayFab 玩家天气数据 (共", parsedWeather.length, "天):", parsedWeather);
+          } else {
+            const defaultMonthWeather = getMonthlyWeatherForDateToRead(20250101);
+            setMonthlyWeather(defaultMonthWeather);
           }
 
           console.log("成功同步 Unity 玩家的 PlayFab 统计数据:", parsed, "分类搜索统计数据:", parsedCate);

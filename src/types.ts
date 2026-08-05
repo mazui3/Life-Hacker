@@ -28,6 +28,7 @@ export interface Article {
 export interface MonthlyWeatherDay {
   id: number;
   date: number; // Unix timestamp in seconds
+  dateToRead?: number; // Integer YYYYMMDD format e.g. 20250101
   DayofWeek: number; // Day of week (e.g. 0-6 or 1-7)
   isDayOff: boolean; // Is weekend / rest day
   ifIsHoliday: string; // Holiday label e.g. "New Year's Day" or ""

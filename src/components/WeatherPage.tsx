@@ -1,13 +1,17 @@
 import React from "react";
 import { MapPin, Calendar } from "lucide-react";
 import { MonthlyWeatherDay } from "../types";
-import { DEFAULT_MONTHLY_WEATHER, getWeatherConditionInfo } from "../data/mockWeather";
+import { DEFAULT_MONTHLY_WEATHER, getWeatherConditionInfo, parseDateToRead } from "../data/mockWeather";
 
 interface WeatherPageProps {
   monthlyWeather?: MonthlyWeatherDay[];
 }
 
 const DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MONTH_NAMES = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 
 export default function WeatherPage({ monthlyWeather = DEFAULT_MONTHLY_WEATHER }: WeatherPageProps) {
   const weatherList = monthlyWeather.length > 0 ? monthlyWeather : DEFAULT_MONTHLY_WEATHER;
@@ -15,7 +19,10 @@ export default function WeatherPage({ monthlyWeather = DEFAULT_MONTHLY_WEATHER }
 
   // Derive month and year title from first date
   let monthTitle = "Monthly Forecast";
-  if (firstDay && firstDay.date) {
+  if (firstDay && firstDay.dateToRead) {
+    const { year, month } = parseDateToRead(firstDay.dateToRead);
+    monthTitle = `${MONTH_NAMES[month - 1] || "Month"} ${year}`;
+  } else if (firstDay && firstDay.date) {
     const d = new Date(firstDay.date * 1000);
     if (!isNaN(d.getTime())) {
       monthTitle = d.toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
@@ -28,6 +35,10 @@ export default function WeatherPage({ monthlyWeather = DEFAULT_MONTHLY_WEATHER }
 
   // Format day date string (e.g. "1/1", "1/2")
   const formatDateStr = (dayObj: MonthlyWeatherDay) => {
+    if (dayObj.dateToRead) {
+      const { monthDayStr } = parseDateToRead(dayObj.dateToRead);
+      return monthDayStr;
+    }
     if (dayObj.date) {
       const d = new Date(dayObj.date * 1000);
       if (!isNaN(d.getTime())) {
