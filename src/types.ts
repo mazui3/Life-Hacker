@@ -20,10 +20,20 @@ export interface Article {
   keys: string[]; // keywords for searching
   likes: number;
   comments: Comment[];
-  isHero?: boolean;
   readTime: string;
   trending?: boolean;
   requiredCategorySearches?: number;
+}
+
+export interface MonthlyWeatherDay {
+  id: number;
+  date: number; // Unix timestamp in seconds
+  DayofWeek: number; // Day of week (e.g. 0-6 or 1-7)
+  isDayOff: boolean; // Is weekend / rest day
+  ifIsHoliday: string; // Holiday label e.g. "New Year's Day" or ""
+  weatherCondition: number; // Weather condition code (e.g. 0-6)
+  lowestTemputure: number; // Lowest temperature
+  highestTemputure: number; // Highest temperature
 }
 
 export interface WeatherData {

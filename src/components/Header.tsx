@@ -33,7 +33,8 @@ export default function Header({
     { id: "entertainment", name: "Entertainment" },
     { id: "tech", name: "Tech" },
     { id: "lifestyle", name: "Lifestyle" },
-    { id: "horoscope", name: "Horoscope" }
+    { id: "horoscope", name: "Horoscope" },
+    { id: "weather", name: "Weather" }
   ];
 
   const handleSearchSubmit = (e: React.FormEvent) => {

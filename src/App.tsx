@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { Sparkles, MessageSquare, HelpCircle, Landmark, Compass, Gamepad2, Heart, Award } from "lucide-react";
-import { Article, WeatherData } from "./types";
+import { Article, WeatherData, MonthlyWeatherDay } from "./types";
 import { articlesData, weatherProfiles } from "./data/mockData";
 import { getKeywordCategory, parseStats, findHitKeyword } from "./data/keywordCategories";
+import { DEFAULT_MONTHLY_WEATHER, parsePlayFabWeatherData } from "./data/mockWeather";
 
 // Components
 import Header from "./components/Header";
@@ -10,6 +11,7 @@ import WidgetsRow from "./components/WidgetsRow";
 import NewsFeed from "./components/NewsFeed";
 import ArticleDetail from "./components/ArticleDetail";
 import HoroscopeWidget from "./components/HoroscopeWidget";
+import WeatherPage from "./components/WeatherPage";
 import SearchResults from "./components/SearchResults";
 
 export default function App() {
@@ -22,6 +24,8 @@ export default function App() {
   const [sessionTicket, setSessionTicket] = useState<string | null>(null);
   const [searchStats, setSearchStats] = useState<Record<string, number>>({});
   const [searchCate, setSearchCate] = useState<Record<string, number>>({});
+  const [gameTime, setGameTime] = useState<string>("2025-01-01");
+  const [monthlyWeather, setMonthlyWeather] = useState<MonthlyWeatherDay[]>(DEFAULT_MONTHLY_WEATHER);
   const [isLoginLoading, setIsLoginLoading] = useState(false);
 
   // PlayFab Login and fetch stats effect
@@ -54,7 +58,17 @@ export default function App() {
           setSearchStats(parsed);
           const parsedCate = parseStats(data.cate);
           setSearchCate(parsedCate);
+          const userGameTime = data.gameTime || "2025-01-01";
+          setGameTime(userGameTime);
+
+          if (data.weatherData) {
+            const parsedWeather = parsePlayFabWeatherData(data.weatherData);
+            setMonthlyWeather(parsedWeather);
+            console.log("🎮 [PlayFab Weather] 成功同步 PlayFab 玩家天气数据 (共", parsedWeather.length, "天):", parsedWeather);
+          }
+
           console.log("成功同步 Unity 玩家的 PlayFab 统计数据:", parsed, "分类搜索统计数据:", parsedCate);
+          console.log(`🎮 [PlayFab Game Time] 玩家当前游戏时间戳: ${userGameTime}`);
         } else {
           console.error("无法获取该 Unity 玩家数据，请检查后台是否存在该 ID:", data.error || data);
         }
@@ -132,6 +146,7 @@ export default function App() {
       const data = await response.json();
       if (response.ok && data.success) {
         setSearchStats(parseStats(data.stats));
+        if (data.gameTime) setGameTime(data.gameTime);
         console.log(`已成功在 PlayFab 中为文章中的所有注册关键词增加点击量！`);
       }
     } catch (err) {
@@ -197,6 +212,7 @@ export default function App() {
       if (response.ok && data.success) {
         setSearchStats(parseStats(data.stats));
         setSearchCate(parseStats(data.cate));
+        if (data.gameTime) setGameTime(data.gameTime);
         console.log(`已成功在 PlayFab 中为 [${normalizedKeyword}] 搜索次数加1，分类 [${category}] 搜索次数加1！`);
       }
     } catch (err) {
@@ -233,15 +249,9 @@ export default function App() {
 
   // Interactive widget row handlers
   const handleTickerWeatherClick = () => {
-    // Scrolls to the weather card or signals the right sidebar on desktop
-    const element = document.getElementById("weather-sidebar-widget");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      element.classList.add("ring-2", "ring-purple-600");
-      setTimeout(() => {
-        element.classList.remove("ring-2", "ring-purple-600");
-      }, 1500);
-    }
+    setActiveCategory("weather");
+    setSelectedArticleId(null);
+    setSearchQuery("");
   };
 
   const handleTickerHoroscopeClick = () => {
@@ -255,15 +265,30 @@ export default function App() {
     handleSelectArticle("star-city-thriller");
   };
 
-  // Filter visible articles based on search_cate counts
+  // Helper to check if article publication date is on or before current gameTime
+  const isPublished = (artDateStr: string, currentGameTimeStr: string) => {
+    if (!artDateStr) return true;
+    const artTime = new Date(artDateStr).getTime();
+    const gameTimeMs = new Date(currentGameTimeStr).getTime();
+    if (isNaN(artTime) || isNaN(gameTimeMs)) {
+      return artDateStr <= currentGameTimeStr;
+    }
+    return artTime <= gameTimeMs;
+  };
+
+  // Filter visible articles based on search_cate counts and publication date (gameTime)
   const visibleArticles = useMemo(() => {
     return articles.filter((art) => {
+      // 1. Check category search requirement
       const required = art.requiredCategorySearches || 0;
-      if (required === 0) return true;
-      const count = searchCate[art.category.toLowerCase().trim()] || 0;
-      return count >= required;
+      if (required > 0) {
+        const count = searchCate[art.category.toLowerCase().trim()] || 0;
+        if (count < required) return false;
+      }
+      // 2. Check publication date against gameTime (no future articles)
+      return isPublished(art.date, gameTime);
     });
-  }, [articles, searchCate]);
+  }, [articles, searchCate, gameTime]);
 
   // Search Matching Algorithm
   const filteredSearchResults = useMemo(() => {
@@ -341,8 +366,8 @@ export default function App() {
       />
 
       <main className="max-w-7xl mx-auto px-4 mt-2">
-        {/* Top Ticker row is always shown except inside reading mode for clean layout */}
-        {!selectedArticleId && (
+        {/* Top Ticker row is hidden when reading an article or viewing Horoscope/Weather tabs */}
+        {!selectedArticleId && activeCategory !== "horoscope" && activeCategory !== "weather" && (
           <WidgetsRow
             weather={weather}
             activeHoroscopeSign={activeHoroscopeSign}
@@ -379,6 +404,9 @@ export default function App() {
               onClearSearch={() => setSearchQuery("")}
               onSearchKeyClick={handleKeywordSelect}
             />
+          ) : activeCategory === "weather" ? (
+            /* Weather Dashboard Tab */
+            <WeatherPage monthlyWeather={monthlyWeather} />
           ) : activeCategory === "horoscope" ? (
             /* Horoscope Dashboard */
             <HoroscopeWidget
@@ -397,6 +425,8 @@ export default function App() {
               onKeywordClick={handleKeywordSelect}
               searchStats={searchStats}
               searchCate={searchCate}
+              monthlyWeather={monthlyWeather}
+              onOpenWeatherTab={handleTickerWeatherClick}
             />
           )}
         </div>
@@ -404,7 +434,7 @@ export default function App() {
 
       {/* Footer copyright */}
       <footer className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-neutral-200 text-center text-xs text-neutral-500 space-y-2">
-        <p>© 2026 Life Hacker Client Corporation. All rights reserved.</p>
+        <p>© 2025 Life Hacker Client Corporation. All rights reserved.</p>
       </footer>
 
       {/* Custom authentication modals */}

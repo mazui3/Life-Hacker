@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Play, Pause, ChevronLeft, ChevronRight, ThumbsUp, MessageSquare, ExternalLink, ArrowRight, Star, Heart } from "lucide-react";
-import { Article, WeatherData } from "../types";
+import { Article, WeatherData, MonthlyWeatherDay } from "../types";
 import WeatherWidget from "./WeatherWidget";
 import { mockGames, trendingSearches } from "../data/mockData";
 import { keywordCategoryMap } from "../data/keywordCategories";
@@ -16,6 +16,8 @@ interface NewsFeedProps {
   onKeywordClick?: (term: string) => void;
   searchStats?: Record<string, number>;
   searchCate?: Record<string, number>;
+  monthlyWeather?: MonthlyWeatherDay[];
+  onOpenWeatherTab?: () => void;
 }
 
 export default function NewsFeed({
@@ -28,6 +30,8 @@ export default function NewsFeed({
   onKeywordClick,
   searchStats = {},
   searchCate = {},
+  monthlyWeather,
+  onOpenWeatherTab,
 }: NewsFeedProps) {
   // Helper to get category count from PlayFab stats
   const getCategoryCount = (category: string) => {
@@ -39,42 +43,135 @@ export default function NewsFeed({
     return searchStats[keyword.toLowerCase().trim()] || 0;
   };
 
-  // Carousel states - sorted by category search counts
-  const heroArticles = articles
-    .filter((a) => a.isHero || a.trending)
-    .sort((a, b) => {
-      const countA = getCategoryCount(a.category);
-      const countB = getCategoryCount(b.category);
-      if (countB !== countA) {
-        return countB - countA;
+  // Selection logic for 5 Carousel articles and 2 Fixed Bottom articles
+  const { carouselArticles, fixedBottomArticles } = useMemo(() => {
+    // 1. Determine categories ranked by search count
+    const catCounts: Record<string, number> = {};
+    articles.forEach((a) => {
+      const cat = a.category.toLowerCase().trim();
+      catCounts[cat] = searchCate[cat] || 0;
+    });
+
+    const sortedCategories = Object.keys(catCounts).sort((a, b) => catCounts[b] - catCounts[a]);
+
+    const cat1 = sortedCategories[0] || "news";
+    const cat2 = sortedCategories[1] || (sortedCategories[0] ? sortedCategories[0] : "tech");
+
+    const usedIds = new Set<string>();
+
+    const sortByDateDesc = (list: Article[]) => {
+      return [...list].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    };
+
+    // Helper to get up to N trending (or newest) articles from a specific category
+    const getArticlesForCategory = (category: string, count: number): Article[] => {
+      const catArticles = articles.filter(
+        (a) => a.category.toLowerCase().trim() === category.toLowerCase().trim() && !usedIds.has(a.id)
+      );
+      const trending = sortByDateDesc(catArticles.filter((a) => a.trending));
+      const nonTrending = sortByDateDesc(catArticles.filter((a) => !a.trending));
+
+      const selected: Article[] = [];
+      for (const item of trending) {
+        if (selected.length < count) {
+          selected.push(item);
+          usedIds.add(item.id);
+        }
       }
-      return 0; // maintain original order
-    })
-    .slice(0, 5);
+      for (const item of nonTrending) {
+        if (selected.length < count) {
+          selected.push(item);
+          usedIds.add(item.id);
+        }
+      }
+      return selected;
+    };
+
+    // Category #1: 3 articles (2 for carousel, 1 for fixed bottom)
+    const cat1Articles = getArticlesForCategory(cat1, 3);
+    // Category #2: 3 articles (2 for carousel, 1 for fixed bottom)
+    const cat2Articles = getArticlesForCategory(cat2, 3);
+
+    // Other categories: 1 article (for carousel)
+    const otherArticlesPool = articles.filter(
+      (a) =>
+        a.category.toLowerCase().trim() !== cat1.toLowerCase().trim() &&
+        a.category.toLowerCase().trim() !== cat2.toLowerCase().trim() &&
+        !usedIds.has(a.id)
+    );
+    const otherTrending = sortByDateDesc(otherArticlesPool.filter((a) => a.trending));
+    const otherNonTrending = sortByDateDesc(otherArticlesPool.filter((a) => !a.trending));
+
+    const otherSelected: Article[] = [];
+    if (otherTrending.length > 0) {
+      otherSelected.push(otherTrending[0]);
+      usedIds.add(otherTrending[0].id);
+    } else if (otherNonTrending.length > 0) {
+      otherSelected.push(otherNonTrending[0]);
+      usedIds.add(otherNonTrending[0].id);
+    }
+
+    // Build carousel array (up to 5 articles)
+    const carousel: Article[] = [];
+    if (cat1Articles[0]) carousel.push(cat1Articles[0]);
+    if (cat1Articles[1]) carousel.push(cat1Articles[1]);
+    if (cat2Articles[0]) carousel.push(cat2Articles[0]);
+    if (cat2Articles[1]) carousel.push(cat2Articles[1]);
+    if (otherSelected[0]) carousel.push(otherSelected[0]);
+
+    // Pad carousel if needed
+    if (carousel.length < 5) {
+      const remaining = sortByDateDesc(articles.filter((a) => !usedIds.has(a.id)));
+      for (const item of remaining) {
+        if (carousel.length < 5) {
+          carousel.push(item);
+          usedIds.add(item.id);
+        }
+      }
+    }
+
+    // Build fixed bottom array (2 articles)
+    const fixedBottom: Article[] = [];
+    if (cat1Articles[2]) fixedBottom.push(cat1Articles[2]);
+    if (cat2Articles[2]) fixedBottom.push(cat2Articles[2]);
+
+    // Pad fixed bottom if needed
+    if (fixedBottom.length < 2) {
+      const remaining = sortByDateDesc(articles.filter((a) => !usedIds.has(a.id)));
+      for (const item of remaining) {
+        if (fixedBottom.length < 2) {
+          fixedBottom.push(item);
+          usedIds.add(item.id);
+        }
+      }
+    }
+
+    return { carouselArticles: carousel, fixedBottomArticles: fixedBottom };
+  }, [articles, searchCate]);
 
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   // Auto-play effect
   useEffect(() => {
-    if (!isAutoPlaying || heroArticles.length <= 1) return;
+    if (!isAutoPlaying || carouselArticles.length <= 1) return;
     const interval = setInterval(() => {
-      setCarouselIndex((prev) => (prev + 1) % heroArticles.length);
+      setCarouselIndex((prev) => (prev + 1) % carouselArticles.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, heroArticles.length]);
+  }, [isAutoPlaying, carouselArticles.length]);
 
   const handlePrevSlide = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCarouselIndex((prev) => (prev - 1 + heroArticles.length) % heroArticles.length);
+    setCarouselIndex((prev) => (prev - 1 + carouselArticles.length) % carouselArticles.length);
   };
 
   const handleNextSlide = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCarouselIndex((prev) => (prev + 1) % heroArticles.length);
+    setCarouselIndex((prev) => (prev + 1) % carouselArticles.length);
   };
 
-  const currentHero = heroArticles[carouselIndex] || articles[0];
+  const currentHero = carouselArticles[carouselIndex] || articles[0];
 
   // Most Popular Sidebar items - sorted primarily by category search counts, secondary by likes
   const popularArticles = [...articles]
@@ -126,8 +223,14 @@ export default function NewsFeed({
         return 0;
       });
 
-  // Standard stream stories (excluding current hero)
-  const streamStories = articles.filter((a) => a.id !== currentHero?.id);
+  // Top header featured articles IDs
+  const topFeaturedIds = new Set([
+    ...carouselArticles.map((a) => a.id),
+    ...fixedBottomArticles.map((a) => a.id),
+  ]);
+
+  // Standard stream stories (excluding carousel and fixed bottom top hero articles)
+  const streamStories = articles.filter((a) => !topFeaturedIds.has(a.id));
 
   // Ad banner close state
   const [showAd, setShowAd] = useState(true);
@@ -208,7 +311,7 @@ export default function NewsFeed({
 
               {/* Badges/Indicator top right */}
               <div className="absolute top-4 right-4 flex items-center space-x-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] text-white font-bold tracking-wider z-10">
-                <span className="font-mono">{carouselIndex + 1} of {heroArticles.length}</span>
+                <span className="font-mono">{carouselIndex + 1} of {carouselArticles.length}</span>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
@@ -260,9 +363,9 @@ export default function NewsFeed({
             </div>
           )}
 
-          {/* Sub-Bento stories list (Row grid below Carousel) */}
+          {/* Sub-Bento stories list (Row grid below Carousel - 2 fixed articles) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" id="bento-stories-grid">
-            {streamStories.slice(0, 2).map((story) => (
+            {fixedBottomArticles.map((story) => (
               <div
                 key={story.id}
                 onClick={() => onSelectArticle(story.id)}
@@ -307,8 +410,8 @@ export default function NewsFeed({
         <div className="lg:col-span-3 space-y-6 order-3">
           {/* Weather Card container */}
           <WeatherWidget
-            currentWeather={weather}
-            onCityChange={onWeatherCityChange}
+            monthlyWeather={monthlyWeather}
+            onOpenWeatherTab={onOpenWeatherTab}
           />
         </div>
 

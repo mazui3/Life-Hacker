@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ArrowLeft, Bookmark, Clock, User, ArrowRight } from "lucide-react";
-import { Article } from "../types";
+import { ArrowLeft, Bookmark, Clock, User, ArrowRight, MessageSquare, Send } from "lucide-react";
+import { Article, Comment } from "../types";
 
 interface ArticleDetailProps {
   article: Article;
@@ -16,6 +16,35 @@ export default function ArticleDetail({
   onSelectArticle,
 }: ArticleDetailProps) {
   const [isBookmarked, setIsBookmarked] = useState(false);
+  const [commentsList, setCommentsList] = useState<Comment[]>(article.comments || []);
+  const [newCommentText, setNewCommentText] = useState("");
+
+  const handleAddComment = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newCommentText.trim()) return;
+
+    // Ensure comment timestamp is >= article.date
+    const now = new Date();
+    const nowIsoDate = now.toISOString().split("T")[0]; // YYYY-MM-DD
+    const nowHoursMins = now.toTimeString().slice(0, 5); // HH:mm
+    
+    let commentDate = `${nowIsoDate} ${nowHoursMins}`;
+    if (article.date && nowIsoDate < article.date) {
+      // If the article is set in a future date (e.g., 2050), match or exceed article date
+      commentDate = `${article.date} ${nowHoursMins}`;
+    }
+
+    const newCommentObj: Comment = {
+      id: `c_${Date.now()}`,
+      user: "Sandbox Reader",
+      avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80",
+      text: newCommentText.trim(),
+      time: commentDate,
+    };
+
+    setCommentsList([newCommentObj, ...commentsList]);
+    setNewCommentText("");
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6 font-sans text-left" id={`article-detail-${article.id}`}>
@@ -108,6 +137,70 @@ export default function ArticleDetail({
               #{key}
             </span>
           ))}
+        </div>
+
+        {/* Comments Section */}
+        <div className="pt-8 border-t border-neutral-200 mt-8 space-y-6" id="article-comments-section">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-extrabold text-neutral-900 flex items-center space-x-2">
+              <MessageSquare className="w-5 h-5 text-[#6001d2]" />
+              <span>Reader Comments ({commentsList.length})</span>
+            </h3>
+            <span className="text-xs text-neutral-400 font-mono">
+              Article Date: {article.date}
+            </span>
+          </div>
+
+          {/* Comment Form */}
+          <form onSubmit={handleAddComment} className="flex gap-2">
+            <input
+              type="text"
+              placeholder="Share your thoughts on this story..."
+              value={newCommentText}
+              onChange={(e) => setNewCommentText(e.target.value)}
+              className="flex-1 bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-2.5 text-sm text-neutral-900 focus:outline-hidden focus:border-[#6001d2] focus:ring-1 focus:ring-[#6001d2] transition-all"
+            />
+            <button
+              type="submit"
+              disabled={!newCommentText.trim()}
+              className="bg-[#6001d2] hover:bg-[#5001bd] disabled:opacity-50 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center space-x-1.5 transition-all cursor-pointer shadow-xs"
+            >
+              <span>Post</span>
+              <Send className="w-3.5 h-3.5" />
+            </button>
+          </form>
+
+          {/* Comments List */}
+          <div className="space-y-3">
+            {commentsList.length === 0 ? (
+              <p className="text-xs text-neutral-400 italic py-2">No comments yet. Be the first to comment!</p>
+            ) : (
+              commentsList.map((comment) => (
+                <div
+                  key={comment.id}
+                  className="p-4 bg-neutral-50/70 rounded-2xl border border-neutral-100 space-y-1.5 text-left"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src={comment.avatar}
+                        alt={comment.user}
+                        className="w-6 h-6 rounded-full object-cover border border-neutral-200"
+                        referrerPolicy="no-referrer"
+                      />
+                      <span className="text-xs font-bold text-neutral-800">{comment.user}</span>
+                    </div>
+                    <span className="text-[11px] font-mono text-neutral-400">
+                      {comment.time}
+                    </span>
+                  </div>
+                  <p className="text-xs text-neutral-700 leading-relaxed pl-8">
+                    {comment.text}
+                  </p>
+                </div>
+              ))
+            )}
+          </div>
         </div>
         {/* Related Articles Recommended */}
         {relatedArticles.length > 0 && (

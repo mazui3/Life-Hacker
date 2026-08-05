@@ -62,7 +62,7 @@ export const handler = async (event, context) => {
         },
         body: JSON.stringify({
           PlayFabId: playFabId, // 👈 直接用 Unity 那个 ID 查
-          Keys: ["search_stats", "search_cate"],
+          Keys: ["search_stats", "search_cate", "game_time", "game_timestamp", "timestamp", "time_stamp", "weather_data", "weather", "forecast", "weather_forecast"],
         }),
       });
 
@@ -72,10 +72,12 @@ export const handler = async (event, context) => {
         const userData = data.data.Data || {};
         const searchStatsStr = userData.search_stats ? userData.search_stats.Value : "";
         const searchCateStr = userData.search_cate ? userData.search_cate.Value : "";
+        const gameTimeVal = (userData.game_time || userData.game_timestamp || userData.timestamp || userData.time_stamp)?.Value || "";
+        const weatherVal = (userData.weather_data || userData.weather || userData.forecast || userData.weather_forecast)?.Value || "";
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({ success: true, stats: searchStatsStr, cate: searchCateStr }),
+          body: JSON.stringify({ success: true, stats: searchStatsStr, cate: searchCateStr, gameTime: gameTimeVal, weatherData: weatherVal }),
         };
       } else {
         return {
@@ -98,13 +100,15 @@ export const handler = async (event, context) => {
         },
         body: JSON.stringify({
           PlayFabId: playFabId,
-          Keys: ["search_stats", "search_cate"],
+          Keys: ["search_stats", "search_cate", "game_time", "game_timestamp", "timestamp", "time_stamp", "weather_data", "weather", "forecast", "weather_forecast"],
         }),
       });
 
       const getData = await getResponse.json();
       let statsMap = {};
       let cateMap = {};
+      let gameTimeVal = "";
+      let weatherVal = "";
       
       if (getResponse.ok && getData.code === 200) {
         const userData = getData.data.Data || {};
@@ -112,6 +116,8 @@ export const handler = async (event, context) => {
         statsMap = parseStats(searchStatsStr);
         const searchCateStr = userData.search_cate ? userData.search_cate.Value : "";
         cateMap = parseStats(searchCateStr);
+        gameTimeVal = (userData.game_time || userData.game_timestamp || userData.timestamp || userData.time_stamp)?.Value || "";
+        weatherVal = (userData.weather_data || userData.weather || userData.forecast || userData.weather_forecast)?.Value || "";
       }
 
       // 递增计数
@@ -155,7 +161,7 @@ export const handler = async (event, context) => {
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({ success: true, stats: updatedStatsStr, cate: updatedCateStr }),
+          body: JSON.stringify({ success: true, stats: updatedStatsStr, cate: updatedCateStr, gameTime: gameTimeVal }),
         };
       } else {
         return {
