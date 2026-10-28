@@ -3,6 +3,7 @@ import { Sparkles, MessageSquare, HelpCircle, Landmark, Compass, Gamepad2, Heart
 import { Article, WeatherData, MonthlyWeatherDay } from "./types";
 import { articlesData, weatherProfiles } from "./data/mockData";
 import { getKeywordCategory, parseStats, findHitKeyword } from "./data/keywordCategories";
+import { categorySlugs, hasCategory, sharesCategory } from "./categoryUtils";
 import { DEFAULT_MONTHLY_WEATHER, parsePlayFabWeatherData, getMonthlyWeatherForDateToRead, parsePlayerState } from "./data/mockWeather";
 
 // Components
@@ -302,7 +303,8 @@ export default function App() {
       // 1. Check category search requirement
       const required = art.requiredCategorySearches || 0;
       if (required > 0) {
-        const count = searchCate[art.category.toLowerCase().trim()] || 0;
+        // Unlocked once any one of the article's categories hits the threshold
+        const count = Math.max(0, ...categorySlugs(art.category).map((cat) => searchCate[cat] || 0));
         if (count < required) return false;
       }
       // 2. Check publication date against gameTime (no future articles)
@@ -326,7 +328,7 @@ export default function App() {
       // Check summary
       const summaryMatch = art.summary.toLowerCase().includes(query);
       // Check category
-      const categoryMatch = art.category.toLowerCase().includes(query);
+      const categoryMatch = categorySlugs(art.category).some((cat) => cat.includes(query));
       // Check keywords array
       const keywordMatch = art.keys.some((key) => key.toLowerCase().includes(query));
       // Check body paragraphs
@@ -344,7 +346,7 @@ export default function App() {
   // Category news filtering
   const categoryArticles = useMemo(() => {
     if (activeCategory === "all") return visibleArticles;
-    return visibleArticles.filter((art) => art.category === activeCategory);
+    return visibleArticles.filter((art) => hasCategory(art.category, activeCategory));
   }, [activeCategory, visibleArticles]);
 
   // Selected active article detail object
@@ -357,7 +359,7 @@ export default function App() {
   const relatedArticles = useMemo(() => {
     if (!activeArticleObj) return [];
     return visibleArticles
-      .filter((a) => a.id !== activeArticleObj.id && a.category === activeArticleObj.category)
+      .filter((a) => a.id !== activeArticleObj.id && sharesCategory(a.category, activeArticleObj.category))
       .slice(0, 2);
   }, [activeArticleObj, visibleArticles]);
 

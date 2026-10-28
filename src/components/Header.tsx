@@ -33,6 +33,8 @@ export default function Header({
     { id: "entertainment", name: "Entertainment" },
     { id: "tech", name: "Tech" },
     { id: "lifestyle", name: "Lifestyle" },
+    { id: "career", name: "Career" },
+    { id: "travel", name: "Travel" },
     { id: "horoscope", name: "Horoscope" },
     { id: "weather", name: "Weather" }
   ];

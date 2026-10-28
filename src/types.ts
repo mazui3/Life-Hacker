@@ -11,7 +11,7 @@ export interface Article {
   title: string;
   summary: string;
   content: string[]; // split by paragraphs for beautiful rendering
-  category: "news" | "finance" | "sports" | "entertainment" | "tech" | "lifestyle" | "horoscope";
+  category: string[]; // one or more categories, authored capitalized e.g. ["Career", "Lifestyle"]
   source: string;
   sourceLogo?: string;
   author: string;

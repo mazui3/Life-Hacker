@@ -1,8 +1,13 @@
-import { WeatherData, MailMessage, Article } from "../types";
+import { WeatherData, MailMessage, Article, Comment } from "../types";
 import articlesRaw from "./articles.json";
 
-// Typed articles export
-export const articlesData: Article[] = articlesRaw as Article[];
+// Typed articles export. The exporter emits numeric ids and names the comment
+// array `comment`, so reconcile both with the Article shape at this boundary.
+export const articlesData: Article[] = (articlesRaw as any[]).map((raw) => ({
+  ...raw,
+  id: String(raw.id),
+  comments: (raw.comments ?? raw.comment ?? []) as Comment[],
+}));
 
 // Multi-city weather profiles
 export const weatherProfiles: Record<string, WeatherData> = {

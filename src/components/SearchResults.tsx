@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowLeft, Search, ThumbsUp, Calendar, ArrowRight, CornerDownRight } from "lucide-react";
 import { Article } from "../types";
 import { findHitKeyword } from "../data/keywordCategories";
+import { primaryCategory } from "../categoryUtils";
 
 interface SearchResultsProps {
   query: string;
@@ -104,7 +105,7 @@ export default function SearchResults({
                 <div className="space-y-1">
                   <div className="flex items-center space-x-2">
                     <span className="text-[9px] font-extrabold text-[#6001d2] uppercase tracking-widest">
-                      {art.category}
+                      {primaryCategory(art.category)}
                     </span>
                     <span className="text-neutral-300">•</span>
                     <span className="text-xs text-neutral-550 font-semibold">{art.source}</span>

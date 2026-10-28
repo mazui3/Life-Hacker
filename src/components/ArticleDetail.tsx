@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ArrowLeft, Bookmark, Clock, User, ArrowRight, MessageSquare, Send } from "lucide-react";
 import { Article, Comment } from "../types";
+import { primaryCategory } from "../categoryUtils";
 
 interface ArticleDetailProps {
   article: Article;
@@ -77,7 +78,7 @@ export default function ArticleDetail({
         {/* Category, Read Time & Source */}
         <div className="flex items-center space-x-2.5">
           <span className="bg-purple-100 text-[#6001d2] text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-widest font-sans">
-            {article.category}
+            {primaryCategory(article.category)}
           </span>
           <span className="text-neutral-300 font-bold">•</span>
           <div className="flex items-center text-xs text-neutral-550 space-x-1">
@@ -226,7 +227,7 @@ export default function ArticleDetail({
                   </div>
                   <div className="p-4 flex flex-col justify-between flex-1 text-left space-y-2">
                     <div className="space-y-1">
-                      <span className="text-[9px] font-bold text-[#6001d2] uppercase tracking-widest">{rel.category}</span>
+                      <span className="text-[9px] font-bold text-[#6001d2] uppercase tracking-widest">{primaryCategory(rel.category)}</span>
                       <h4 className="text-sm font-bold text-neutral-800 leading-snug group-hover:text-[#6001d2] transition-colors line-clamp-2">
                         {rel.title}
                       </h4>

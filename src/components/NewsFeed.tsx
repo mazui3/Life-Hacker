@@ -5,6 +5,7 @@ import { Article, WeatherData, MonthlyWeatherDay } from "../types";
 import WeatherWidget from "./WeatherWidget";
 import { mockGames, trendingSearches } from "../data/mockData";
 import { keywordCategoryMap } from "../data/keywordCategories";
+import { categorySlugs, hasCategory, primaryCategory } from "../categoryUtils";
 
 interface NewsFeedProps {
   articles: Article[];
@@ -38,6 +39,10 @@ export default function NewsFeed({
     return searchCate[category.toLowerCase().trim()] || 0;
   };
 
+  // An article's score is that of its highest-ranked category
+  const getArticleCategoryCount = (category: string[]) =>
+    Math.max(0, ...category.map(getCategoryCount));
+
   // Helper to get keyword count from PlayFab stats
   const getKeywordCount = (keyword: string) => {
     return searchStats[keyword.toLowerCase().trim()] || 0;
@@ -48,8 +53,9 @@ export default function NewsFeed({
     // 1. Determine categories ranked by search count
     const catCounts: Record<string, number> = {};
     articles.forEach((a) => {
-      const cat = a.category.toLowerCase().trim();
-      catCounts[cat] = searchCate[cat] || 0;
+      categorySlugs(a.category).forEach((cat) => {
+        catCounts[cat] = searchCate[cat] || 0;
+      });
     });
 
     const sortedCategories = Object.keys(catCounts).sort((a, b) => catCounts[b] - catCounts[a]);
@@ -66,7 +72,7 @@ export default function NewsFeed({
     // Helper to get up to N trending (or newest) articles from a specific category
     const getArticlesForCategory = (category: string, count: number): Article[] => {
       const catArticles = articles.filter(
-        (a) => a.category.toLowerCase().trim() === category.toLowerCase().trim() && !usedIds.has(a.id)
+        (a) => hasCategory(a.category, category) && !usedIds.has(a.id)
       );
       const trending = sortByDateDesc(catArticles.filter((a) => a.trending));
       const nonTrending = sortByDateDesc(catArticles.filter((a) => !a.trending));
@@ -95,8 +101,8 @@ export default function NewsFeed({
     // Other categories: 1 article (for carousel)
     const otherArticlesPool = articles.filter(
       (a) =>
-        a.category.toLowerCase().trim() !== cat1.toLowerCase().trim() &&
-        a.category.toLowerCase().trim() !== cat2.toLowerCase().trim() &&
+        !hasCategory(a.category, cat1) &&
+        !hasCategory(a.category, cat2) &&
         !usedIds.has(a.id)
     );
     const otherTrending = sortByDateDesc(otherArticlesPool.filter((a) => a.trending));
@@ -176,8 +182,8 @@ export default function NewsFeed({
   // Most Popular Sidebar items - sorted primarily by category search counts, secondary by likes
   const popularArticles = [...articles]
     .sort((a, b) => {
-      const countA = getCategoryCount(a.category);
-      const countB = getCategoryCount(b.category);
+      const countA = getArticleCategoryCount(a.category);
+      const countB = getArticleCategoryCount(b.category);
       if (countB !== countA) {
         return countB - countA;
       }
@@ -380,7 +386,7 @@ export default function NewsFeed({
                     referrerPolicy="no-referrer"
                   />
                   <span className="absolute top-3 left-3 bg-white/95 text-neutral-800 text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
-                    {story.category}
+                    {primaryCategory(story.category)}
                   </span>
                 </div>
                 <div className="p-4 flex flex-col justify-between flex-1 space-y-2">
