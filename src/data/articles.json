@@ -1,175 +1,124 @@
 [
   {
-    "id": "solar-fusion-2030",
-    "title": "Global Energy Coalition Announces Transition to Solar-Cell Fusion Grid by 2030",
-    "summary": "An alliance of 40 nations has signed a historic treaty to begin phasing out traditional grids, replacing them with a decentralized network of hybrid solar-fusion microreactors.",
+    "id": 12,
+    "title": "Level Up Your Career: Sandstone State University Launches Night School for Working Professionals",
+    "summary": "Whether you want a quick professional certificate or a part-time Master's degree, VSU's continuous education catalog is now open.",
     "content": [
-      "GENEVA — In what is being hailed as the most significant environmental agreement since the turn of the century, a coalition of forty nations has finalized a binding treaty to deploy a next-generation energy grid based entirely on micro-fusion and advanced high-efficiency solar cells by the year 2030.",
-      "The program, codenamed 'Project Helios-Fusion', aims to replace traditional coal, gas, and early-generation nuclear fission plants with highly integrated hybrid power units. These units combine the continuous, clean baseload power of newly developed magnetic confinement fusion with ultra-thin organic solar films capable of harvesting energy even under heavy cloud cover.",
-      "Dr. Elena Vance, Director of the International Clean Energy Institute, stated during the press conference: 'We are no longer looking at solar and fusion as competing or separate clean energy sources. By combining them into localized, modular micro-grids, we bypass the grid vulnerability and transmission losses that have plagued national infrastructure for a century.'",
-      "Critics, however, raise concerns about the immense initial capital requirements and the availability of tritium and lithium isotopes needed to seed the fusion reactors. Industry analysts estimate the total deployment cost at approximately $4.2 trillion globally, to be funded through public-private partnerships and carbon offset bonds.",
-      "Nevertheless, major tech conglomerates and industrial hubs are already pledging to transition early. Tech campuses in Seattle, Bangalore, and Munich have announced plans to disconnect from state grids and implement self-contained solar-fusion cells as early as next summer."
+      "SANDBOX — As the local job market becomes increasingly competitive, Virtualization State University (VSU) has officially expanded its Continuing Education Division, introducing a robust slate of evening programs tailored entirely for the 9-to-5 workforce.",
+      "The program allows Sandbox citizens to attend lectures after 7:00 PM, offering three distinct tracks: short-term professional certificates for immediate corporate skill boosts, continuous education courses for industry pivots, and accredited part-time Master's degrees.",
+      "While the tuition fees require a careful look at your monthly budget, career data suggests that graduates from SSU's evening programs see an average 22% bump in their promotion velocity and intelligence-based career paths."
     ],
-    "category": "news",
-    "source": "LifeHacker News Global",
-    "author": "Marcus Sterling",
-    "date": "2025-01-01",
-    "imageUrl": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80",
+    "category": [
+      7,
+      5
+    ],
+    "requiredCategorySearches": 3,
+    "source": "LifeHacker Work",
+    "author": "Robert Chen",
+    "date": "2025-01-01 12:00:00 AM",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1724061886937-5f75a7907dcd?w=800&auto=format&fit=crop&q=80",
     "keys": [
-      "solar",
-      "fusion",
-      "energy",
-      "clean tech",
-      "2030",
-      "helios",
-      "grid",
-      "climate"
+      "career",
+      "what to do",
+      "education",
+      "university",
+      "degree",
+      "promotion"
     ],
-    "likes": 1284,
-    "comments": [
-      {
-        "id": "c1",
-        "user": "EcoWarrior88",
-        "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80",
-        "text": "This is a massive step forward if they can actually pull off the tritium logistics. Fingers crossed!",
-        "time": "2025-01-01 10:30"
-      },
-      {
-        "id": "c2",
-        "user": "GridEngineer_Tom",
-        "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&auto=format&fit=crop&q=80",
-        "text": "Decentralizing the grid is the real secret sauce here. Less transmission loss is huge.",
-        "time": "2025-01-01 14:15"
-      }
-    ],
-    "readTime": "4 min read",
-    "trending": true
-  },
-  {
-    "id": "sandbox-cinema-romance",
-    "title": "Before the Last Train Leaves: The Heartbreaking Romance Movie Setting Sandbox Ablaze Next Month",
-    "summary": "Director Liam Vance and lead actress Clara Rossi open up about the intense emotional toll behind next month's most anticipated tear-jerker.",
-    "content": [
-      "SANDBOX — If you've walked past the Downtown Cinema Complex this week, you've undoubtedly seen the massive, rain-blurred posters for 'Before the Last Train Leaves'. Scheduled to premiere early next month, this heavy, hyper-realistic romantic drama is already causing a massive stir among local cinephiles.",
-      "Directed by Sandbox auteur Liam Vance, the film shuns predictable Hollywood happy endings and flashy romance tropes. Instead, it follows a bittersweet, slow-burn story of two young professionals trying to balance their corporate ambitions in a fast-paced city while their relationship quietly fractures under the pressure.",
-      "To capture the raw, devastating emotion of a fading romance, Vance utilized an unusual filming method, keeping the two lead actors isolated from each other except during active takes. 'We wanted the audience to feel the genuine ache of distance,' Vance explained. 'When Clara weeps in the platform scene, those aren't just stage tears—that's pure, unfiltered emotional exhaustion.'",
-      "Early test screenings within Sandstone State have left audiences entirely devastated, with critics warning viewers to bring an entire box of tissues. Local entertainment blogs predict the movie will smash Sandbox box office records for the romance category upon its release.",
-      "With its haunting acoustic soundtrack and deeply relatable themes of youth, love, and sacrifice, 'Before the Last Train Leaves' is poised to be the defining emotional masterpiece of this winter."
-    ],
-    "category": "entertainment",
-    "source": "LifeHacker Entertainment",
-    "author": "Sophia Loren",
-    "date": "2026-02-14",
-    "imageUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "movie",
-      "romance",
-      "cinema",
-      "behind the scenes",
-      "clara rossi",
-      "liam vance",
-      "entertainment",
-      "sandbox"
-    ],
-    "likes": 1245,
-    "comments": [
-      {
-        "id": "c3",
-        "user": "Cinephile_99",
-        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
-        "text": "I saw the 30-second teaser trailer at the Downtown theater and I'm already crying. Clara Rossi is going to destroy me next month.",
-        "time": "2026-02-14 10:30"
-      }
-    ],
-    "readTime": "3 min read",
+    "likes": 2105,
+    "readTime": "5 min read",
     "trending": true,
-    "requiredCategorySearches": 3
+    "comment": [
+      {
+        "id": "12",
+        "user": "JuniorDev_Alpha",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Signing up for the Data Science Certificate. Goodbye to my weekday free time, hello to a potential promotion!",
+        "time": "2025-01-01 10:30:00 AM"
+      }
+    ]
   },
   {
-    "id": "sandbox-green-bonds",
+    "id": 11,
+    "title": "Sandbox Housing Micro-Trends: Are 'Capsule Co-Living' Spaces Worth the Lower Rent?",
+    "summary": "As standard apartment leases skyrocket, a new communal housing project offers ultra-budget rooms with shared amenities.",
+    "content": [
+      "SANDBOX — Rent prices in the Sandbox metropolitan sector have hit an all-time high this quarter, forcing fresh graduates and junior staff to reconsider their living arrangements. Enter 'The Hive' — Sandbox’s first massive Capsule Co-Living complex.",
+      "Located in the trendy industrial-turned-residential district, the building replaces traditional apartments with private, soundproofed sleeping pods. Kitchens, lounges, gym facilities, and high-speed working spaces are completely shared among the hundreds of residents.",
+      "The biggest selling point is the price tag: rent is exactly 40% lower than a standard studio apartment in town, effectively solving the initial budget crunch that most 25-year-old characters face upon moving into Sandbox."
+    ],
+    "category": [
+      2,
+      5
+    ],
+    "requiredCategorySearches": 5,
+    "source": "LifeHacker Housing",
+    "author": "Elena Rostova",
+    "date": "2025-01-01 12:00:00 AM",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1680367480804-12033b523184?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "housing",
+      "rent",
+      "budget",
+      "coliving",
+      "apartment",
+      "money",
+      "lifestyle",
+      "friend"
+    ],
+    "likes": 980,
+    "readTime": "5 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "11",
+        "user": "StudioHunter",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Honestly, considering this for my first year just to hoard cash for that investment account mentioned in the other article.",
+        "time": "2025-01-01 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 2,
     "title": "Local Eco-Bonds Surge as Sandbox Citizens Shift Savings Into Town Green Initiatives",
     "summary": "Sustainable finance reaches a tipping point in Sandbox as young professionals drive record capital into certified local climate-adaptation projects.",
     "content": [
       "SANDBOX — The town's micro-investment market is undergoing a fundamental rewiring. In the first half of this quarter, Sandbox's newly certified 'Community Green Bonds' attracted record-breaking engagement, outperforming traditional corporate index products among younger demographics.",
       "The surge has been accelerated by the Sandbox National Bank's digital platform, which allows individual citizens to purchase fractional eco-bonds starting as low as $50. These funds are locked directly into audited, local projects such as the North Sector park reforestation, solar panels over the town highway canals, and community wind grids.",
-      "Financial analyst Dev Shah explained: 'Historically, impactful investing was reserved for major corporate portfolios. By democratizing access through fractional bonds, we are seeing a massive influx of retail capital from 20-somethings in Sandbox who demand that their savings do more than just compound—they want to see physical, environmental improvements in their own neighborhoods.'",
       "The trend has forced local financial institutions to restructure their offerings. The new 'Impact Yield' accounts automatically funnel interest from standard accounts into municipal eco-resilience projects, providing players with dual returns in stable cash yield and verified town reputation points."
     ],
-    "category": "finance",
+    "category": [
+      2
+    ],
+    "requiredCategorySearches": 0,
     "source": "LifeHacker Finance",
     "author": "Dev Shah",
-    "date": "2025-01-01",
+    "date": "2025-01-01 12:00:00 AM",
     "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
     "keys": [
       "finance",
       "bonds",
-      "green",
       "market",
       "investing",
       "eco",
-      "sandbox",
       "money"
     ],
     "likes": 560,
-    "comments": [
+    "readTime": "5 min read",
+    "trending": false,
+    "comment": [
       {
-        "id": "c301",
+        "id": "2",
         "user": "EcoSaver_Sandbox",
         "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
         "text": "Put $200 into the solar canal project. Love seeing the actual solar panels being built while earning a neat return.",
-        "time": "2025-01-01 10:30"
+        "time": "2025-01-02 10:30:00 AM"
       }
-    ],
-    "readTime": "5 min read",
-    "trending": false
+    ]
   },
   {
-    "id": "sandstone-esports-games",
-    "title": "E-Sports Welcomed as Official Demonstration Event in Upcoming Sandstone State Summer Games",
-    "summary": "A historic compromise opens the door for competitive video gaming to share the state athletic stage, featuring Sandbox's local gaming talent.",
-    "content": [
-      "SANDBOX — In a milestone announcement that has divided traditionalists and thrilled younger citizens, the Sandstone State Athletic Council has officially approved competitive electronic sports (E-sports) as a demonstration category for the upcoming State Summer Games.",
-      "Four major competitive titles have been selected for the regional tournament, covering tactical team arenas, high-octane racing simulators, and digital sports simulations. Competitors will represent their respective towns, with Sandbox sending its first-ever official esports delegation complete with team uniforms and tactical coaches.",
-      "While medals won in the E-sports categories will not count toward the official physical athletic tally, state planners see the move as an essential strategy to hook a generation of digital natives who bypass traditional track-and-field events.",
-      "Head of the Sandbox Gaming Coalition, Kenji Sato, remarked: 'This is the validation we have worked years for. The mental stamina, hand-eye coordination, and tactical genius required at elite-level gaming are fully on par with any corporate or athletic endeavor. Our local Sandbox players are grinding 8 hours a day after work to bring home the trophy next month.'"
-    ],
-    "category": "sports",
-    "source": "LifeHacker Sports",
-    "author": "Kenji Sato",
-    "date": "2027-06-20",
-    "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "esports",
-      "gaming",
-      "state-games",
-      "sports",
-      "competition",
-      "sato",
-      "sandstone",
-      "sandbox"
-    ],
-    "likes": 980,
-    "comments": [
-      {
-        "id": "c4",
-        "user": "TrackStar_92",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Unbelievable. What's next, competitive spreadsheet entry? Keep gaming separate from physical sports at the State Games.",
-        "time": "2027-06-20 10:30"
-      },
-      {
-        "id": "c5",
-        "user": "PixelPusher",
-        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80",
-        "text": "Stamina and coordination are real! If you've tried to balance a 9-to-5 job and competitive matchmaking in Sandbox, you know how intense this is. Highly deserved!",
-        "time": "2027-06-20 14:15"
-      }
-    ],
-    "readTime": "3 min read",
-    "trending": false
-  },
-  {
-    "id": "sandbox-algorithmic-shadow",
+    "id": 4,
     "title": "The Invisible Guide: How Sandbox's Subtle Choice Algorithms are Quietly Shaping Your Career Path",
     "summary": "Behavioral scientists warn that everyday app recommendations in Sandbox are changing how young professionals make life-altering decisions without them even noticing.",
     "content": [
@@ -178,10 +127,13 @@
       "Dr. Julian Vance, lead author of the study, explained: 'We are no longer just consuming content; the algorithm is predicting and reinforcing human behavior loops. By quietly injecting optimal choices into an employee's schedule, it optimizes their short-term productivity metrics, but we have absolutely no historical data on what this total loss of raw spontaneity will do to a human mind by the time they turn 50.'",
       "Tech companies in Sandbox's commercial district have denied any deliberate manipulation, claiming their engines merely reduce decision fatigue for overwhelmed junior staff. However, independent analysts suggest that this continuous algorithmic nudging creates a predictable workforce, leaving many to wonder if true individual agency still exists inside the town's borders."
     ],
-    "category": "tech",
+    "category": [
+      4
+    ],
+    "requiredCategorySearches": 0,
     "source": "LifeHacker Tech & Society",
     "author": "Elena Rostova",
-    "date": "2028-09-10",
+    "date": "2025-02-10 12:00:00 AM",
     "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80",
     "keys": [
       "algorithm",
@@ -190,287 +142,23 @@
       "psychology",
       "choice",
       "society",
-      "sandbox",
       "future"
     ],
     "likes": 2045,
-    "comments": [
+    "readTime": "4 min read",
+    "trending": true,
+    "comment": [
       {
-        "id": "c6",
+        "id": "5",
         "user": "ByteCode_Dev",
         "avatar": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&auto=format&fit=crop&q=80",
         "text": "Honestly, this is terrifying. I literally applied for a night class yesterday because an app notification made it look like a seamless choice. Who am I actually competing with?",
-        "time": "2028-09-10 10:30"
+        "time": "2025-01-10 10:30:00 AM"
       }
-    ],
-    "readTime": "4 min read",
-    "trending": true
+    ]
   },
   {
-    "id": "sandbox-detox-walks",
-    "title": "The Micro-Habit Movement: Why 5-Minute 'Digital Detox' Walks are Replacing Coffee Runs in Sandbox Downtown",
-    "summary": "Sandbox office workers are trading their mid-afternoon caffeine crashes for short, screen-free walks, sparking a noticeable surge in focus and cognitive stamina.",
-    "content": [
-      "SANDBOX — It's 3:00 PM. Instead of lining up at the local espresso bar on Maple Street for a double-shot macchiato and scrolling social media, a growing number of corporate workers in Sandbox's business district are locking their Banana Phones in drawers and stepping outside for five minutes of pure, unstructured walking.",
-      "This shift, dubbed the 'Micro-Habit Movement', is gaining major momentum across local tech, finance, and creative startups in town. The rules are simple: leave all screens behind, walk in any direction for two and a half minutes, and walk back. No podcasts, no work chats, no step-counting.",
-      "Neuroscientists at Sandstone State University suggest that this deliberate sensory depletion allows the brain's default mode network to activate, restoring executive cognitive functions and offering a more sustainable energy boost than caffeine.",
-      "Dr. Julian Vance, author of 'The Rested Mind', explains: 'A caffeine shot masks weariness by blocking adenosine receptors, but it triggers an inevitable cortisol and energy crash later. A screen-free micro-walk around Sandbox's green lanes, by contrast, naturally flushes the brain with fresh oxygen and calms the over-stimulated nervous system.'",
-      "Local HR departments are taking note, with several startups in the Sandbox corporate sector designating screen-free 'decompression paths' and replacing espresso machines with herbal tea bars."
-    ],
-    "category": "lifestyle",
-    "source": "LifeHacker Lifestyle",
-    "author": "Julian Vance",
-    "date": "2025-01-01",
-    "imageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "lifestyle",
-      "detox",
-      "walk",
-      "coffee",
-      "health",
-      "habits",
-      "mindfulness",
-      "wellness",
-      "sandbox"
-    ],
-    "likes": 1420,
-    "comments": [
-      {
-        "id": "c7",
-        "user": "ZenDesk_User",
-        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
-        "text": "Started doing this last week around the Downtown square. It actually works! I feel way less fried by 5 PM.",
-        "time": "2025-01-01 10:30"
-      }
-    ],
-    "readTime": "3 min read",
-    "trending": false
-  },
-  {
-    "id": "sandstone-transit-link",
-    "title": "Sandstone State Launches Multi-Million Dollar High-Speed Eco-Rail Linking Sandbox to Capital City",
-    "summary": "The ambitious infrastructure project promises to slash travel times to just 35 minutes, offering an emission-free alternative for regional commuters.",
-    "content": [
-      "SANDBOX — In a bold bid to revolutionize regional transit and ease the housing pressure within the metropolitan hubs, the Sandstone State government has officially greenlit the construction of a high-speed magnetic rail corridor linking Sandbox directly to Capital City.",
-      "The new rail line, estimated to cost $4.2 billion, will operate clean-energy train fleets cruising at high speeds. At that pace, a commute from downtown Sandbox to Capital City's central economic hub will take just 35 minutes, compared to nearly three hours of driving through the mountain passes.",
-      "By operating entirely on clean solar power collected along the highway canal arrays, the eco-rail network is projected to eliminate over 400,000 regional car trips annually, significantly aiding the state's net-zero carbon goals.",
-      "Transport Minister Chloe Dupont declared: 'This is not just about moving people faster; it's about stretching our economic hubs together, opening up affordable housing in intermediate towns like Sandbox, and letting young workers live in quiet neighborhoods while commuting to high-paying jobs.'"
-    ],
-    "category": "news",
-    "source": "LifeHacker Regional News",
-    "author": "Chloe Dupont",
-    "date": "2029-04-05",
-    "imageUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "sandstone",
-      "rail",
-      "transit",
-      "speed",
-      "train",
-      "infrastructure",
-      "sandbox"
-    ],
-    "likes": 1102,
-    "comments": [
-      {
-        "id": "c8",
-        "user": "CommuterLife",
-        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
-        "text": "35 minutes to Capital City?! I can finally keep my cozy apartment in Sandbox and apply for those high-tier corporate roles next month!",
-        "time": "2029-04-05 10:30"
-      }
-    ],
-    "readTime": "5 min read",
-    "trending": true
-  },
-  {
-    "id": "sandbox-acoustic-tour",
-    "title": "Local Icon's Acoustic Tour Set to Break Ticket Sales Record at Sandstone Arena",
-    "summary": "An unplugged, intimate show sells out in minutes, proving that stripped-down organic vocals are drawing massive crowds over high-tech spectacles.",
-    "content": [
-      "SANDBOX — Stripped of backing tracks, holographic projection screens, and backup dancers, Sandstone State's favorite indie pop icon Luna Rose is breaking local record books with nothing but an acoustic guitar and an extraordinary voice.",
-      "Her newly announced 'Unplugged & Raw' hometown show at the Sandstone Arena sold out all available seating tiers within four minutes of going live, causing the local ticket booking servers to briefly buckle under unprecedented traffic from local fans.",
-      "Music journalists are calling it a cultural reaction to the over-digitization of modern entertainment. 'We have reached peak automation,' explained local industry critic John Chang. 'Audiences in Sandbox are craving raw, human connection. Hearing an artist sing in a quiet room with simple acoustic resonance is the ultimate luxury now.'",
-      "Luna Rose plans to record a live album during her two-night residency at the arena, with all proceeds donated to grass-roots music and art education programs throughout the Sandbox youth community center."
-    ],
-    "category": "entertainment",
-    "source": "LifeHacker Music",
-    "author": "John Chang",
-    "date": "2030-10-15",
-    "imageUrl": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "music",
-      "concert",
-      "tour",
-      "records",
-      "pop",
-      "luna rose",
-      "acoustic",
-      "sandbox",
-      "entertainment"
-    ],
-    "likes": 1590,
-    "comments": [
-      {
-        "id": "c302",
-        "user": "GuitarStrings",
-        "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80",
-        "text": "Managed to snip a balcony ticket! Can't wait to see a raw performance instead of the usual flashing neon stage stuff.",
-        "time": "2030-10-15 10:30"
-      }
-    ],
-    "readTime": "3 min read",
-    "trending": false
-  },
-  {
-    "id": "ssu-observatory-discovery",
-    "title": "SSU Observatory Detects High-Density Deep Sky Anomalies Using New Ridge Telescope",
-    "summary": "Local astronomers locate clear orbital patterns on a nearby planet candidate, boosting hopes for advanced planetary studies within the state curriculum.",
-    "content": [
-      "SANDBOX — In a discovery that has sent shockwaves through the local academic community, researchers at the Sandstone State University (SSU) Observatory have detected unique, high-density atmospheric signatures on a nearby planet candidate using the new deep-sky telescope on Sandbox North Ridge.",
-      "The planet candidate, cataloged as 'Sandstone-1b', is a rocky world orbiting within a temperate range. It marks the first time that the university's astronomy department has identified potential atmospheric data using their own localized hardware arrays.",
-      "Using high-resolution spectroscopy during their night shifts, student researchers and faculty analyzed light filtering through the system, identifying heavy absorption bands that indicate an active molecular environment.",
-      "Lead astrophysicist Dr. Sarah Vance cautioned: 'While the data indicates an active atmosphere, it requires further peer reviews from the main campus. However, having this level of scientific discovery happening right in Sandbox's backyard is an incredible achievement for our local students and night school programs.'"
-    ],
-    "category": "tech",
-    "source": "LifeHacker Space Science",
-    "author": "Dr. Sarah Vance",
-    "date": "2032-01-20",
-    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "space",
-      "telescope",
-      "science",
-      "ssu",
-      "university",
-      "astronomy",
-      "sandbox"
-    ],
-    "likes": 2341,
-    "comments": [
-      {
-        "id": "c9",
-        "user": "Stargazer_Dave",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Simply mind-blowing for a local campus observatory! Definitely walking up to the ridge park tonight to see if the facility is open to visitors.",
-        "time": "2032-01-20 10:30"
-      }
-    ],
-    "readTime": "4 min read",
-    "trending": true
-  },
-  {
-    "id": "sandbox-farmers-coop",
-    "title": "Fresh Off the Soil: Local Farmers Open Organic Drive-Thru Market at Sandbox Highway Exit 4",
-    "summary": "A collective of Sandbox valley farmers is cutting out the middleman, offering pesticide-free produce directly to daily commuters.",
-    "content": [
-      "SANDBOX — Commuters driving into Sandbox's corporate district now have a healthier pitstop options. Starting this Tuesday, the newly formed Sandbox Agricultural Co-operative has officially opened 'The Green Exit' — a rustic, drive-thru market located right off Highway Exit 4.",
-      "The initiative aims to provide busy 20-somethings and office workers with affordable, organic groceries on their way home. By skipping major supermarket supply chains, the cooperative offers fruits, vegetables, and dairy products that were harvested less than six hours prior.",
-      "Local farmer Thomas Miller, who organized the cooperative, said: 'We saw young professionals living in the town center buying stale, expensive greens from big retail chains. We have the best soil right here in Sandbox. Why not bring the farm straight to their car windows?'",
-      "Early reviews on social media praise the reasonable pricing. Health coaches in Sandbox are already recommending the market as a budget-friendly way for young corporate workers to fix their meal prep routines."
-    ],
-    "category": "lifestyle",
-    "source": "LifeHacker Local",
-    "author": "Thomas Miller",
-    "date": "2025-01-01",
-    "imageUrl": "https://plus.unsplash.com/premium_photo-1664299231810-29d1caf6f753?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "sandbox",
-      "farming",
-      "organic",
-      "market",
-      "lifestyle",
-      "food",
-      "budget"
-    ],
-    "likes": 845,
-    "comments": [
-      {
-        "id": "c101",
-        "user": "MealPrepKing",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Grabbed a basket of avocados and fresh eggs after work. Half the price of the downtown organic store!",
-        "time": "2025-01-01 10:30"
-      }
-    ],
-    "readTime": "3 min read",
-    "trending": true
-  },
-  {
-    "id": "sandbox-bank-yield",
-    "title": "Sandbox National Bank Unveils 3.5% High-Yield Investment Plan Tailored for Young Professionals",
-    "summary": "With inflation pressing down, the town's primary financial institution launches an aggressive entry-level savings product.",
-    "content": [
-      "SANDBOX — In a surprise market move, Sandbox National Bank (SNB) announced its new 'First-Step High-Yield Account', boasting a guaranteed 3.5% annual interest rate. The product is explicitly designed to help young citizens secure their early-career savings.",
-      "Unlike traditional wealth management portfolios that require hefty upfront capital, this new account features a low entry barrier, requiring a minimum deposit of just $500. Financial advisors note that this is a direct response to the growing anxiety among the town's 25-to-30 demographic regarding house down payments.",
-      "Chief Financial Analyst Sarah Jenkins stated: 'The first five years of your career dictate your long-term financial freedom. A 3.5% low-risk yield allows young workers to beat inflation while keeping their capital liquid for future career transitions or life milestones.'",
-      "Economists suggest that if a standard Sandbox citizen deposits 15% of their monthly starting salary into this account, they could significantly accelerate their financial independence tracker before turning 30."
-    ],
-    "category": "finance",
-    "source": "LifeHacker Money",
-    "author": "Sarah Jenkins",
-    "date": "2025-01-01",
-    "imageUrl": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "finance",
-      "savings",
-      "investment",
-      "bank",
-      "interest",
-      "money",
-      "sandbox"
-    ],
-    "likes": 1920,
-    "comments": [
-      {
-        "id": "c102",
-        "user": "CompoundInterestFan",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Finally, a place to dump my emergency fund where it won't just rot. Moving my money tomorrow.",
-        "time": "2025-01-01 10:30"
-      }
-    ],
-    "readTime": "4 min read",
-    "trending": true
-  },
-  {
-    "id": "wanderlust-sandbox-agency",
-    "title": "Escape the Sandbox: New 'Wanderlust' Travel Agency Promises Personalized Life-Leave Blueprints",
-    "summary": "Feeling burnt out by the 9-to-5 grind? A boutique agency in town is mapping out custom journeys to explore the world beyond Sandbox borders.",
-    "content": [
-      "SANDBOX — For those who feel the walls of Sandbox closing in after months of endless corporate tasks, a new startup called 'Wanderlust Itineraries' has opened its doors on Maple Street. Its mission? To help citizens curate customized travel experiences that offer a perspective on life outside the simulation.",
-      "Wanderlust doesn't just book flights; they use personality quizzes and stress-level evaluations to build personalized 'sabbatical blueprints.' Whether it's a 3-day digital detox in the mountain ranges or a month-long cultural immersion, the plans focus heavily on mental restoration.",
-      "Agency founder Marcus Vance noted: 'We see so many 25-year-olds entering the workforce who immediately burn out because they think Sandbox is the entire universe. There is a massive world out there. Sometimes, taking a planned break actually advances your career more than grinding through the weekend.'",
-      "The agency also partners with local HR departments to promote 'well-being leaves,' allowing workers to pause their career progression counters temporarily without losing their job security."
-    ],
-    "category": "travel",
-    "source": "LifeHacker Lifestyle",
-    "author": "Marcus Vance",
-    "date": "2035-05-12",
-    "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "travel",
-      "burnout",
-      "agency",
-      "vacation",
-      "mentalhealth",
-      "sandbox"
-    ],
-    "likes": 650,
-    "comments": [
-      {
-        "id": "c103",
-        "user": "OvertimeSurvivor",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "I desperately need this. Booked a consultation. Sandbox's office lights are draining my soul.",
-        "time": "2035-05-12 10:30"
-      }
-    ],
-    "readTime": "4 min read",
-    "trending": false
-  },
-  {
-    "id": "sandbox-side-hustle",
+    "id": 10,
     "title": "The Rise of the 'Side-Hustle Economy' in Sandbox: How Gen Z Workers are Making Extra Cash After 6 PM",
     "summary": "From remote coding to artisanal candle making, young professionals are redefining the standard 40-hour work week.",
     "content": [
@@ -479,10 +167,14 @@
       "Economic experts warn, however, of the hidden health costs. While an extra $800 a month drastically improves short-term purchasing power in the game, it severely limits the 'Energy' stat required for next-morning corporate performance.",
       "Career advisor Liam Frost states: 'A side hustle is a double-edged sword. It accelerates early-game capital accumulation, but if you don't manage your stamina, you will face a severe burnout penalty before you hit your 30s.'"
     ],
-    "category": "career",
+    "category": [
+      2,
+      7
+    ],
+    "requiredCategorySearches": 5,
     "source": "LifeHacker Work",
     "author": "Liam Frost",
-    "date": "2025-01-01",
+    "date": "2026-01-01 12:00:00 AM",
     "imageUrl": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&auto=format&fit=crop&q=80",
     "keys": [
       "career",
@@ -491,280 +183,386 @@
       "hustle",
       "work",
       "burnout",
-      "sandbox"
+      "what to do"
     ],
     "likes": 1530,
-    "comments": [
+    "readTime": "3 min read",
+    "trending": true,
+    "comment": [
       {
-        "id": "c104",
+        "id": "10",
         "user": "NoMoreOvertime",
         "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
         "text": "Doing some freelance tech support after my main job. It's tough, but hey, rent in Sandbox isn't getting any cheaper.",
-        "time": "2025-01-01 10:30"
+        "time": "2026-01-01 10:30:00 AM"
       }
-    ],
-    "readTime": "3 min read",
-    "trending": true
+    ]
   },
   {
-    "id": "sandbox-capsule-housing",
-    "title": "Sandbox Housing Micro-Trends: Are 'Capsule Co-Living' Spaces Worth the Lower Rent?",
-    "summary": "As standard apartment leases skyrocket, a new communal housing project offers ultra-budget rooms with shared amenities.",
+    "id": 1,
+    "title": "Before the Last Train Leaves: The Heartbreaking Romance Movie Setting Sandbox Ablaze Next Month",
+    "summary": "Director Liam Vance and lead actress Clara Rossi open up about the intense emotional toll behind next month's most anticipated tear-jerker.",
     "content": [
-      "SANDBOX — Rent prices in the Sandbox metropolitan sector have hit an all-time high this quarter, forcing fresh graduates and junior staff to reconsider their living arrangements. Enter 'The Hive' — Sandbox’s first massive Capsule Co-Living complex.",
-      "Located in the trendy industrial-turned-residential district, the building replaces traditional apartments with private, soundproofed sleeping pods. Kitchens, lounges, gym facilities, and high-speed working spaces are completely shared among the hundreds of residents.",
-      "The biggest selling point is the price tag: rent is exactly 40% lower than a standard studio apartment in town, effectively solving the initial budget crunch that most 25-year-old characters face upon moving into Sandbox.",
-      "However, psychologists note the psychological trade-offs. 'Living in a micro-space limits your long-term Mood recovery metrics,' warns Dr. Elena Rostova. 'It is fantastic for a fast financial start, but human beings eventually crave dedicated privacy as they mature into their 30s.'"
+      "SANDBOX — If you've walked past the Downtown Cinema Complex this week, you've undoubtedly seen the massive, rain-blurred posters for 'Before the Last Train Leaves'. Scheduled to premiere early next month, this heavy, hyper-realistic romantic drama is already causing a massive stir among local cinephiles.",
+      "Directed by Sandbox auteur Liam Vance, the film shuns predictable Hollywood happy endings and flashy romance tropes. Instead, it follows a bittersweet, slow-burn story of two young professionals trying to balance their corporate ambitions in a fast-paced city while their relationship quietly fractures under the pressure.",
+      "To capture the raw, devastating emotion of a fading romance, Vance utilized an unusual filming method, keeping the two lead actors isolated from each other except during active takes. 'We wanted the audience to feel the genuine ache of distance,' Vance explained. 'When Clara weeps in the platform scene, those aren't just stage tears—that's pure, unfiltered emotional exhaustion.'",
+      "With its haunting acoustic soundtrack and deeply relatable themes of youth, love, and sacrifice, 'Before the Last Train Leaves' is poised to be the defining emotional masterpiece of this winter."
     ],
-    "category": "lifestyle",
-    "source": "LifeHacker Housing",
-    "author": "Elena Rostova",
-    "date": "2025-01-01",
-    "imageUrl": "https://plus.unsplash.com/premium_photo-1680367480804-12033b523184?w=800&auto=format&fit=crop&q=80",
+    "category": [
+      1
+    ],
+    "requiredCategorySearches": 0,
+    "source": "LifeHacker Entertainment",
+    "author": "Sophia Loren",
+    "date": "2026-02-14 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&auto=format&fit=crop&q=80",
     "keys": [
-      "housing",
-      "rent",
-      "budget",
-      "coliving",
-      "apartment",
-      "sandbox",
-      "lifestyle"
+      "movie",
+      "romance",
+      "cinema",
+      "entertainment",
+      "Clara Rossi",
+      "Liam Vance"
     ],
-    "likes": 980,
-    "comments": [
+    "likes": 1245,
+    "readTime": "3 min read",
+    "trending": false,
+    "comment": [
       {
-        "id": "c105",
-        "user": "StudioHunter",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Honestly, considering this for my first year just to hoard cash for that investment account mentioned in the other article.",
-        "time": "2025-01-01 10:30"
+        "id": "1",
+        "user": "Cinephile_99",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+        "text": "I saw the 30-second teaser trailer at the Downtown theater and I'm already crying. Clara Rossi is going to destroy me next month.",
+        "time": "2026-02-14 10:30:00 AM"
       }
-    ],
-    "readTime": "5 min read",
-    "trending": false
+    ]
   },
   {
-    "id": "sandstone-university-night-school",
-    "title": "Level Up Your Career: Sandstone State University Launches Flexible Night School for Working Professionals",
-    "summary": "Whether you want a quick professional certificate or a part-time Master's degree, SSU's continuous education catalog is now open.",
+    "id": 18,
+    "title": "GreenLeaf Supermarket Rolls Out 'Tuesday Club' — 20% Off for Members Every Week",
+    "summary": "Sandbox's busiest grocery store introduces a free loyalty program aimed at helping young families and budget-conscious commuters save on weekly staples.",
     "content": [
-      "SANDBOX — As the local job market becomes increasingly competitive, Sandstone State University (SSU) has officially expanded its Continuing Education Division, introducing a robust slate of evening programs tailored entirely for the 9-to-5 workforce.",
-      "The program allows Sandbox citizens to attend lectures after 7:00 PM, offering three distinct tracks: short-term professional certificates for immediate corporate skill boosts, continuous education courses for industry pivots, and accredited part-time Master's degrees.",
-      "Dean Robert Chen commented: 'Many 25-year-olds enter Sandbox's corporate ladder only to realize they lack the specialized credentials for management roles. This night school bridges that gap without requiring them to sacrifice their primary source of income.'",
-      "While the tuition fees require a careful look at your monthly budget, career data suggests that graduates from SSU's evening programs see an average 22% bump in their promotion velocity and intelligence-based career paths."
+      "\"SANDBOX — GreenLeaf Supermarket on Maple Street has officially launched its first-ever customer loyalty program, dubbed the 'Tuesday Club.' The initiative offers enrolled members a flat 20% discount on all store purchases every Tuesday, excluding alcohol and tobacco products.\",",
+      "    \"The program is completely free to join and requires only a quick registration at the customer service desk or via the store's new digital kiosk. Members receive a physical loyalty card and a digital QR code for their Banana Phones, making checkout seamless.\",",
+      "    \"Early feedback from Sandbox residents has been overwhelmingly positive. For a typical young professional spending $120 per week on groceries, the Tuesday discount translates to nearly $25 in weekly savings — over $1,200 annually, according to store calculations.\",",
+      "    \"GreenLeaf has also partnered with nearby Umami House to offer Tuesday Club members a 10% discount at the restaurant when they show their loyalty card — an unexpected bonus that has already created a buzz on local social media feeds.\""
     ],
-    "category": "career",
+    "category": [
+      5,
+      8
+    ],
+    "requiredCategorySearches": 5,
+    "source": "LifeHacker Local",
+    "author": "Patricia Okonkwo",
+    "date": "2026-06-01 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "supermarket",
+      "membership",
+      "discount",
+      "savings",
+      "budget",
+      "shopping",
+      "tuesday",
+      "loyalty",
+      "money"
+    ],
+    "likes": 1560,
+    "readTime": "3 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "21",
+        "user": "BudgetQueen_SBX",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+        "text": "Finally! I've been waiting for GreenLeaf to do something like this. Tuesdays are now my official grocery day.",
+        "time": "2026-06-01 10:30:00 AM"
+      },
+      {
+        "id": "22",
+        "user": "MidweekShopper",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "That Umami House tie-in is genius. Grocery run + dinner date on Tuesday = winning combination.",
+        "time": "2026-06-01 1:15:00 PM"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Fresh Off the Soil: Local Farmers Open Organic Drive-Thru Market at Sandbox Highway Exit 4",
+    "summary": "A collective of Sandbox valley farmers is cutting out the middleman, offering pesticide-free produce directly to daily commuters.",
+    "content": [
+      "SANDBOX — Commuters driving into Sandbox's corporate district now have a healthier pitstop options. Starting this Tuesday, the newly formed Sandbox Agricultural Co-operative has officially opened 'The Green Exit' — a rustic, drive-thru market located right off Highway Exit 4.",
+      "The initiative aims to provide busy 20-somethings and office workers with affordable, organic groceries on their way home. By skipping major supermarket supply chains, the cooperative offers fruits, vegetables, and dairy products that were harvested less than six hours prior.",
+      "Local farmer Thomas Miller, who organized the cooperative, said: 'We saw young professionals living in the town center buying stale, expensive greens from big retail chains. We have the best soil right here in Sandbox. Why not bring the farm straight to their car windows?'",
+      "Early reviews on social media praise the reasonable pricing. Health coaches in Sandbox are already recommending the market as a budget-friendly way for young corporate workers to fix their meal prep routines."
+    ],
+    "category": [
+      5
+    ],
+    "requiredCategorySearches": 2,
+    "source": "LifeHacker Lifestyle",
+    "author": "Thomas Miller",
+    "date": "2027-01-01 12:00:00 AM",
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1664299231810-29d1caf6f753?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "healthy",
+      "farming",
+      "organic",
+      "market",
+      "lifestyle",
+      "food",
+      "budget",
+      "eating"
+    ],
+    "likes": 845,
+    "readTime": "3 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "8",
+        "user": "MealPrepKing",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Grabbed a basket of avocados and fresh eggs after work. Half the price of the downtown organic store!",
+        "time": "2027-01-01 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "From Grind to Growth: How to Level Up Your Professional Game in Sandbox",
+    "summary": "Career coach Maya Torres shares four practical habits that separate high-performers from the overwhelmed — and they don't require working extra hours.",
+    "content": [
+      "SANDBOX — In a town where burnout is almost a rite of passage, true professionalism often gets confused with sheer hours logged. But according to Maya Torres, a career strategist who advises Sandbox's top startups, working longer rarely means working smarter. 'Professionalism isn't about sacrificing your evenings. It's about presence, preparation, and strategic visibility.'",
+      "Torres recommends four daily habits. First: arrive five minutes early to every meeting — virtual or in-person — and review your agenda beforehand. 'That small buffer signals respect and gives you mental clarity.' Second: send a brief weekly update to your manager summarizing your wins, blockers, and next steps. 'It takes ten minutes and makes you unforgettable during promotion cycles.' Third: learn to say 'let me get back to you' instead of guessing on the spot. 'Accuracy beats speed when stakes are high.' Fourth: invest in one new skill per quarter, whether it's public speaking, data analysis, or industry-specific software.",
+      "For those feeling stuck in their current role, Torres points to accessible options right here in Sandbox. Virtualization State University has recently ramped up its evening course catalog, offering working professionals a flexible path to upskilling without stepping away from their day jobs. From short-term certificates in high-demand fields to full graduate degrees spread over evenings and weekends, the university has clearly designed these programs with the 9-to-5 crowd in mind. 'You don't need to quit your job to pivot your career,' Torres adds. 'These VSU night offerings are exactly the bridge most professionals are looking for.'",
+      "She also emphasizes the importance of office relationships. 'Networking isn't a dirty word. It's simply building genuine connections before you need them. Grab coffee with a colleague from another department, join a cross-functional project, or attend the Sandbox Community Center's weekend mixers. Your next opportunity often comes from someone who remembers your name.'",
+      "Above all, Torres urges patience. 'Professional growth is a marathon, not a sprint. Consistency in small actions — showing up prepared, communicating clearly, and investing in yourself — compounds over time. In two years, you won't recognize the version of you who felt stuck.'"
+    ],
+    "category": [
+      7
+    ],
+    "requiredCategorySearches": 2,
     "source": "LifeHacker Work",
-    "author": "Robert Chen",
-    "date": "2025-01-01",
-    "imageUrl": "https://plus.unsplash.com/premium_photo-1724061886937-5f75a7907dcd?w=800&auto=format&fit=crop&q=80",
+    "author": "Maya Torres",
+    "date": "2027-08-04 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=800&auto=format&fit=crop&q=80",
     "keys": [
       "career",
+      "professional",
+      "growth",
+      "work",
+      "productivity",
+      "nightschool",
       "education",
-      "university",
-      "degree",
-      "promotion",
-      "sandbox",
-      "sandstone"
-    ],
-    "likes": 2105,
-    "comments": [
-      {
-        "id": "c201",
-        "user": "JuniorDev_Alpha",
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-        "text": "Signing up for the Data Science Certificate. Goodbye to my weekday free time, hello to a potential promotion!",
-        "time": "2025-01-01 10:30"
-      }
-    ],
-    "readTime": "5 min read",
-    "trending": true
-  },
-  {
-    "id": "sandbox-community-volunteers",
-    "title": "Sandbox Community Center Seeks Weekend Volunteers: Give Back and Build Your Local Network",
-    "summary": "The town's primary social hub is looking for passionate citizens to assist with youth mentoring and elderly care programs.",
-    "content": [
-      "SANDBOX — The Sandbox Community Center has launched its annual winter volunteer recruitment drive, urging young professionals to donate a few hours of their weekend action blocks to local social causes.",
-      "Open positions include organizing after-school coding camps for teenagers, assisting at the regional food pantry, and hosting digital literacy workshops for elderly Sandbox residents. No prior experience is required, as the center provides full onboarding orientation.",
-      "Social workers highlight that while volunteering doesn't pay a direct financial salary, it drastically accelerates a character's local Reputation metric and builds deep relationships with influential town elders.",
-      "Volunteer Coordinator Clara Higgins added: 'It’s a fantastic antidote to corporate isolation. Spending two hours here on a Saturday morning completely resets your mental stress parameters.'"
-    ],
-    "category": "lifestyle",
-    "source": "LifeHacker Local",
-    "author": "Clara Higgins",
-    "date": "2038-11-01",
-    "imageUrl": "https://images.unsplash.com/photo-1464863979621-258859e62245?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "community",
-      "volunteer",
-      "reputation",
-      "lifestyle",
-      "sandbox",
       "networking"
     ],
-    "likes": 420,
-    "comments": [
-      {
-        "id": "c202",
-        "user": "KindHearted",
-        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
-        "text": "Did the youth mentoring last semester. Met some amazing people and honestly, it looked great on my CV.",
-        "time": "2038-11-01 10:30"
-      }
-    ],
-    "readTime": "3 min read",
-    "trending": false
-  },
-  {
-    "id": "downtown-free-hugs",
-    "title": "Chilling Winter, Warming Hearts: 'Free Hugs' Movement Takes Over Sandbox Downtown Square",
-    "summary": "A grassroots group of citizens is braving the winter cold to combat urban loneliness with a simple, impactful gesture.",
-    "content": [
-      "SANDBOX — If you are walking through the Downtown commercial district this week, you might notice a vibrant group of people holding bright cardboard signs offering free, warm embraces to stressed commuters.",
-      "The 'Free Hugs Sandbox' initiative was started by a group of local artists aimed at easing the seasonal depression and high anxiety levels often felt by young corporate workers during the grueling winter quarters.",
-      "Organizers state that urban loneliness peaks during this time of the year, especially for 20-somethings living away from their families for the first time in capsule apartments or studios.",
-      "Psychology reports on LifeHacker indicate that a 10-second embrace triggers an instant release of oxytocin, providing a massive, completely free boost to a character's Mood meter when walking past the square."
-    ],
-    "category": "lifestyle",
-    "source": "LifeHacker Culture",
-    "author": "Elena Rostova",
-    "date": "2040-02-14",
-    "imageUrl": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "lifestyle",
-      "winter",
-      "mentalhealth",
-      "mood",
-      "downtown",
-      "sandbox"
-    ],
-    "likes": 1890,
-    "comments": [
-      {
-        "id": "c203",
-        "user": "LonelyCommuter",
-        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
-        "text": "I was having a terrible day after a rough performance review, and this completely turned my week around. God bless them.",
-        "time": "2040-02-14 10:30"
-      }
-    ],
-    "readTime": "2 min read",
-    "trending": true
-  },
-  {
-    "id": "sandbox-secondhand-furniture",
-    "title": "Skip the Showroom Prices: Sandbox's New Secondhand Furniture Depot Opens in Industrial Sector",
-    "summary": "Ditch the expensive retail chains; 'The Retro Nest' offers vintage, upcycled, and budget-friendly decor for first-time renters.",
-    "content": [
-      "SANDBOX — Furnishing a new apartment in downtown Sandbox usually means draining your early-career savings account. However, a massive new warehouse called 'The Retro Nest' is changing the game for budget-conscious citizens.",
-      "Located in the town's North Industrial Sector, the depot sources high-quality, pre-owned desks, sofas, and ergonomic office chairs, selling them at up to 70% off retail prices. Many items are upcycled by local designers, giving them a trendy, mid-century modern aesthetic.",
-      "Store manager Gary Vance said: 'You don't need a $3,000 designer couch to make your studio feel like home. Our customers are mostly 25-year-olds who just want a sturdy desk for their side-hustles and a comfortable bed that won't ruin their credit score.'",
-      "Interior design blogs note that shopping here fulfills a character's Home Comfort requirement perfectly without triggering the financial stress penalty caused by heavy credit card debt."
-    ],
-    "category": "lifestyle",
-    "source": "LifeHacker Housing",
-    "author": "Gary Vance",
-    "date": "2025-01-01",
-    "imageUrl": "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "housing",
-      "furniture",
-      "budget",
-      "apartment",
-      "lifestyle",
-      "sandbox",
-      "saving"
-    ],
     "likes": 950,
-    "comments": [
-      {
-        "id": "c204",
-        "user": "StudioHunter",
-        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
-        "text": "Got an amazing solid oak drafting table here for fifty bucks. It has a few scratches, but it adds character!",
-        "time": "2025-01-01 10:30"
-      }
-    ],
     "readTime": "3 min read",
-    "trending": false
+    "trending": false,
+    "comment": [
+      {
+        "id": "25",
+        "user": "RisingStar_SBX",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "The weekly update to my manager has been a game-changer. Got recognized in our team meeting twice in a row now.",
+        "time": "2027-08-04 10:30:00 AM"
+      }
+    ]
   },
   {
-    "id": "sandbox-first-asian-cuisine",
-    "title": "Massive Lineups Reported at 'Umami House', Sandbox's First Authentic Asian Fusion Restaurant",
-    "summary": "Foodies are braving two-hour wait times to try the town's highly anticipated handmade ramen and artisanal dim sum.",
+    "id": 16,
+    "title": "Checkout Miracle: Sandbox Grocery Clerk Wins $2.4 Million in Supermarket Lottery",
+    "summary": "A routine shift at GreenLeaf Supermarket turned into a life-changing moment for a 27-year-old cashier, who plans to use the windfall to escape the corporate grind.",
     "content": [
-      "SANDBOX — The culinary scene in Sandbox just took a major leap forward. This morning, 'Umami House' officially opened its doors on Eastern Avenue, marking the town’s first dedicated authentic Asian culinary establishment.",
-      "By noon, the queue wrapped completely around the block, with hungry office workers and food bloggers eagerly waiting to taste Master Chef Kenji Tanaka’s signature 18-hour broth ramen and delicate handmade dumplings.",
-      "The restaurant features an open-kitchen concept and mid-tier pricing, making it an attractive destination for weekend social gatherings or dating spots for Sandbox's younger demographic.",
-      "Food critics report that dining here gives an immediate, exceptional boost to a character's Satiety and Taste appreciation stats, though players should budget their time carefully to avoid waiting in lines during peak operational hours."
+      "\"SANDBOX — It started like any other Tuesday evening at the GreenLeaf Supermarket on Maple Street. For cashier Marcus Webb, the shift was dragging on as he scanned avocados and organic granola for the usual stream of after-work shoppers. Then, at exactly 6:42 PM, he scanned his own lottery ticket purchased during his lunch break — and the register screen froze.\",",
+      "I thought the system had crashed, Webb recalled, still visibly shaking during an exclusive interview at his cramped capsule apartment. My manager ran over, we rebooted the terminal three times, and then the winning notification just flashed up in big green letters: $2.4 million. I literally fell off my stool.",
+      "When asked about his immediate plans, Webb didn't hesitate: \"I'm giving my two-week notice tomorrow. No more 6 AM shifts, no more scrubbing produce stains off my uniform. I've been grinding here for four years while trying to build a side hustle in graphic design, and honestly, I was running on fumes.",
+      "Webb plans to use a portion of his winnings to enroll full-time in the Virtualization State University's digital arts program.  I want to build something creative, not just survive until my next paycheck, he added.",
+      "The rest of his windfall will go toward a down payment on a modest studio and a long-postponed visit to his family in the northern valleys. He also insisted on buying dinner for every colleague on his night shift, racking up a $900 tab at the newly opened Umami House.",
+      "Local financial experts warn that sudden wealth can be just as stressful as financial strain. However, Webb seems grounded:  I've seen the articles about burnout and side-hustle exhaustion. This is my reset button. I'm not going to waste it.",
+      "The GreenLeaf Supermarket management has already hung a framed copy of the winning ticket behind the customer service desk, calling it \"the greatest checkout moment in Sandbox retail history."
     ],
-    "category": "lifestyle",
-    "source": "LifeHacker Lifestyle",
-    "author": "FoodieSam",
-    "date": "2045-08-08",
-    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop&q=80",
+    "category": [
+      8,
+      2
+    ],
+    "requiredCategorySearches": 0,
+    "source": "LifeHacker Local",
+    "author": "Clara Higgins",
+    "date": "2028-07-08 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80",
     "keys": [
-      "food",
-      "restaurant",
-      "lifestyle",
-      "asian",
-      "ramen",
-      "sandbox",
-      "social"
+      "lottery",
+      "winner",
+      "supermarket",
+      "money",
+      "windfall",
+      "interview"
     ],
-    "likes": 1640,
-    "comments": [
-      {
-        "id": "c205",
-        "user": "RamenLover99",
-        "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80",
-        "text": "The spicy miso ramen is absolutely legendary. Totally worth the 90-minute wait in the cold!",
-        "time": "2045-08-08 10:30"
-      }
-    ],
-    "readTime": "3 min read",
-    "trending": true
-  },
-  {
-    "id": "banana-phone-launch",
-    "title": "Tech Frenzy: Hundreds Camp Overnight Outside Banana Store for the All-New Banana Phone 15 Pro",
-    "summary": "Tech enthusiasts and trend-chasers queue up on Maple Street to secure the latest flagship device featuring a titanium chassis.",
-    "content": [
-      "SANDBOX — The global tech hype has landed squarely in Sandbox. Tech giant Banana Inc. officially launched its next-generation smartphone, the Banana Phone 15 Pro, triggering massive overnight camping lines outside its flagship Maple Street retail store.",
-      "Equipped with a cutting-edge holographic display and an AI-driven lifestyle tracker, the device has become the ultimate status symbol among Sandbox's young tech and corporate elite, despite its eye-watering $1,299 starting price tag.",
-      "Financial columnists on LifeHacker have issued mild warnings, pointing out that buying the phone on launch day often requires entry-level workers to exhaust their emergency funds or rely heavily on high-interest monthly installments.",
-      "However, tech reviewer Leo TechTips claims: 'The social prestige and productivity metrics boost you get from pulling this out during a corporate boardroom meeting is undeniable. It's a luxury tax that many are willing to pay.'"
-    ],
-    "category": "news",
-    "source": "LifeHacker Tech",
-    "author": "Leo TechTips",
-    "date": "2050-09-20",
-    "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
-    "keys": [
-      "tech",
-      "gadget",
-      "banana",
-      "phone",
-      "launch",
-      "status",
-      "sandbox"
-    ],
-    "likes": 3240,
-    "comments": [
-      {
-        "id": "c206",
-        "user": "EarlyAdopter",
-        "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&auto=format&fit=crop&q=80",
-        "text": "Camped out since 10 PM yesterday and secured the Titanium Yellow model! My bank account hurts, but the screen is beautiful.",
-        "time": "2050-09-20 10:30"
-      }
-    ],
+    "likes": 2340,
     "readTime": "4 min read",
-    "trending": true
+    "trending": true,
+    "comment": [
+      {
+        "id": "16",
+        "user": "LuckyStrike_SBX",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+        "text": "I buy a ticket from that same kiosk every Friday. Seeing this gives me hope. Congrats Marcus, you earned it!",
+        "time": "2028-07-08 10:30:00 AM"
+      },
+      {
+        "id": "17",
+        "user": "NightShiftSurvivor",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Worked with Marcus for two years. Nicest guy in the store. So glad it happened to someone who actually deserves it.",
+        "time": "2028-07-08  16:30:00 AM"
+      }
+    ]
   },
   {
-    "id": "residential-charity-artshow",
+    "id": 8,
+    "title": "Sandbox National Bank Unveils 3.5% High-Yield Investment Plan Tailored for Young Professionals",
+    "summary": "With inflation pressing down, the town's primary financial institution launches an aggressive entry-level savings product.",
+    "content": [
+      "SANDBOX — In a surprise market move, Sandbox National Bank (SNB) announced its new 'First-Step High-Yield Account', boasting a guaranteed 3.5% annual interest rate. The product is explicitly designed to help young citizens secure their early-career savings.",
+      "Unlike traditional wealth management portfolios that require hefty upfront capital, this new account features a low entry barrier, requiring a minimum deposit of just $500.",
+      "Chief Financial Analyst Sarah Jenkins stated: 'The first five years of your career dictate your long-term financial freedom. A 3.5% low-risk yield allows young workers to beat inflation while keeping their capital liquid for future career transitions or life milestones.'"
+    ],
+    "category": [
+      2
+    ],
+    "requiredCategorySearches": 5,
+    "source": "LifeHacker Finance",
+    "author": "Sarah Jenkins",
+    "date": "2029-02-02 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "finance",
+      "savings",
+      "investment",
+      "bank",
+      "interest",
+      "money"
+    ],
+    "likes": 1920,
+    "readTime": "4 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "8",
+        "user": "CompoundInterestFan",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "Finally, a place to dump my emergency fund where it won't just rot. Moving my money tomorrow.",
+        "time": "2029-02-02 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Small Shifts, Big Results: Rethinking Wellness in Sandbox's Hustle Culture",
+    "summary": "Forget extreme routines — health experts say micro-adjustments to sleep, movement, and mindset are the real game-changers.",
+    "content": [
+      "SANDBOX — Wellness has become a buzzword drowned in expensive supplements, wearable trackers, and conflicting advice. But Dr. Miriam Holt, a Sandbox-based general practitioner, argues that genuine health is far more mundane — and far more achievable. 'We've overcomplicated something inherently simple. Your body doesn't need a $200 smart ring. It needs consistent, basic care.'",
+      "Holt emphasizes three pillars: sleep, movement, and digital boundaries. On sleep, she recommends a fixed bedtime even on weekends — 'Your circadian rhythm doesn't care if it's Saturday.' For movement, she dismisses the 10,000-step myth. 'Three 15-minute brisk walks spread across your day are more effective than one exhausting gym session.' On digital boundaries, she suggests a 30-minute screen-free window before sleep: 'Blue light suppresses melatonin, and doom-scrolling spikes cortisol. Read a physical book, stretch, or simply stare at the ceiling.'",
+      "She also cautions against the all-or-nothing mindset that derails most resolutions. 'One bad night of sleep doesn't ruin your health. One missed workout doesn't erase your progress. The danger is letting a single slip become a week of abandonment. Forgive yourself quickly and return to your baseline.' Holt adds that social connection is an overlooked health metric: 'Loneliness is as harmful as smoking. A five-minute phone call with a friend or a wave to a neighbor at the community center is genuine medicine.'",
+      "Ultimately, Holt's message is one of gentle consistency. 'Sandbox culture glorifies exhaustion as a badge of honor. But burnout isn't a trophy — it's a warning sign. Prioritize rest, move your body daily, and protect your mental space. That's not laziness. That's survival.'"
+    ],
+    "category": [
+      5
+    ],
+    "requiredCategorySearches": 0,
+    "source": "LifeHacker Lifestyle",
+    "author": "Miriam Holt",
+    "date": "2031-09-30 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "wellness",
+      "sleep",
+      "health",
+      "mindset",
+      "balance",
+      "habits",
+      "lifestyle"
+    ],
+    "likes": 210,
+    "readTime": "2 min read",
+    "trending": false,
+    "comment": [
+      {
+        "id": "25",
+        "user": "NightOwl_SBX",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+        "text": "The screen-free 30 minutes before bed is the hardest part. But when I actually do it, I sleep like a rock.",
+        "time": "2031-09-30 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "'I Almost Threw It Away': Retired Schoolteacher's $3.8 Million Lottery Win Comes Just in Time",
+    "summary": "A 64-year-old former educator nearly discarded her winning ticket as junk mail, but a last-minute second thought changed her life forever.",
+    "content": [
+      "SANDBOX — For Margaret Chen, the last decade has been a quiet exercise in stretching every dollar. The retired elementary school teacher lives alone in a modest one-bedroom apartment on the outskirts of Sandbox, surviving on a fixed pension that barely covers her rising rent and medication costs. Last Thursday, that all changed in a single, bewildering moment.",
+      "It happened at the Sandbox GreenLeaf Supermarket, where Chen stopped by after her weekly bridge club meeting to pick up a carton of eggs and a loaf of bread. The store's lottery kiosk was displaying a promotional banner: 'Try Your Luck — Tickets Just $2.' Chen hesitated, then shrugged. 'I never play. My late husband used to buy tickets every Saturday, and he never won a cent. But something made me stop that day. Maybe it was the color of the banner — it was his favorite shade of blue.'",
+      "She purchased a single quick-pick ticket, stuffed it into her worn leather handbag, and promptly forgot about it. Three days later, while cleaning out her bag, she almost tossed the crumpled slip into the trash. 'It looked like garbage,' she told reporters with a sheepish laugh.",
+      "What followed was pure disbelief. Every single digit matched the Virtualization State Mega Draw jackpot. The prize: $3.8 million — the largest lottery payout in Sandbox's history, eclipsing a previous record set in 2029.",
+      "I sat down on my kitchen floor and cried for twenty minutes, Chen recalled, her voice still trembling with emotion. Then I called my daughter in Westbrook, and she thought I was having a stroke. I had to send her a photo of the ticket just to prove I wasn't delusional.",
+      "Unlike the usual stories of young winners splurging on sports cars and luxury vacations, Chen's plans are deeply practical and heartfelt. She intends to pay off her daughter's student loans, set up a college fund for her two grandchildren, and move into a quieter, ground-floor apartment with better accessibility for her arthritic knees.",
+      "I've spent my whole life giving to others — my students, my family, this community. Now, for the first time, the universe is giving back, she said, wiping a tear from her eye. I'm going to donate $200,000 to the Sandbox Community Center. They run the after-school reading program I helped start thirty years ago. It's still going strong, and I want to keep it alive.",
+      "When asked if she has any extravagant plans for herself, Chen chuckled. I'm going to buy a really good vacuum cleaner. The one I have is older than half the people reading this article. And maybe — just maybe — I'll treat myself to a proper dinner at that new ramen place everyone keeps talking about.",
+      "Financial advisors commend Chen's measured approach. At her age, wealth preservation and legacy planning are paramount, noted Sarah Jenkins, chief analyst at Sandbox National Bank. Margaret is making exactly the right moves — securing her health, supporting her family, and giving back to the institutions that shaped her. This is how you change a life without losing yourself.",
+      "Store employees report a significant surge in ticket sales since the announcement, with many shoppers jokingly rubbing the machine for good luck."
+    ],
+    "category": [
+      2,
+      8
+    ],
+    "requiredCategorySearches": 1,
+    "source": "LifeHacker Local",
+    "author": "Elena Rostova",
+    "date": "2035-03-21 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "lottery",
+      "retirement",
+      "community",
+      "family",
+      "luck",
+      "supermarket",
+      "generosity",
+      "money",
+      "interview"
+    ],
+    "likes": 2870,
+    "readTime": "4 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "18",
+        "user": "FormerStudent_89",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80",
+        "text": "Mrs. Chen was my third-grade teacher! She used to read us stories during lunch break. No one deserves this more than her. So happy right now!",
+        "time": "2035-03-21 1:00:00 PM"
+      },
+      {
+        "id": "19",
+        "user": "SandboxElder",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
+        "text": "Finally, a winner who actually needs it. God bless you, Margaret. Enjoy that vacuum cleaner — you've earned it!",
+        "time": "2035-03-21 12:00:00 AM"
+      },
+      {
+        "id": "20",
+        "user": "SkepticalSam",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+        "text": "Amazing story, but I'm still convinced these machines are rigged. I've spent $200 this year and won exactly zero. Congrats to her though.",
+        "time": "2035-03-22 2:00:00 PM"
+      }
+    ]
+  },
+  {
+    "id": 7,
     "title": "Lemonade & Local Art: Sandbox Artists Guild Announces Neighborhood Charity Art Show Next Month",
     "summary": "Grab a fresh drink and browse original works by local painters at this intimate, open-air community gallery.",
     "content": [
@@ -773,10 +571,13 @@
       "Guild president Maya Lin stated: 'We wanted to pull fine art out of cold, intimidating downtown museums and bring it right to where people live. It's a casual, sunny weekend event where you can buy amazing local art and chat with your neighbors.'",
       "Attending this event provides a relaxed, low-cost way to max out a character's Stress Relief counter and gives an opportunity to purchase affordable, original artwork to boost your home's aesthetic score."
     ],
-    "category": "lifestyle",
-    "source": "LifeHacker Culture",
+    "category": [
+      5
+    ],
+    "requiredCategorySearches": 3,
+    "source": "LifeHacker Lifestyle",
     "author": "Maya Lin",
-    "date": "2055-05-01",
+    "date": "2035-05-01 12:00:00 AM",
     "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "keys": [
       "art",
@@ -784,20 +585,225 @@
       "lifestyle",
       "charity",
       "weekend",
-      "sandbox",
-      "culture"
+      "culture",
+      "what to do"
     ],
     "likes": 710,
-    "comments": [
+    "readTime": "3 min read",
+    "trending": false,
+    "comment": [
       {
-        "id": "c207",
+        "id": "7",
         "user": "ArtLover_Sandbox",
         "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80",
         "text": "This sounds wonderful! Definitely taking a walk through the residential area next month. And I can never say no to fresh lemonade.",
-        "time": "2055-05-01 10:30"
+        "time": "2035-05-01 10:30:00 AM"
       }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Escape the Sandbox: New 'Wanderlust' Travel Agency Promises Personalized Life-Leave Blueprints",
+    "summary": "Feeling burnt out by the 9-to-5 grind? A boutique agency in town is mapping out custom journeys to explore the world beyond Sandbox borders.",
+    "content": [
+      "SANDBOX — For those who feel the walls of Sandbox closing in after months of endless corporate tasks, a new startup called 'Wanderlust Itineraries' has opened its doors on Maple Street. Its mission? To help citizens curate customized travel experiences that offer a perspective on life outside the simulation.",
+      "Wanderlust doesn't just book flights; they use personality quizzes and stress-level evaluations to build personalized 'sabbatical blueprints.' Whether it's a 3-day digital detox in the mountain ranges or a month-long cultural immersion, the plans focus heavily on mental restoration.",
+      "Agency founder Marcus Vance noted: 'We see so many young people who immediately burn out because they think Sandbox is the entire universe. There is a massive world out there. Sometimes, taking a planned break actually advances your career more than grinding through the weekend.'",
+      "The agency also partners with local HR departments to promote 'well-being leaves,' allowing workers to pause their career progression counters temporarily without losing their job security."
     ],
+    "category": [
+      6
+    ],
+    "requiredCategorySearches": 0,
+    "source": "LifeHacker Lifestyle",
+    "author": "Marcus Vance",
+    "date": "2035-05-12 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "travel",
+      "relax",
+      "burnout",
+      "agency",
+      "vacation",
+      "mentalhealth",
+      "what to do"
+    ],
+    "likes": 650,
+    "readTime": "4 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "9",
+        "user": "OvertimeSurvivor",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "I desperately need this. Booked a consultation. Sandbox's office lights are draining my soul.",
+        "time": "2035-05-12 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Sandbox Community Center Seeks Weekend Volunteers: Give Back and Build Your Local Network",
+    "summary": "The town's primary social hub is looking for passionate citizens to assist with youth mentoring and elderly care programs.",
+    "content": [
+      "SANDBOX — The Sandbox Community Center has launched its annual winter volunteer recruitment drive, urging young professionals to donate a few hours of their weekend action blocks to local social causes.",
+      "Open positions include organizing after-school coding camps for teenagers, assisting at the regional food pantry, and hosting digital literacy workshops for elderly Sandbox residents. No prior experience is required, as the center provides full onboarding orientation.",
+      "Social workers highlight that while volunteering doesn't pay a direct financial salary, it drastically accelerates a character's local Reputation metric and builds deep relationships with influential town elders.",
+      "Volunteer Coordinator Clara Higgins added: 'It’s a fantastic antidote to corporate isolation. Spending two hours here on a Saturday morning completely resets your mental stress parameters.'"
+    ],
+    "category": [
+      5,
+      7
+    ],
+    "requiredCategorySearches": 3,
+    "source": "LifeHacker Local",
+    "author": "Clara Higgins",
+    "date": "2038-11-01 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1464863979621-258859e62245?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "community",
+      "volunteer",
+      "reputation",
+      "lifestyle",
+      "friend",
+      "networking"
+    ],
+    "likes": 420,
     "readTime": "3 min read",
-    "trending": false
+    "trending": false,
+    "comment": [
+      {
+        "id": "14",
+        "user": "KindHearted",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+        "text": "Did the youth mentoring last semester. Met some amazing people and honestly, it looked great on my CV.",
+        "time": "2038-11-01 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Fuel Smart: A No-Nonsense Guide to Healthy Eating for Sandbox's Overworked Professionals",
+    "summary": "Ditch the fad diets and expensive superfoods — local nutritionists share simple, budget-friendly habits that actually stick.",
+    "content": [
+      "SANDBOX — Between corporate deadlines, side hustles, and social obligations, eating well often falls to the bottom of the priority list for Sandbox's 20-something workforce. The result? A cycle of vending machine snacks, midnight takeout, and the inevitable 3 PM energy crash.",
+      "Local nutritionist Dr. Amy Foster, believes healthy eating doesn't require expensive meal kits or exotic ingredients. 'The biggest myth is that eating well is complicated and costly. In reality, it's about consistency, not perfection,' she says.",
+      "Foster recommends three foundational rules for busy professionals. First: always keep shelf-stable staples at home — brown rice, canned beans, oats, and frozen vegetables. '",
+      "Second: prioritize protein at breakfast. 'Skipping breakfast or eating sugary cereals sets off a blood-sugar rollercoaster. A simple scrambled egg on toast or Greek yogurt with fruit keeps you focused until lunch without the crash.'",
+      "Third: hydrate before you caffeinate. 'Drink a full glass of water first thing in the morning and before every meal. Thirst is often mistaken for hunger, and it costs nothing to fix.'",
+      "The biggest obstacle, she admits, is mental. 'We're conditioned to think healthy food tastes bland. But a little olive oil, garlic, and salt can transform simple ingredients into something genuinely satisfying. You just need ten extra minutes.'",
+      "For those who struggle with portion control, Foster suggests the 'plate method': fill half your plate with vegetables, a quarter with protein, and a quarter with whole grains. 'It's visual, it's easy, and it works regardless of what cuisine you're cooking.'",
+      "Finally, she urges patience. 'Don't aim for a complete overhaul overnight. Start with one meal a day. Make that meal intentional. Once that becomes routine, build from there. Sustainable change is slow, but it's the only kind that lasts.'"
+    ],
+    "category": [
+      5
+    ],
+    "requiredCategorySearches": 0,
+    "source": "LifeHacker Lifestyle",
+    "author": "Julian Vance",
+    "date": "2039-02-01 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&auto=format&fit=crop&q=80",
+    "keys": [],
+    "likes": 1830,
+    "readTime": "3 min read",
+    "trending": false,
+    "comment": [
+      {
+        "id": "23",
+        "user": "FitAndFrugal",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+        "text": "The plate method changed my life. I used to just eat whatever was in front of me. Now I actually think about balance.",
+        "time": "2039-02-01 10:30:00 AM"
+      },
+      {
+        "id": "24",
+        "user": "TakeoutTitan",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+        "text": "Okay but who has time to cook after a 10-hour shift? Genuine question. I barely have energy to microwave stuff.",
+        "time": "2039-02-02 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Chilling Winter, Warming Hearts: 'Free Hugs' Movement Takes Over Sandbox Downtown Square",
+    "summary": "A grassroots group of citizens is braving the winter cold to combat urban loneliness with a simple, impactful gesture.",
+    "content": [
+      "SANDBOX — If you are walking through the Downtown commercial district this week, you might notice a vibrant group of people holding bright cardboard signs offering free, warm embraces to stressed commuters.",
+      "The 'Free Hugs Sandbox' initiative was started by a group of local artists aimed at easing the seasonal depression and high anxiety levels often felt by young corporate workers during the grueling winter quarters.",
+      "Organizers state that urban loneliness peaks during this time of the year, especially for 20-somethings living away from their families for the first time.",
+      "Psychology reports on LifeHacker indicate that a 10-second embrace triggers an instant release of oxytocin, providing a massive, completely free boost to a character's Mood meter when walking past the square."
+    ],
+    "category": [
+      5
+    ],
+    "requiredCategorySearches": 0,
+    "source": "LifeHacker Culture",
+    "author": "Elena Rostova",
+    "date": "2040-02-14 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "lifestyle",
+      "winter",
+      "mentalhealth",
+      "mood",
+      "destress",
+      "downtown",
+      "warm",
+      "friend"
+    ],
+    "likes": 1890,
+    "readTime": "2 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "13",
+        "user": "LonelyCommuter",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+        "text": "I was having a terrible day after a rough performance review, and this completely turned my week around. God bless them.",
+        "time": "2040-02-14 10:30:00 AM"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Massive Lineups Reported at 'Umami House', Sandbox's First Authentic Asian Fusion Restaurant",
+    "summary": "Foodies are braving two-hour wait times to try the town's highly anticipated handmade ramen and artisanal dim sum.",
+    "content": [
+      "SANDBOX — The culinary scene in Sandbox just took a major leap forward. This morning, 'Umami House' officially opened its doors on Eastern Avenue, marking the town’s first dedicated authentic Asian culinary establishment.",
+      "By noon, the queue wrapped completely around the block, with hungry office workers and food bloggers eagerly waiting to taste Master Chef Kenji Tanaka’s signature 18-hour broth ramen and delicate handmade dumplings.",
+      "The restaurant features an open-kitchen concept and mid-tier pricing, making it an attractive destination for weekend social gatherings or dating spots for Sandbox's younger demographic.",
+      "Food critics report that dining here gives an immediate, exceptional boost to a character's Satiety and Taste appreciation stats, though players should budget their time carefully to avoid waiting in lines during peak operational hours.",
+      "   "
+    ],
+    "category": [
+      5
+    ],
+    "requiredCategorySearches": 0,
+    "source": "LifeHacker Local",
+    "author": "Clara Higgins",
+    "date": "2045-08-08 12:00:00 AM",
+    "imageUrl": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop&q=80",
+    "keys": [
+      "food",
+      "restaurant",
+      "lifestyle",
+      "asian",
+      "ramen",
+      "social",
+      "what to do"
+    ],
+    "likes": 1640,
+    "readTime": "3 min read",
+    "trending": true,
+    "comment": [
+      {
+        "id": "15",
+        "user": "RamenLover99",
+        "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80",
+        "text": "The spicy miso ramen is absolutely legendary. Totally worth the 90-minute wait in the cold!",
+        "time": "2045-08-08 10:30:00 AM"
+      }
+    ]
   }
 ]
