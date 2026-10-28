@@ -9,8 +9,8 @@
       "While the tuition fees require a careful look at your monthly budget, career data suggests that graduates from SSU's evening programs see an average 22% bump in their promotion velocity and intelligence-based career paths."
     ],
     "category": [
-      7,
-      5
+      "Career",
+      "Lifestyle"
     ],
     "requiredCategorySearches": 3,
     "source": "LifeHacker Work",
@@ -48,8 +48,8 @@
       "The biggest selling point is the price tag: rent is exactly 40% lower than a standard studio apartment in town, effectively solving the initial budget crunch that most 25-year-old characters face upon moving into Sandbox."
     ],
     "category": [
-      2,
-      5
+      "Finance",
+      "Lifestyle"
     ],
     "requiredCategorySearches": 5,
     "source": "LifeHacker Housing",
@@ -89,7 +89,7 @@
       "The trend has forced local financial institutions to restructure their offerings. The new 'Impact Yield' accounts automatically funnel interest from standard accounts into municipal eco-resilience projects, providing players with dual returns in stable cash yield and verified town reputation points."
     ],
     "category": [
-      2
+      "Finance"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Finance",
@@ -128,7 +128,7 @@
       "Tech companies in Sandbox's commercial district have denied any deliberate manipulation, claiming their engines merely reduce decision fatigue for overwhelmed junior staff. However, independent analysts suggest that this continuous algorithmic nudging creates a predictable workforce, leaving many to wonder if true individual agency still exists inside the town's borders."
     ],
     "category": [
-      4
+      "Tech"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Tech & Society",
@@ -168,8 +168,8 @@
       "Career advisor Liam Frost states: 'A side hustle is a double-edged sword. It accelerates early-game capital accumulation, but if you don't manage your stamina, you will face a severe burnout penalty before you hit your 30s.'"
     ],
     "category": [
-      2,
-      7
+      "Finance",
+      "Career"
     ],
     "requiredCategorySearches": 5,
     "source": "LifeHacker Work",
@@ -209,7 +209,7 @@
       "With its haunting acoustic soundtrack and deeply relatable themes of youth, love, and sacrifice, 'Before the Last Train Leaves' is poised to be the defining emotional masterpiece of this winter."
     ],
     "category": [
-      1
+      "Entertainment"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Entertainment",
@@ -248,8 +248,8 @@
       "    \"GreenLeaf has also partnered with nearby Umami House to offer Tuesday Club members a 10% discount at the restaurant when they show their loyalty card — an unexpected bonus that has already created a buzz on local social media feeds.\""
     ],
     "category": [
-      5,
-      8
+      "Lifestyle",
+      "News"
     ],
     "requiredCategorySearches": 5,
     "source": "LifeHacker Local",
@@ -298,7 +298,7 @@
       "Early reviews on social media praise the reasonable pricing. Health coaches in Sandbox are already recommending the market as a budget-friendly way for young corporate workers to fix their meal prep routines."
     ],
     "category": [
-      5
+      "Lifestyle"
     ],
     "requiredCategorySearches": 2,
     "source": "LifeHacker Lifestyle",
@@ -340,7 +340,7 @@
       "Above all, Torres urges patience. 'Professional growth is a marathon, not a sprint. Consistency in small actions — showing up prepared, communicating clearly, and investing in yourself — compounds over time. In two years, you won't recognize the version of you who felt stuck.'"
     ],
     "category": [
-      7
+      "Career"
     ],
     "requiredCategorySearches": 2,
     "source": "LifeHacker Work",
@@ -384,8 +384,8 @@
       "The GreenLeaf Supermarket management has already hung a framed copy of the winning ticket behind the customer service desk, calling it \"the greatest checkout moment in Sandbox retail history."
     ],
     "category": [
-      8,
-      2
+      "News",
+      "Finance"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Local",
@@ -430,7 +430,7 @@
       "Chief Financial Analyst Sarah Jenkins stated: 'The first five years of your career dictate your long-term financial freedom. A 3.5% low-risk yield allows young workers to beat inflation while keeping their capital liquid for future career transitions or life milestones.'"
     ],
     "category": [
-      2
+      "Finance"
     ],
     "requiredCategorySearches": 5,
     "source": "LifeHacker Finance",
@@ -469,7 +469,7 @@
       "Ultimately, Holt's message is one of gentle consistency. 'Sandbox culture glorifies exhaustion as a badge of honor. But burnout isn't a trophy — it's a warning sign. Prioritize rest, move your body daily, and protect your mental space. That's not laziness. That's survival.'"
     ],
     "category": [
-      5
+      "Lifestyle"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Lifestyle",
@@ -515,8 +515,8 @@
       "Store employees report a significant surge in ticket sales since the announcement, with many shoppers jokingly rubbing the machine for good luck."
     ],
     "category": [
-      2,
-      8
+      "Finance",
+      "News"
     ],
     "requiredCategorySearches": 1,
     "source": "LifeHacker Local",
@@ -572,7 +572,7 @@
       "Attending this event provides a relaxed, low-cost way to max out a character's Stress Relief counter and gives an opportunity to purchase affordable, original artwork to boost your home's aesthetic score."
     ],
     "category": [
-      5
+      "Lifestyle"
     ],
     "requiredCategorySearches": 3,
     "source": "LifeHacker Lifestyle",
@@ -612,7 +612,7 @@
       "The agency also partners with local HR departments to promote 'well-being leaves,' allowing workers to pause their career progression counters temporarily without losing their job security."
     ],
     "category": [
-      6
+      "Travel"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Lifestyle",
@@ -652,8 +652,8 @@
       "Volunteer Coordinator Clara Higgins added: 'It’s a fantastic antidote to corporate isolation. Spending two hours here on a Saturday morning completely resets your mental stress parameters.'"
     ],
     "category": [
-      5,
-      7
+      "Lifestyle",
+      "Career"
     ],
     "requiredCategorySearches": 3,
     "source": "LifeHacker Local",
@@ -696,7 +696,7 @@
       "Finally, she urges patience. 'Don't aim for a complete overhaul overnight. Start with one meal a day. Make that meal intentional. Once that becomes routine, build from there. Sustainable change is slow, but it's the only kind that lasts.'"
     ],
     "category": [
-      5
+      "Lifestyle"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Lifestyle",
@@ -735,7 +735,7 @@
       "Psychology reports on LifeHacker indicate that a 10-second embrace triggers an instant release of oxytocin, providing a massive, completely free boost to a character's Mood meter when walking past the square."
     ],
     "category": [
-      5
+      "Lifestyle"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Culture",
@@ -777,7 +777,7 @@
       "   "
     ],
     "category": [
-      5
+      "Lifestyle"
     ],
     "requiredCategorySearches": 0,
     "source": "LifeHacker Local",
