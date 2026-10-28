@@ -4,6 +4,7 @@ import { Article, WeatherData, MonthlyWeatherDay } from "./types";
 import { articlesData, weatherProfiles } from "./data/mockData";
 import { getKeywordCategory, parseStats, findHitKeyword } from "./data/keywordCategories";
 import { categorySlugs, hasCategory, sharesCategory } from "./categoryUtils";
+import { toDateNum } from "./dateUtils";
 import { DEFAULT_MONTHLY_WEATHER, parsePlayFabWeatherData, getMonthlyWeatherForDateToRead, parsePlayerState } from "./data/mockWeather";
 
 // Components
@@ -28,6 +29,14 @@ export default function App() {
   const [gameTime, setGameTime] = useState<string>("2025-01-01");
   const [monthlyWeather, setMonthlyWeather] = useState<MonthlyWeatherDay[]>(DEFAULT_MONTHLY_WEATHER);
   const [isLoginLoading, setIsLoginLoading] = useState(false);
+
+  // player_state.date (如 20250401) 是游戏内日期的权威来源；game_time / game_timestamp
+  // 等 key 只是旧玩家的兜底。两者都读不到时保留 state 里的默认值。
+  const applyGameTime = (data: any): number | undefined => {
+    const dateNum = parsePlayerState(data.playerState)?.date || toDateNum(data.gameTime) || undefined;
+    if (dateNum) setGameTime(String(dateNum));
+    return dateNum;
+  };
 
   // PlayFab Login and fetch stats effect
   // 用一个 Ref 防止组件重复挂载时重复请求
@@ -59,22 +68,12 @@ export default function App() {
           setSearchStats(parsed);
           const parsedCate = parseStats(data.cate);
           setSearchCate(parsedCate);
-          const userGameTime = data.gameTime || "2025-01-01";
-          setGameTime(userGameTime);
+          // 1. 解析游戏内日期 (player_state.date 优先，game_time 兜底) —— 文章过滤和
+          //    天气都用它，之前文章过滤只认 game_time 所以停在了 2025-01-01
+          const targetDateNum = applyGameTime(data);
+          const userGameTime = targetDateNum ? String(targetDateNum) : "2025-01-01";
 
-          // 1. 尝试读取 player_state 中的 date (如 20250201)
-          const playerStateObj = parsePlayerState(data.playerState);
-          let targetDateNum: number | undefined = playerStateObj?.date;
-
-          // 2. 如果 player_state 没有 date，从 userGameTime ("2025-01-01") 提取 dateToRead 数字
-          if (!targetDateNum) {
-            const digits = userGameTime.replace(/[^0-9]/g, "");
-            if (digits.length >= 8) {
-              targetDateNum = parseInt(digits.substring(0, 8), 10);
-            }
-          }
-
-          // 3. 读取 table_tbweather.json 中本月的所有天气预测
+          // 2. 读取 table_tbweather.json 中本月的所有天气预测
           if (targetDateNum) {
             const monthWeather = getMonthlyWeatherForDateToRead(targetDateNum);
             setMonthlyWeather(monthWeather);
@@ -167,7 +166,7 @@ export default function App() {
       const data = await response.json();
       if (response.ok && data.success) {
         setSearchStats(parseStats(data.stats));
-        if (data.gameTime) setGameTime(data.gameTime);
+        applyGameTime(data);
         console.log(`已成功在 PlayFab 中为文章中的所有注册关键词增加点击量！`);
       }
     } catch (err) {
@@ -233,7 +232,7 @@ export default function App() {
       if (response.ok && data.success) {
         setSearchStats(parseStats(data.stats));
         setSearchCate(parseStats(data.cate));
-        if (data.gameTime) setGameTime(data.gameTime);
+        applyGameTime(data);
         console.log(`已成功在 PlayFab 中为 [${normalizedKeyword}] 搜索次数加1，分类 [${category}] 搜索次数加1！`);
       }
     } catch (err) {
@@ -286,15 +285,17 @@ export default function App() {
     handleSelectArticle("star-city-thriller");
   };
 
-  // Helper to check if article publication date is on or before current gameTime
-  const isPublished = (artDateStr: string, currentGameTimeStr: string) => {
-    if (!artDateStr) return true;
-    const artTime = new Date(artDateStr).getTime();
-    const gameTimeMs = new Date(currentGameTimeStr).getTime();
-    if (isNaN(artTime) || isNaN(gameTimeMs)) {
-      return artDateStr <= currentGameTimeStr;
-    }
-    return artTime <= gameTimeMs;
+  // Helper to check if article publication date is on or before current gameTime.
+  // Both sides are reduced to a YYYYMMDD integer so the comparison is immune to
+  // timezones: article dates ("2025-01-01 12:00:00 AM") parse as local midnight
+  // while an ISO gameTime ("2025-04-01") parses as UTC midnight, and mixing the
+  // two silently hid same-day articles for players west of UTC.
+  const isPublished = (artDateStr: string, currentGameTime: string) => {
+    const artNum = toDateNum(artDateStr);
+    const gameNum = toDateNum(currentGameTime);
+    // Fail open: never hide content just because a date was unreadable
+    if (artNum === null || gameNum === null) return true;
+    return artNum <= gameNum;
   };
 
   // Filter visible articles based on search_cate counts and publication date (gameTime)
