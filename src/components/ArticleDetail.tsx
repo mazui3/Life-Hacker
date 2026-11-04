@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { ArrowLeft, Bookmark, Clock, User, ArrowRight, MessageSquare, Send } from "lucide-react";
 import { Article, Comment } from "../types";
 import { primaryCategory } from "../categoryUtils";
@@ -19,6 +19,10 @@ export default function ArticleDetail({
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [commentsList, setCommentsList] = useState<Comment[]>(article.comments || []);
   const [newCommentText, setNewCommentText] = useState("");
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [article.id]);
 
   const handleAddComment = (e: React.FormEvent) => {
     e.preventDefault();
