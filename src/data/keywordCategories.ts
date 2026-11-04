@@ -1,4 +1,11 @@
 export const keywordCategoryMap: Record<string, string> = {
+  // Default searches quoted from Sandbox articles.
+  "Tuesday Club": "lifestyle",
+  "Capsule Co-Living": "finance",
+  "Before the Last Train Leaves": "entertainment",
+  "Free Hugs": "lifestyle",
+  "Umami House": "lifestyle",
+
   // news
   "solar": "news",
   "fusion": "news",

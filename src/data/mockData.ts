@@ -11,8 +11,8 @@ export const articlesData: Article[] = (articlesRaw as any[]).map((raw) => ({
 
 // Multi-city weather profiles
 export const weatherProfiles: Record<string, WeatherData> = {
-  montreal: {
-    city: "Montreal",
+  sandbox: {
+    city: "Sandbox",
     temp: 29,
     high: 32,
     low: 21,
@@ -243,12 +243,12 @@ export const mockGames = [
 ];
 
 // Trending Searches on LifeHacker
+// Short phrases quoted from Sandbox article titles.
 export const trendingSearches = [
-  "Taylor Swift Wedding Schedule",
-  "Solar Fusion 2030 Treaty",
-  "Best spy shows 2026",
-  "Montreal real-feel temperatures",
-  "E-sports in summer games",
-  "Gemini Local WebAssembly compiler",
-  "Prague spy filming spots"
+  "Tuesday Club",
+  "Capsule Co-Living",
+  "Before the Last Train Leaves",
+  "Free Hugs",
+  "Umami House"
 ];
+

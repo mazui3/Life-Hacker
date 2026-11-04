@@ -114,7 +114,7 @@ export default function App() {
 
   // Live Modifiable Datasets (to enable liking)
   const [articles, setArticles] = useState<Article[]>(articlesData);
-  const [weather, setWeather] = useState<WeatherData>(weatherProfiles.montreal);
+  const [weather, setWeather] = useState<WeatherData>(weatherProfiles.sandbox);
   const [activeHoroscopeSign, setActiveHoroscopeSign] = useState("cancer");
 
   const recordArticleViewInPlayFab = async (articleId: string) => {

@@ -126,9 +126,6 @@ export default function ArticleDetail({
 
         {/* Keywords / Tags list */}
         <div className="pt-4 flex flex-wrap gap-2" id="article-keywords-bar">
-          <span className="text-xs font-bold text-neutral-400 uppercase flex items-center mr-1">
-            Keywords:
-          </span>
           {article.keys.map((key) => (
             <span
               key={key}

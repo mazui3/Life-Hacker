@@ -19,28 +19,41 @@ export default function WidgetsRow({
 }: WidgetsRowProps) {
   const [showHistoryModal, setShowHistoryModal] = useState(false);
 
+  // Fictional town memories, loosely inspired by the Sandbox articles.
   const historyFacts = [
     {
-      year: "1608",
-      title: "Quebec City is Founded",
-      description: "French explorer Samuel de Champlain founded Quebec City on the site of a former St. Lawrence Iroquoian settlement called Stadacona.",
-      fact: "Champlain constructed three wooden main buildings, surrounded by a moat and a wooden stockade, establishing what would become the historic heart of French North America."
+      year: "2021",
+      title: "The Tuesday That Needed a Queue",
+      description: "GreenLeaf's first neighborhood discount day drew a line all the way to the shopping carts. Three residents joined it without knowing what was on sale.",
+      fact: "The unofficial queue captain was paid in a slightly bruised pear. Local bargain hunters still describe this as a leadership opportunity."
     },
     {
-      year: "1947",
-      title: "First Roswell Reports",
-      description: "Debris is recovered from a ranch near Roswell, New Mexico, sparking decades of global UFO lore.",
-      fact: "The military initially announced the recovery of a 'flying disc', but quickly recanted, stating it was a standard weather balloon. Declassified files later revealed it was a top-secret acoustics spy balloon."
+      year: "2022",
+      title: "The Hive Labels Its First Fridge",
+      description: "Sandbox's capsule co-living pioneers introduced a shared-fridge labeling system after six identical lunch boxes caused a very polite investigation.",
+      fact: "The first label simply read 'mine.' By dinner, all six boxes had the same label. A residents' committee was formed immediately."
     },
     {
-      year: "1937",
-      title: "Amelia Earhart's Last Recorded Signal",
-      description: "Aviation pioneer Amelia Earhart and navigator Fred Noonan vanish over the Pacific Ocean during their round-the-world flight attempt.",
-      fact: "Despite a massive multi-million dollar search by the US Coast Guard and Navy, no trace was ever found, cementing one of history's greatest mysteries."
+      year: "2023",
+      title: "Exit 4 Gets a Carrot Lane",
+      description: "Valley farmers tested a roadside produce stall at Highway Exit 4. Commuters discovered they could pick up dinner ingredients without leaving their cars.",
+      fact: "One customer asked whether the carrots came with loyalty points. The farmer added an extra carrot and called the matter settled."
+    },
+    {
+      year: "2024",
+      title: "A Hug Holds Up the Square",
+      description: "An early Free Hugs gathering in Downtown Square briefly blocked the path to a coffee stand. Nobody filed a complaint until the coffee went cold.",
+      fact: "Organizers moved two steps to the left. Town records describe this as a successful pedestrian improvement project."
+    },
+    {
+      year: "2024",
+      title: "Umami House's First Unofficial Guest",
+      description: "Before Umami House opened, a resident mistook a staff noodle tasting for the lunch queue and waited outside for forty minutes.",
+      fact: "The staff offered a bowl anyway. The resident's review praised the noodles and suggested the opening hours were 'more of a feeling.'"
     }
   ];
 
-  // Pick a random fact or current fact based on day
+  // Rotate town memories daily; these are anecdotes, not date-matched anniversaries.
   const currentFactIndex = new Date().getDate() % historyFacts.length;
   const currentFact = historyFacts[currentFactIndex];
 
@@ -146,8 +159,8 @@ export default function WidgetsRow({
                 <Landmark className="w-6 h-6" />
               </div>
               <div>
-                <span className="text-xs text-emerald-600 font-bold tracking-widest uppercase block">Historical Fact</span>
-                <span className="text-sm font-mono font-semibold text-neutral-400">Day: July 7th • Year {currentFact.year}</span>
+                <span className="text-xs text-emerald-600 font-bold tracking-widest uppercase block">Sandbox Town Archives</span>
+                <span className="text-sm font-mono font-semibold text-neutral-400">Sandbox / Year {currentFact.year}</span>
               </div>
             </div>
 
